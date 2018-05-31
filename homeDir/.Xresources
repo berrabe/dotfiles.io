@@ -1,0 +1,44 @@
+xterm*dynamicColors: true
+urxvt*dynamicColors: on
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+URxvt.font: xft:Space Mono For Powerline:size=9:antialias=true
+	    xft:Source Code Pro:pixelsize=18:style=medium:antialias=true,\
+            -*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
+URxvt.letterSpace: -1
+URxvt.scrollBar: false
+URxvt.cursorBlink: true
+
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.iso14755: False
+
+URxvt*background: #2C2C2C
+URxvt*foreground: #DCDCCC
+! black
+URxvt.color0  : #3F3F3F
+URxvt.color8  : #709080
+! red
+URxvt.color1  : #705050
+URxvt.color9  : #DCA3A3
+! green
+URxvt.color2  : #60B48A
+URxvt.color10 : #72D5A3
+! yellow
+URxvt.color3  : #DFAF8F
+URxvt.color11 : #F0DFAF
+! blue
+URxvt.color4  : #9AB8D7
+URxvt.color12 : #94BFF3
+! magenta
+URxvt.color5  : #DC8CC3
+URxvt.color13 : #EC93D3
+! cyan
+URxvt.color6  : #8CD0D3
+URxvt.color14 : #93E0E3
+! white
+URxvt.color7  : #DCDCCC
+URxvt.color15 : #FFFFFF
+
+rofi.combi-modi:    window,drun,ssh
+rofi.modi:          combi

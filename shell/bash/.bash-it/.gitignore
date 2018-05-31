@@ -1,0 +1,17 @@
+.atom-build.json
+*/enabled/*
+.DS_Store
+custom/*
+!custom/example.bash
+.rvmrc
+aliases/custom.aliases.bash
+completion/custom.completion.bash
+lib/custom.bash
+plugins/custom.plugins.bash
+*.swp
+.*.un~
+bats
+.idea
+*.sublime-workspace
+*.sublime-project
+enabled/*
