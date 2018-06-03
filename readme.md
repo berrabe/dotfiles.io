@@ -7,6 +7,11 @@
 $ sudo apt install i3
 ```
 
+-  ###### I3 GAPS
+```sh
+$ https://github.com/Airblader/i3/wiki/Compiling-&-Installing
+```
+
 -  ###### TERMINAL EMULATOR
 ```sh
 $ sudo apt install xfce4-terminal rxvt-unicode
