@@ -48,13 +48,20 @@ local exit_code="%(?,,C:%{$fg[red]%}%?%{$reset_color%})"
 # $
 PROMPT="
 %{$terminfo[bold]$fg[blue]%}#%{$reset_color%} \
-%(#,%{$bg[yellow]%}%{$fg[black]%}%n%{$reset_color%},%{$fg[cyan]%}%n) \
+%(#,%{$bg[yellow]%}%{$fg[black]%}%n%{$reset_color%},$terminfo[bold]%{$fg[cyan]%}%n) \
 %{$fg[white]%}@ \
 %{$fg[green]%}%m \
 %{$fg[white]%}in \
 %{$terminfo[bold]$fg[yellow]%}%~%{$reset_color%}\
 ${hg_info}\
 ${git_info}\
- \
-%{$fg[white]%}[%*] $exit_code
+$exit_code
 %{$terminfo[bold]$fg[red]%}$ %{$reset_color%}"
+
+_newline=$'\n'
+_lineup=$'\e[1A'
+_linedown=$'\e[1B'
+
+RPROMPT='%{${_lineup}%} \
+%{$terminfo[bold]$fg[white]%}[%D - %*]\
+%{${_linedown}%}'

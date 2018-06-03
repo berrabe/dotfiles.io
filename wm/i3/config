@@ -35,12 +35,12 @@ client.background                           $bg-color
 
 
 #                                                                               OPEN TERMINAL
-bindsym $mod+Shift+Return exec xfce4-terminal --hide-menubar
-bindsym $mod+Return exec  urxvt
+bindsym $mod+Return exec xfce4-terminal --hide-menubar
+#bindsym $mod+Return exec  urxvt
 #                                                                               EXIT CONTAINER
 bindsym $mod+q	kill
 #                                                                               OPEN ROFI (APPLICATION MENU)
-bindsym $mod+d exec rofi -show drun -lines 3 -columns 2 -eh 2 -bw 0 -width 50 -padding 350 -hide-scrollbar true -font "Space Mono For Powerline Bold 12"
+bindsym $mod+d exec rofi -show drun -lines 3 -columns 2 -eh 2 -bw 0 -hide-scrollbar true -font "Space Mono For Powerline Bold 12"
 # bindsym $mod+d exec rofi -show drun -lines 3 -eh 2 -width 100 -padding 400 -opacity "10" -bw 0 -bc "802d303b" -bg "802d303b" -fg "802d303b" -hlbg "802d303b" -hlfg "#802d303b" -font "Space Mono For Powerline Bold 18"
 # bindsym $mod+d exec rofi -show drun -modi drun -font "San Francisco Display Bold 14"
 
@@ -131,7 +131,6 @@ bindsym XF86MonBrightnessDown exec "light -U 5; notify-send 'brightness down'"
 bindsym $mod+Shift+t exec $HOME/.config/i3/i3lock-fancy/lock
 #                                                                               CUSTOM KEY
 bindsym $enter+f exec thunar
-bindsym $enter+t exec xfce4-terminal --hide-menubar
 
 
 
