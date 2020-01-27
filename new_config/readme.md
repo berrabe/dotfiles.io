@@ -10,6 +10,7 @@
 | **Panel** | tint2 |
 | **Compositor** | compton |
 | **Notifier** | dunst |
+| **Color Generator** | [pywal](https://github.com/dylanaraps/pywal/wiki) bug, use --vte|
 | **Icon** | [Papirus-Dark](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme#installation) |
 | **GTK Theme** | [Sierra-Dark](https://github.com/vinceliuice/Sierra-gtk-theme) |
 | **Mouse Theme** | [Capitaine-Cursor](https://launchpad.net/~dyatlov-igor/+archive/ubuntu/la-capitaine) |
