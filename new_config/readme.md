@@ -8,7 +8,7 @@
 | --- | --- |
 | **WM** |  [i3-gaps](https://github.com/Airblader/i3/wiki/Installation) |
 | **Panel** | tint2 |
-| **Compositor** | compton |
+| **Compositor** | compton / [compton-tryone-kawasake-blur](Programs/compton)  |
 | **Notifier** | dunst |
 | **App Launcher** | rofi |
 | **Color Generator** | [pywal](https://github.com/dylanaraps/pywal/wiki)|
