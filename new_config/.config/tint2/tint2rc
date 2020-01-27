@@ -96,7 +96,7 @@ time1_format =%H:%M
 # time2_font = Sans 0
 clock_font_color = #ffffff 100
 clock_tooltip = 
-clock_padding = 1 2
+clock_padding = 5 2
 clock_background_id = 2
 clock_lclick_command = gsimplecal
 time1_timezone = 
@@ -113,24 +113,6 @@ tooltip_background_id = 0
 tooltip_font = = rissole 8
 tooltip_font_color = #FFFFFF 100
 
-# Mouse
-mouse_left = toggle_iconify
-mouse_middle = close
-mouse_right = closel
-mouse_scroll_up = prev_task
-mouse_scroll_down = next_task
-
-# Battery
-battery_low_status = 15
-battery_low_cmd = notify-send "Battery low, charge 'em now!"
-# bat1_font = Space Mono For Powerline Bold 7
-bat1_font = rissole 8
-bat2_font = PragmataPro 0
-battery_font_color = #ffffff 100
-battery_padding = 0 0
-battery_background_id = 1
-bat1_format = %h:%m-%p
-
 
 execp = new
 execp_command = $HOME/.config/tint2/./tint2_cputemp.sh 0.5
@@ -142,27 +124,6 @@ execp_font = SpaceMono Nerd Font Bold 7
 # execp_font = rissole 8
 execp_padding = 10 10
 execp_background_id = 4
-
-
-# # Launcher
-# launcher_padding = 2 5 2
-# launcher_background_id = 0
-# launcher_icon_background_id = -1
-# launcher_icon_size = 20
-# launcher_icon_asb = 100 0 0
-# launcher_icon_theme_override = 0
-# startup_notifications = 0
-# launcher_tooltip = 0
-# launcher_item_app = /usr/share/app-install/desktop/pavucontrol:pavucontrol.desktop
-
-# Note the use of "stdbuf -oL" to force the program to flush the output line by line.
-# execp = new
-# execp_command = echo "MacBook"
-# execp_continuous = 1
-# execp_interval = 1
-# execp_font_color = #ffffff 100
-# execp_font = San Francisco Display Bold 10
-# execp_padding = 0 0
 
 
 # End of config
