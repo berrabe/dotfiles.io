@@ -191,7 +191,7 @@ exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agen
 exec --no-startup-id tint2
 exec --no-startup-id pnmixer
 exec --no-startup-id compton
-exec --no-startup-id sleep 5 && notify-send -u low -t 10000 'Welcome Again berrabe' && xrandr --output LVDS-1 --brightness 0.5 && init
+exec --no-startup-id sleep 5 && notify-send -u low -t 10000 'Welcome Again berrabe' && xrandr --output LVDS-1 --brightness 0.5 && sudo su -c "echo 11936 >/sys/class/backlight/intel_backlight/brightness"
 # exec --no-startup-id python $HOME/.config/tint2/python.py --core
 
 ################################################################################################################
