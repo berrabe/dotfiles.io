@@ -1,0 +1,222 @@
+#   https://github.com/chiveln2/OS.giT
+
+################################################################################################################
+################################################################################################################    Set Zone
+################################################################################################################
+
+#                                                                               SETTING MAIN FONT I3WM
+# font pango:monospace 8
+font pango:rissole 8
+#                                                                               SET MOD FOR DRAG FLOATING WINDOWS CONTAINER
+floating_modifier $mod
+#                                                                               SET MOD KEY , MOD 1 = ALT , MOD 4 = ENTER
+set $mod Mod1
+set $enter Mod4
+#                                                                               SET COLOR FOR I3WM (BORDER , ETC)
+set $bg-color            #5b5b5b
+set $bd-color            #ffffff
+set $inactive-bg-color   #383C4A
+set $inactive-bd-color   #383C4A
+set $text-color          #f3f4f5
+set $inactive-text-color #676E7D
+#  border          			background      text      		indicator  			 child 		border 
+client.focused      		$bd-color    	$bg-color   	$text-color  		 $bd-color 	$bd-color  
+client.unfocused            $bg-color       $bg-color       $inactive-text-color $bg-color  $bg-color
+client.focused_inactive     $bg-color       $bg-color       $inactive-text-color $bg-color  $bg-color
+client.urgent               $bg-color       $bg-color       $text-color          $bg-color  $bg-color
+client.background                           $bg-color
+
+
+
+
+################################################################################################################
+################################################################################################################  
+################################################################################################################
+
+
+
+#                                                                               OPEN TERMINAL
+bindsym $mod+Return exec xfce4-terminal --hide-menubar
+#bindsym $mod+Return exec  urxvt
+#                                                                               EXIT CONTAINER
+bindsym $mod+q	kill
+#                                                                               OPEN ROFI (APPLICATION MENU)
+bindsym $mod+d exec rofi -show drun -lines 3 -columns 2 -eh 2 -bw 0 -hide-scrollbar true -font "Space Mono For Powerline Bold 8"
+# bindsym $mod+d exec rofi -show drun -lines 3 -columns 2 -eh 2 -bw 0 -hide-scrollbar true -font "rissole 10"
+
+# bindsym $mod+d exec rofi -show drun -lines 3 -eh 2 -width 100 -padding 400 -opacity "10" -bw 0 -bc "802d303b" -bg "802d303b" -fg "802d303b" -hlbg "802d303b" -hlfg "#802d303b" -font "Space Mono For Powerline Bold 18"
+# bindsym $mod+d exec rofi -show drun -modi drun -font "San Francisco Display Bold 14"
+
+# bindsym $mod+d exec synapse
+
+#                                                                               CHANGE FOCUS CONTAINER
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+i focus up
+bindsym $mod+l focus right
+#                                                                               MOVE CONTAINER
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+i move up
+bindsym $mod+Shift+l move right
+#                                                                               SPLIT NEXT CONTAINER
+bindsym $mod+h split h
+bindsym $mod+v split v
+#                                                                               FULLSCREEN MODE
+bindsym $mod+f fullscreen toggle
+#                                                                               MODE CONTAINER
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+#                                                                               MOD KEY FOR TOGGLE
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+bindsym $mod+a focus parents
+bindsym $mod+c focus child
+#                                                                               CHANGE WORKSPACE
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+#                                                                               MOVE CONTAINER TO WORKSPACE
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+#                                                                               EXIT , RESTART , EXIT I3WM
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+
+#                                                                               RESIZE MODE
+bindsym $mod+r mode "resize"
+
+mode "resize" {
+ 
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym i resize grow height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+#                                                                               VOLUME KEY ON KEYBOARD
+
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+#                                                                               TRACKPAD ACTIVATION
+bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh
+#                                                                               MULTIMEDIA KEY
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec light -A 5
+bindsym XF86AudioPrev exec light -U 5
+#                                                                               Screen brightness controls with notification
+bindsym XF86MonBrightnessUp exec "light -A 5; notify-send 'brightness up'"
+bindsym XF86MonBrightnessDown exec "light -U 5; notify-send 'brightness down'" 
+#                                                                               LOCK
+bindsym $mod+Shift+t exec $HOME/.config/i3/i3lock-fancy/lock
+#                                                                               CUSTOM KEY
+bindsym $enter+f exec thunar
+bindsym $mod+o exec "notify-send -u normal '==== B E R R A B E ===='"
+
+
+
+
+################################################################################################################
+################################################################################################################  
+################################################################################################################
+
+
+
+# bar {
+# #		SET I3-BAR CONFIG
+#     status_command i3status -c $HOME/.config/i3/i3status.conf
+# 	tray_output primary
+# 	height 15
+# 	position top
+# #         COLOR OF I3-BAR , DIFFERENT FROM DEFAULTF
+#     colors {
+#         background #000000
+#         statusline #ffffff
+#         separator  #666666
+# # 				class	   border backgr. text indicator child_border
+#         focused_workspace  #4c7899 #285577 #ffffff
+#         active_workspace   #333333 #5f676a #ffffff
+#         inactive_workspace #333333 #222222 #888888
+#         urgent_workspace   #2f343a #900000 #ffffff
+#         binding_mode       #2f343a #900000 #ffffff
+#     }
+# }
+
+
+
+################################################################################################################
+################################################################################################################  
+################################################################################################################
+
+
+#                                                                               I3-GAPS SETTING
+for_window [class="^.*"] border pixel 1
+gaps inner 50
+gaps outer 5
+#                                                                               DISABLE FOCUS CONTAINER WHEN MOVE CURSOR
+focus_follows_mouse no
+
+#                                                                               CHANGE BACKGROUND WITH FEH
+exec feh --bg-scale --no-xinerama '/usr/share/wallpapers/Wallpaper/129744.jpg'
+#                                                                               CUSTOM EXEC ON STARTUP
+# exec --no-startup-id indicator-cpufreq
+exec --no-startup-id xfce4-power-manager
+exec --no-startup-id nm-applet
+#exec --no-startup-id xautolock -time 5 -locker i3lock &
+#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+exec --no-startup-id tint2
+exec --no-startup-id pnmixer
+exec --no-startup-id compton
+exec --no-startup-id sleep 5 && notify-send -u low -t 10000 'Welcome Again berrabe' && xrandr --output LVDS-1 --brightness 0.5 && init
+# exec --no-startup-id python $HOME/.config/tint2/python.py --core
+
+################################################################################################################
+################################################################################################################
+################################################################################################################
+
+#                                                                               THIS PART USELESS CONFIG
+
+#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+#bindsym $mod+Left focus left
+#bindsym $mod+Down focus down
+#bindsym $mod+Up focus up
+#bindsym $mod+Right focus right
+
+#bindsym $mod+Shift+Left move left
+#bindsym $mod+Shift+Down move down
+#bindsym $mod+Shift+Up move up
+#bindsym $mod+Shift+Right move right
+
+#bindsym Left resize shrink width 10 px or 10 ppt
+#bindsym Down resize grow height 10 px or 10 ppt
+#bindsym Up resize shrink height 10 px or 10 ppt
+#bindsym Right resize grow width 10 px or 10 ppt
+
+
+#bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+#bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness

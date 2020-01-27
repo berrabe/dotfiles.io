@@ -1,0 +1,389 @@
+Jan 26 00:16 : exception: Failed to access /media/berrabe/Music: No such file or directory
+Jan 26 00:16 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 26 00:16 : avahi: Service 'Music Player' successfully established.
+Jan 26 00:17 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 26 00:17 : avahi: Service 'Music Player' successfully established.
+Jan 26 00:17 : client: [0] opened from 127.0.0.1:34762
+Jan 26 00:17 : update: added /66 - KLA Project - Yogyakarta (Music Video Cover by Cemara Pictures).mp3
+Jan 26 00:17 : update: added /49 - Sugeng dalu ' official video clip ' DENNY CAKNAN.mp3
+Jan 26 00:17 : update: added /60 - Ebiet G Ade - Berita Kepada Kawan.mp3
+Jan 26 00:17 : update: added /53 - ANGGA CANDRA - SEMUA DEMI KAMU ( Official Music Video ).mp3
+Jan 26 00:17 : update: added /61 - Exist - Mencari Alasan (lirik) #music #lirik #lagumalaysia.mp3
+Jan 26 00:17 : update: added /65 - UNGU - Cinta Dalam Hati (Official Video) _ UNGUofficial.mp3
+Jan 26 00:17 : update: added /55 - eńau - Negara Lucu (Official Video Lyric).mp3
+Jan 26 00:17 : update: added /50 - NDARBOY GENK - BAIK BAIK SAJA (Official Music Video).mp3
+Jan 26 00:17 : update: added /54 - Mawar De Jongh - Lebih Dari Egoku (Lyrics).mp3
+Jan 26 00:17 : update: added /63 - Armada - Apa Kabar Sayang (Official Music Video).mp3
+Jan 26 00:17 : update: added /64 - KATAKAN SEJUJURNYA ( COVER AKUSTIK & LIRIK ) By Silvia Nicky.mp3
+Jan 26 00:17 : update: added /58 - NOAH - Andaikan Kau Datang (Official Music Video).mp3
+Jan 26 00:17 : update: added /47 - Endank Soekamti - Semoga Kau Di Neraka (Official Music Video NAGASWARA) #music.mp3
+Jan 26 00:17 : update: added /52 - ANGGA CANDRA - SAMPAI TUTUP USIA ( Official Music Video).mp3
+Jan 26 00:17 : update: added /51 - Ello - Masih Ada (Video Clip).mp3
+Jan 26 00:17 : update: added /62 - Armada - Katakan Sejujurnya (Official Music Video).mp3
+Jan 26 00:17 : update: added /48 - Ost Crayon Shincan versi DJ KOPLO.mp3
+Jan 26 00:17 : update: added /57 - SEPERTI YANG KAU MINTA ( PONGKY BARATA ) - MICHELA THEA COVER.mp3
+Jan 26 00:17 : update: added /56 - HARUSKAH KU MATI ( ADA BAND ) - MICHELA THEA COVER.mp3
+Jan 26 00:17 : client: [0] closed
+Jan 26 00:18 : client: [1] opened from 127.0.0.1:34910
+Jan 26 00:19 : client: [2] opened from 127.0.0.1:35094
+Jan 26 00:19 : client: [2] closed
+Jan 26 00:20 : client: [3] opened from 127.0.0.1:35146
+Jan 26 00:20 : client: [3] closed
+Jan 26 00:20 : client: [4] opened from 127.0.0.1:35148
+Jan 26 00:20 : client: [4] closed
+Jan 26 00:20 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 26 00:25 : client: [1] closed
+Jan 26 00:29 : client: [5] opened from 127.0.0.1:36248
+Jan 26 00:29 : client: [5] closed
+Jan 26 00:29 : client: [6] opened from 127.0.0.1:36272
+Jan 26 00:30 : client: [6] closed
+Jan 26 00:30 : client: [7] opened from 127.0.0.1:36472
+Jan 26 00:33 : player: played "48 - Ost Crayon Shincan versi DJ KOPLO.mp3"
+Jan 26 00:46 : client: [7] closed
+Jan 26 00:51 : player: played "47 - Endank Soekamti - Semoga Kau Di Neraka (Official Music Video NAGASWARA) #music.mp3"
+Jan 26 06:51 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 26 06:51 : avahi: Service 'Music Player' successfully established.
+Jan 26 06:51 : client: [0] opened from 127.0.0.1:34390
+Jan 26 06:51 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 26 06:53 : client: [0] closed
+Jan 26 07:21 : client: [1] opened from 127.0.0.1:36462
+Jan 26 07:26 : player: played "55 - eńau - Negara Lucu (Official Video Lyric).mp3"
+Jan 26 07:31 : player: played "56 - HARUSKAH KU MATI ( ADA BAND ) - MICHELA THEA COVER.mp3"
+Jan 26 07:42 : player: played "66 - KLA Project - Yogyakarta (Music Video Cover by Cemara Pictures).mp3"
+Jan 26 15:38 : client: [1] closed
+Jan 26 15:43 : player: played "49 - Sugeng dalu ' official video clip ' DENNY CAKNAN.mp3"
+Jan 26 15:44 : client: [2] opened from 127.0.0.1:41598
+Jan 26 15:48 : player: played "50 - NDARBOY GENK - BAIK BAIK SAJA (Official Music Video).mp3"
+Jan 26 15:50 : player: played "52 - ANGGA CANDRA - SAMPAI TUTUP USIA ( Official Music Video).mp3"
+Jan 26 15:58 : player: played "55 - eńau - Negara Lucu (Official Video Lyric).mp3"
+Jan 26 16:04 : player: played "56 - HARUSKAH KU MATI ( ADA BAND ) - MICHELA THEA COVER.mp3"
+Jan 26 16:07 : client: [2] closed
+Jan 26 16:07 : player: played "57 - SEPERTI YANG KAU MINTA ( PONGKY BARATA ) - MICHELA THEA COVER.mp3"
+Jan 26 18:50 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 26 18:50 : avahi: Service 'Music Player' successfully established.
+Jan 26 18:50 : client: [0] opened from 127.0.0.1:37234
+Jan 26 18:50 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 26 18:52 : player: played "48 - Ost Crayon Shincan versi DJ KOPLO.mp3"
+Jan 26 18:58 : player: played "49 - Sugeng dalu ' official video clip ' DENNY CAKNAN.mp3"
+Jan 26 19:11 : client: [1] opened from 127.0.0.1:39920
+Jan 26 19:11 : update: added Music/Avenged Sevenfold - Dear God [Official Music Video].mp3
+Jan 26 19:11 : update: added Music/Judika - Jikalau Kau Cinta (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/KENANGLAH AKU NAFF COVER - PENGAMEN JOGJA _ MUSISI JOGJA PROJECT _ PENDOPO LAWAS.mp3
+Jan 26 19:11 : update: added Music/Yovie Tulus Glenn - Adu Rayu (OFFICIAL LYRIC VIDEO).mp3
+Jan 26 19:11 : update: added Music/PADI - Begitu Indah.mp3
+Jan 26 19:11 : update: added Music/005 - Virzha - Tentang Rindu [Official Music Video].mp3
+Jan 26 19:11 : update: added Music/003 - Virgoun - Surat Cinta Untuk Starla (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/NA - GuyonWaton Official - Korban Janji (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/Memori Berkasih Reggae Version.mp3
+Jan 26 19:11 : update: added Music/Juicy Luicy - Tanpa Tergesa (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/Endank Soekamti - Sampai Jumpa (Official Lyric Video with Sign Language).mp3
+Jan 26 19:11 : update: added Music/Marcell - Takkan Terganti (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/002 - Payung Teduh - Akad (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/34 - Andmesh - Nyaman (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/19 - PENDHOZA - DEMI KOWE [ UNOFFICIAL LIRIK ].mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/14 - SAMPAI MENUTUP MATA - ACHA SEPTRIASA ( Ipank Yuniar ft. Maria Reres Cover & Lirik ).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/31 - Pendhoza - Demi Kowe (Official Audio Lyric).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/18 - Yura Yunita ft. Glenn Fredly - Cinta dan Rahasia ( Official Lyrics Video).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/27 - Stinky - Mungkinkah (Official Video).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/35 - Backstreet Boys - I Want It That Way.mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/44 - PAMER BOJO - GuyonWaton Cover ( Ciptaan Didi Kempot ).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/16 - Jikustik - Puisi _ Nufi Wardhana Cover.mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/12 - D'MASIV - Pergilah Kasih (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/01 - Budi Doremi - Tolong (Official Lyric Video).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/46 - SESUATU DI JOGJA - ADHITIA SOFYAN (UNOFFICIAL LYRIC VIDEO).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/10 - NAIF - Karena Kamu Cuma Satu (Official  Music Video).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/15 - Pergilah Kasih Chrisye Tami Aulia ft Unique band Cover live @silol.mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/43 - GuyonWaton Official - Ora Masalah (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/36 - NOAH - Kupu-Kupu Malam (Official Audio).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/40 - GuyonWaton Official - Lungaku (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/03 - Fiersa Besari ft Tantri - Waktu Yang Salah  [unofficial lirik video].mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/04 - Andmesh - Hanya Rindu (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/37 - KARTONYONO MEDOT JANJI ' Official Video Klip ' DENNY CAKNAN.mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/32 - GuyonWaton - Pamer Bojo LIRIK (Ciptaan Didi Kempot).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/11 - The Rain Feat. Endank Soekamti - Terlatih Patah Hati (Official Video).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/30 - Nidji - laskar pelangi (lirik).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/39 - GUYONWATON OFFICIAL - SEBATAS TEMAN (OFFICIAL LYRIC VIDEO).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/08 - Yovie Tulus Glenn - Adu Rayu (OFFICIAL MUSIC VIDEO).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/45 - Official Video Clip ' Denny Caknan ' SAMPEK TUWEK.mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/25 - TITIP RINDU BUAT AYAH ( EBIET G ADE ) - MICHELA THEA COVER.mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/26 - TITIP RINDU BUAT AYAH ( EBIET G ADE ) - MICHELA THEA COVER.mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/02 - Armada - Harusnya Aku (Unofficial Music Video).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/24 - fourtwnty - Aku Tenang (Official Video)  'Gili Trawangan'.mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/21 - Music Everywhere - Glenn Fredly - Malaikat Juga Tahu.mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/23 - fourtwnty - Aku Tenang (Official Video)  'Gili Trawangan'.mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/25 - Sheila On 7 - Dan.mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/26 - AYAH ( RINTO HARAHAP ) - MICHELA THEA COVER.mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/06 - Juicy Luicy - Tanpa Tergesa (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/29 - Ayah - Rinto Harahap _ Izzamedia Live Cover by Zhie & Tofan.mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/27 - AYAH ( RINTO HARAHAP ) - MICHELA THEA COVER.mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/38 - GUYONWATON - Pamer Bojo (Lirik Video).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/05 - Andmesh Kamaleng - Cinta Luar Biasa (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/17 - Badai Romantic Project - Melamarmu (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/07 - Brisia Jodie - Kisahku (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/28 - SAMSONS - Kenangan Terindah.mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/20 - Sandhy Sondoro - Malam Biru (Kasihku).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/13 - Virzha - Tentang Rindu [Official Music Video].mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/22 - Music Everywhere - Glenn Fredly - Januari.mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/24 - Sheila On 7 - Dan.mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/09 - Fiersa Besari - April [unofficial lirik video].mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/41 - GuyonWaton Official - Karma (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/33 - NDARBOY GENK - BALUNGAN KERE ( Official Music Video ).mp3
+Jan 26 19:11 : update: added Music/lagu berrabe/42 - GuyonWaton Official - Korban Janji (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/Via Vallen - Bojoku Galak [OFFICIAL].mp3
+Jan 26 19:11 : update: added Music/James Arthur - Say You Won't Let Go.mp3
+Jan 26 19:11 : update: added Music/The Rain Feat. Endank Soekamti - Terlatih Patah Hati (Official Video).mp3
+Jan 26 19:11 : update: added Music/Via Vallen - Ditinggal Rabi [OFFICIAL].mp3
+Jan 26 19:11 : update: added Music/Via Vallen - RA JODO _ OM. Sera   _   Official Video.mp3
+Jan 26 19:11 : update: added Music/NOAH - Andaikan Kau Datang (Official Video).mp3
+Jan 26 19:11 : update: added Music/ku tak bisa - SLANK.mp3
+Jan 26 19:11 : update: added Music/LABRINTH - JEALOUS (Judika Cover).mp3
+Jan 26 19:11 : update: added Music/Avenged Sevenfold - So Far Away [Official Music Video].mp3
+Jan 26 19:11 : update: added Music/NaFF - Akhirnya Ku Menemukanmu _ Official Video Clip.mp3
+Jan 26 19:11 : update: added Music/Marry Your Daughter (Brian McKnight) - curved soprano saxophone cover by Desmond Amos.mp3
+Jan 26 19:11 : update: added Music/Calum Scott - You Are The Reason (Official).mp3
+Jan 26 19:11 : update: added Music/Can't Take My Eyes Off You - Frankie Valli x Lauryn Hill (Joseph Vincent Cover).mp3
+Jan 26 19:11 : update: added Music/Fiersa Besari ft Tantri - Waktu Yang Salah  [unofficial lirik video].mp3
+Jan 26 19:11 : update: added Music/NAIF - Karena Kamu Cuma Satu (Official  Music Video)-6mh0S3NpO1M.mp3
+Jan 26 19:11 : update: added Music/Andmesh Kamaleng - Cinta Luar Biasa (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/001 - Virgoun - Bukti (Official Lyric Video).mp3
+Jan 26 19:11 : update: added Music/Amazing Day.mp3
+Jan 26 19:11 : update: added Music/[ALL STARS] IWAN FALS NOAH NIDJI GEISHA D'MASIV - Kemesraan (Official Video).mp3
+Jan 26 19:11 : update: added Music/SMVLL/10 - Sheila On 7 - Pemuja Rahasia Reggae Cover SMVLL.mp3
+Jan 26 19:11 : update: added Music/SMVLL/03 - Wahyu - Selow COVER SMVLL.mp3
+Jan 26 19:11 : update: added Music/SMVLL/09 - Fourtwnty - Aku Tenang (Reggae Cover SMVLL) Lirik Video.mp3
+Jan 26 19:11 : update: added Music/SMVLL/13 - SMVLL - Argumentasi Dimensi (Fourtwnty Cover) REGGAE.mp3
+Jan 26 19:11 : update: added Music/SMVLL/07 - Dhyo Haw - Ada Aku Disini Cover SMVLL.mp3
+Jan 26 19:11 : update: added Music/SMVLL/01 - SMVLL - Zona Nyaman (Fourtwnty Reggae Cover) Lirik Video.mp3
+Jan 26 19:11 : update: added Music/SMVLL/18 - Sheila On 7 - Seberapa Pantas Reggae (1mnt).mp3
+Jan 26 19:11 : update: added Music/SMVLL/17 - SMVLL - AKU BUKAN BINATANG (Fourtwnty Cover) REGGAE.mp3
+Jan 26 19:11 : update: added Music/SMVLL/15 - Fourtwnty - Hitam Putih Reggae Version SMVLL.mp3
+Jan 26 19:11 : update: added Music/SMVLL/19 - Naif - Piknik 72 REGGAE VERSION.mp3
+Jan 26 19:11 : update: added Music/SMVLL/12 - SMVLL - ALKOHOL Sisitipsi Reggae Cover.mp3
+Jan 26 19:11 : update: added Music/SMVLL/04 - SMVLL - Untuk Perempuan Yang Sedang Dalam Pelukan (Payung Teduh Reggae Cover).mp3
+Jan 26 19:11 : update: added Music/SMVLL/16 - SMVLL - Menghitung Hari 2 Reggae Cover Anda.mp3
+Jan 26 19:11 : update: added Music/SMVLL/02 - SMVLL - DAN (Sheila On Seven REGGAE Cover).mp3
+Jan 26 19:11 : update: added Music/SMVLL/14 - Sheila On 7 - Yang Terlewatkan REGGAE COVER SMVLL.mp3
+Jan 26 19:11 : update: added Music/SMVLL/08 - KARNA SU SAYANG - Near Ft Dian Sorowea -  REGGAE COVER SMVLL.mp3
+Jan 26 19:11 : update: added Music/SMVLL/05 - Naif - Benci Untuk Mencinta (Reggae Cover SMVLL) Lirik Video.mp3
+Jan 26 19:11 : update: added Music/SMVLL/06 - Fourtwnty - Fana Merah Jambu (Reggae Cover SMVLL) Lirik Video.mp3
+Jan 26 19:11 : update: added Music/SMVLL/11 - SMVLL - Sementara FLOAT COVER REGGAE.mp3
+Jan 26 19:11 : update: added Music/NaFF - Kau Masih Kekasihku _ Official Video Clip.mp3
+Jan 26 19:11 : update: added Music/Ari Lasso - Hampa ( Lirik ).mp3
+Jan 26 19:11 : update: added Music/Via Vallen - Bagai Langit Dan Bumi   _   Official Video.mp3
+Jan 26 19:11 : update: added Music/Cakra Khan - Kekasih Bayangan (Official Music Video + Lyrics).mp3
+Jan 26 19:11 : update: added Music/M.E - Inikah Cinta.mp3
+Jan 26 19:11 : update: added Music/KOTAK - Masih Cinta (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/Via Vallen - Sayang (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/Via Vallen - Bojo Galak (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/Glenn Fredly - Akhir Cerita Cinta (Video Clip).mp3
+Jan 26 19:11 : update: added Music/Armada - Harusnya Aku (Unofficial Music Video).mp3
+Jan 26 19:11 : update: added Music/Via Vallen - Kimcil Kepolen (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/132 - Chris Brown - With You.mp3
+Jan 26 19:11 : update: added Music/International 2018/184 - Pitbull - Feel This Moment ft. Christina Aguilera.mp3
+Jan 26 19:11 : update: added Music/International 2018/017 - Jason Derulo x David Guetta - Goodbye (feat. Nicki Minaj & Willy William) [Official HD Lyric Video].mp3
+Jan 26 19:11 : update: added Music/International 2018/069 - Jonas Blue - Perfect Strangers ft. JP Cooper.mp3
+Jan 26 19:11 : update: added Music/International 2018/147 - Avicii - Hey Brother (Lyric).mp3
+Jan 26 19:11 : update: added Music/International 2018/009 - Ed Sheeran - Thinking Out Loud [Official Video].mp3
+Jan 26 19:11 : update: added Music/International 2018/038 - Descemer Bueno, Enrique Iglesias, Andra - Nos Fuimos Lejos (Romanian Version) ft. El Micha.mp3
+Jan 26 19:11 : update: added Music/International 2018/182 - John Newman - Love Me Again.mp3
+Jan 26 19:11 : update: added Music/International 2018/141 - Mariah Carey - We Belong Together.mp3
+Jan 26 19:11 : update: added Music/International 2018/006 - OneRepublic - Counting Stars.mp3
+Jan 26 19:11 : update: added Music/International 2018/072 - Bruno Mars - When I Was Your Man [Official Video].mp3
+Jan 26 19:11 : update: added Music/International 2018/041 - Dua Lipa - Be The One (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/128 - Miley Cyrus - The Climb - Official Music Video (HQ).mp3
+Jan 26 19:11 : update: added Music/International 2018/102 - Sam Smith - I'm Not The Only One.mp3
+Jan 26 19:11 : update: added Music/International 2018/115 - Adele - Send My Love (To Your New Lover).mp3
+Jan 26 19:11 : update: added Music/International 2018/026 - Danny Ocean - Epa Wei (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/159 - Sean Kingston - Beautiful Girls.mp3
+Jan 26 19:11 : update: added Music/International 2018/033 - Pharrell Williams - Happy (Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/088 - John Legend - All of Me (Edited Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/089 - Gotye - Somebody That I Used To Know (feat. Kimbra) - official video.mp3
+Jan 26 19:11 : update: added Music/International 2018/055 - Sofia Reyes - 1, 2, 3 (feat. Jason Derulo & De La Ghetto) [Official Video].mp3
+Jan 26 19:11 : update: added Music/International 2018/172 - The Black Eyed Peas - My Humps.mp3
+Jan 26 19:11 : update: added Music/International 2018/145 - Titanic Theme Song • My Heart Will Go On • Celine Dion.mp3
+Jan 26 19:11 : update: added Music/International 2018/057 - Beyoncé - Halo.mp3
+Jan 26 19:11 : update: added Music/International 2018/001 - Mark Ronson - Uptown Funk ft. Bruno Mars.mp3
+Jan 26 19:11 : update: added Music/International 2018/071 - Gente de Zona - La Gozadera (Official Video) ft. Marc Anthony.mp3
+Jan 26 19:11 : update: added Music/International 2018/094 - P!nk - Just Give Me A Reason ft. Nate Ruess.mp3
+Jan 26 19:11 : update: added Music/International 2018/133 - MAGIC! - Rude (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/056 - Adele - Hello.mp3
+Jan 26 19:11 : update: added Music/International 2018/107 - Jonas Blue - Fast Car ft. Dakota.mp3
+Jan 26 19:11 : update: added Music/International 2018/087 - One Direction - Story of My Life.mp3
+Jan 26 19:11 : update: added Music/International 2018/118 - Shawn Mendes - Mercy.mp3
+Jan 26 19:11 : update: added Music/International 2018/005 - Maroon 5 - Girls Like You ft. Cardi B.mp3
+Jan 26 19:11 : update: added Music/International 2018/095 - One Direction - What Makes You Beautiful (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/008 - Clean Bandit - Solo feat. Demi Lovato [Official Video].mp3
+Jan 26 19:11 : update: added Music/International 2018/054 - The Chainsmokers - Closer (Lyric) ft. Halsey.mp3
+Jan 26 19:11 : update: added Music/International 2018/121 - Zara Larsson - Lush Life.mp3
+Jan 26 19:11 : update: added Music/International 2018/180 - David Guetta - Hey Mama (Official Video) ft Nicki Minaj, Bebe Rexha & Afrojack.mp3
+Jan 26 19:11 : update: added Music/International 2018/103 - Shawn Mendes - Treat You Better.mp3
+Jan 26 19:11 : update: added Music/International 2018/164 - Akon - Lonely.mp3
+Jan 26 19:11 : update: added Music/International 2018/105 - Daft Punk - Get Lucky (Full Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/187 - Ke$ha - TiK ToK.mp3
+Jan 26 19:11 : update: added Music/International 2018/042 - R. City - Locked Away ft. Adam Levine.mp3
+Jan 26 19:11 : update: added Music/International 2018/158 - One Direction - Drag Me Down (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/015 - David Guetta feat Anne-Marie - Don't Leave Me Alone (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/081 - Meghan Trainor - Like I'm Gonna Lose You ft. John Legend.mp3
+Jan 26 19:11 : update: added Music/International 2018/037 - KIKI DO YOU LOVE ME 'DRAKE' (MUSIC VIDEO).mp3
+Jan 26 19:11 : update: added Music/International 2018/148 - Imagine Dragons - Demons (Official).mp3
+Jan 26 19:11 : update: added Music/International 2018/073 - Taylor Swift - Blank Space.mp3
+Jan 26 19:11 : update: added Music/International 2018/039 - Ariana Grande - Side To Side ft. Nicki Minaj.mp3
+Jan 26 19:11 : update: added Music/International 2018/052 - Major Lazer & DJ Snake - Lean On (feat. MØ) (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/120 - Charlie Puth - One Call Away [Official Video].mp3
+Jan 26 19:11 : update: added Music/International 2018/137 - Bruno Mars - Treasure [Official Music Video].mp3
+Jan 26 19:11 : update: added Music/International 2018/027 - Clean Bandit - Rockabye ft. Sean Paul & Anne-Marie [Official Video].mp3
+Jan 26 19:11 : update: added Music/International 2018/153 - Rihanna - Man Down.mp3
+Jan 26 19:11 : update: added Music/International 2018/036 - dvsn - Morning After (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/108 - Justin Bieber - What Do You Mean (Lyric Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/048 - Fifth Harmony - Work from Home ft. Ty Dolla $ign.mp3
+Jan 26 19:11 : update: added Music/International 2018/119 - Shakira - Hips Don't Lie ft. Wyclef Jean.mp3
+Jan 26 19:11 : update: added Music/International 2018/050 - Bruno Mars - Just The Way You Are [OFFICIAL VIDEO].mp3
+Jan 26 19:11 : update: added Music/International 2018/090 - Bruno Mars - 24K Magic [Official Video].mp3
+Jan 26 19:11 : update: added Music/International 2018/099 - Dirty Dancing - Time of my Life (Final Dance) - High Quality HD.mp3
+Jan 26 19:11 : update: added Music/International 2018/114 - Justin Bieber - Never Say Never ft. Jaden Smith.mp3
+Jan 26 19:11 : update: added Music/International 2018/194 - Demi Lovato - Heart Attack.mp3
+Jan 26 19:11 : update: added Music/International 2018/020 - James Arthur - Say You Won't Let Go.mp3
+Jan 26 19:11 : update: added Music/International 2018/062 - twenty one pilots - Heathens (from Suicide Squad - The Album) [OFFICIAL VIDEO].mp3
+Jan 26 19:11 : update: added Music/International 2018/167 - Taylor Swift - Style.mp3
+Jan 26 19:11 : update: added Music/International 2018/031 - Avicii - Wake Me Up (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/151 - Sam Smith - Lay Me Down.mp3
+Jan 26 19:11 : update: added Music/International 2018/045 - Adele - Rolling in the Deep.mp3
+Jan 26 19:11 : update: added Music/International 2018/010 - The Chainsmokers - Don't Let Me Down (Video) ft. Daya.mp3
+Jan 26 19:11 : update: added Music/International 2018/130 - Ariana Grande - Into You.mp3
+Jan 26 19:11 : update: added Music/International 2018/080 - Katy Perry - Hot N Cold (Official).mp3
+Jan 26 19:11 : update: added Music/International 2018/076 - Rihanna - Diamonds.mp3
+Jan 26 19:11 : update: added Music/International 2018/029 - Adele - Someone Like You.mp3
+Jan 26 19:11 : update: added Music/International 2018/046 - Michael Jackson - Billie Jean (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/112 - Meghan Trainor - Me Too.mp3
+Jan 26 19:11 : update: added Music/International 2018/176 - Pitbull - Rain Over Me ft. Marc Anthony.mp3
+Jan 26 19:11 : update: added Music/International 2018/047 - Sam Smith - Too Good At Goodbyes (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/139 - OPUS - Live Is Life - Original Video 1985.mp3
+Jan 26 19:11 : update: added Music/International 2018/003 - Charlie Puth - We Don't Talk Anymore (feat. Selena Gomez) [Official Video].mp3
+Jan 26 19:11 : update: added Music/International 2018/122 - CAN'T STOP THE FEELING! (From DreamWorks Animation's 'Trolls') (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/024 - blackbear - the 1.mp3
+Jan 26 19:11 : update: added Music/International 2018/091 - Drake - Hotline Bling.mp3
+Jan 26 19:11 : update: added Music/International 2018/067 - Justin Bieber - Love Yourself  (PURPOSE  - The Movement).mp3
+Jan 26 19:11 : update: added Music/International 2018/186 - Jennifer Lopez - Booty ft. Iggy Azalea.mp3
+Jan 26 19:11 : update: added Music/International 2018/083 - Earned It (Fifty Shades Of Grey) (From The 'Fifty Shades Of Grey' Soundtrack) (Explicit....mp3
+Jan 26 19:11 : update: added Music/International 2018/078 - Milky Chance - Stolen Dance (Album Version).mp3
+Jan 26 19:11 : update: added Music/International 2018/152 - Shakira - Whenever, Wherever (Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/127 - Alicia Keys - No One (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/174 - Meghan Trainor - Dear Future Husband.mp3
+Jan 26 19:11 : update: added Music/International 2018/096 - Lady Gaga - Bad Romance.mp3
+Jan 26 19:11 : update: added Music/International 2018/113 - Indila - Dernière Danse (Clip Officiel).mp3
+Jan 26 19:11 : update: added Music/International 2018/126 - Ariana Grande, The Weeknd - Love Me Harder.mp3
+Jan 26 19:11 : update: added Music/International 2018/173 - Chet Faker - Gold (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/117 - Rachel Platten - Fight Song (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/143 - Ne-Yo - Miss Independent.mp3
+Jan 26 19:11 : update: added Music/International 2018/157 - Maroon 5 - She Will Be Loved.mp3
+Jan 26 19:11 : update: added Music/International 2018/044 - Lukas Graham - 7 Years [OFFICIAL MUSIC VIDEO].mp3
+Jan 26 19:11 : update: added Music/International 2018/060 - Sia - Chandelier (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/059 - Maroon 5 - Sugar.mp3
+Jan 26 19:11 : update: added Music/International 2018/161 - Zara Larsson, MNEK - Never Forget You.mp3
+Jan 26 19:11 : update: added Music/International 2018/199 - OMI - Cheerleader (Felix Jaehn Remix) [Official Video].mp3
+Jan 26 19:11 : update: added Music/International 2018/125 - Taylor Swift - You Belong With Me.mp3
+Jan 26 19:11 : update: added Music/International 2018/178 - Goo Goo Dolls - 'Iris' [Official Music Video].mp3
+Jan 26 19:11 : update: added Music/International 2018/098 - Eurythmics - Sweet Dreams (Are Made Of This) (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/193 - Major Lazer - Cold Water (feat. Justin Bieber & MØ) (Official Lyric Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/189 - Miley Cyrus - Party In The U.S.A..mp3
+Jan 26 19:11 : update: added Music/International 2018/195 - Imagine Dragons - It's Time.mp3
+Jan 26 19:11 : update: added Music/International 2018/192 - Alok, Bruno Martini feat. Zeeba - Hear Me Now (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/034 - Coldplay - Hymn For The Weekend (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/169 - Bruno Mars - Locked Out Of Heaven [OFFICIAL VIDEO].mp3
+Jan 26 19:11 : update: added Music/International 2018/085 - Carly Rae Jepsen - Call Me Maybe.mp3
+Jan 26 19:11 : update: added Music/International 2018/198 - Alvaro Soler - La Cintura [Remix] ft. Flo Rida, TINI.mp3
+Jan 26 19:11 : update: added Music/International 2018/136 - Kelly Clarkson - Because Of You (VIDEO).mp3
+Jan 26 19:11 : update: added Music/International 2018/110 - Clean Bandit - Rather Be ft. Jess Glynne [Official Video].mp3
+Jan 26 19:11 : update: added Music/International 2018/077 - Whitney Houston - I Have Nothing (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/002 - Wiz Khalifa - See You Again ft. Charlie Puth [Official Video] Furious 7 Soundtrack.mp3
+Jan 26 19:11 : update: added Music/International 2018/197 - Calvin Harris - Summer.mp3
+Jan 26 19:11 : update: added Music/International 2018/124 - Rihanna - Stay ft. Mikky Ekko.mp3
+Jan 26 19:11 : update: added Music/International 2018/070 - Sia - Cheap Thrills (Lyric Video) ft. Sean Paul.mp3
+Jan 26 19:11 : update: added Music/International 2018/040 - Emotional Oranges - Personal [Official Music Video].mp3
+Jan 26 19:11 : update: added Music/International 2018/140 - Akon - Right Now (Na Na Na).mp3
+Jan 26 19:11 : update: added Music/International 2018/190 - Avicii - The Nights.mp3
+Jan 26 19:11 : update: added Music/International 2018/030 - Bruno Mars - The Lazy Song [OFFICIAL VIDEO].mp3
+Jan 26 19:11 : update: added Music/International 2018/004 - Passenger _ Let Her Go (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/109 - Jessie J - Flashlight (from Pitch Perfect 2).mp3
+Jan 26 19:11 : update: added Music/International 2018/053 - Coldplay - Adventure Of A Lifetime (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/185 - Jennifer Lopez - Ain't Your Mama.mp3
+Jan 26 19:11 : update: added Music/International 2018/093 - Avicii - Waiting For Love.mp3
+Jan 26 19:11 : update: added Music/International 2018/162 - Michael Jackson - The Way You Make Me Feel (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/014 - Justin Bieber - Sorry (PURPOSE  - The Movement).mp3
+Jan 26 19:11 : update: added Music/International 2018/079 - Ben E. King - Stand By Me (HQ Video Remastered In 1080p).mp3
+Jan 26 19:11 : update: added Music/International 2018/165 - Calvin Harris & Disciples - How Deep Is Your Love.mp3
+Jan 26 19:11 : update: added Music/International 2018/171 - Starship - Nothing's Gonna Stop Us Now.mp3
+Jan 26 19:11 : update: added Music/International 2018/016 - Ed Sheeran - Photograph (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/181 - James Bay - Let It Go.mp3
+Jan 26 19:11 : update: added Music/International 2018/116 - Taylor Swift - Bad Blood ft. Kendrick Lamar.mp3
+Jan 26 19:11 : update: added Music/International 2018/196 - Pink Floyd - Another Brick In The Wall, Part Two (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/063 - The Weeknd - Starboy (official) ft. Daft Punk.mp3
+Jan 26 19:11 : update: added Music/International 2018/146 - Gym Class Heroes - Stereo Hearts ft. Adam Levine [OFFICIAL VIDEO].mp3
+Jan 26 19:11 : update: added Music/International 2018/074 - Jennifer Lopez - On The Floor ft. Pitbull.mp3
+Jan 26 19:11 : update: added Music/International 2018/134 - Fun. - We Are Young ft. Janelle Monáe [OFFICIAL VIDEO].mp3
+Jan 26 19:11 : update: added Music/International 2018/100 - Galantis - No Money (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/022 - Kris Kross Amsterdam x The Boy Next Door - Whenever (feat. Conor Maynard) [Official Music Video].mp3
+Jan 26 19:11 : update: added Music/International 2018/012 - Anne-Marie - 2002 [Official Video].mp3
+Jan 26 19:11 : update: added Music/International 2018/177 - The Weeknd - Can't Feel My Face.mp3
+Jan 26 19:11 : update: added Music/International 2018/021 - Ed Sheeran - Perfect (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/154 - Zara Larsson - Uncover.mp3
+Jan 26 19:11 : update: added Music/International 2018/068 - James Blunt - You're Beautiful (Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/049 - Shawn Mendes - Stitches (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/149 - Shawn Mendes, Camila Cabello - I Know What You Did Last Summer (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/066 - DJ Snake - Let Me Love You ft. Justin Bieber.mp3
+Jan 26 19:11 : update: added Music/International 2018/086 - Vance Joy - 'Riptide' Official Video.mp3
+Jan 26 19:11 : update: added Music/International 2018/025 - a-ha - Take On Me (Official Music Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/166 - Meghan Trainor - All About That Bass.mp3
+Jan 26 19:11 : update: added Music/International 2018/106 - Little Mix - Black Magic (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/011 - Katy Perry - Roar (Official).mp3
+Jan 26 19:11 : update: added Music/International 2018/019 - Andra - Sudamericana (feat. Pachanga) (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/150 - ZAYN - PILLOWTALK.mp3
+Jan 26 19:11 : update: added Music/International 2018/075 - Kygo - Firestone (Official Video) ft. Conrad Sewell.mp3
+Jan 26 19:11 : update: added Music/International 2018/135 - Coldplay - Viva La Vida.mp3
+Jan 26 19:11 : update: added Music/International 2018/084 - Mike Posner - I Took A Pill In Ibiza (Seeb Remix) (Explicit).mp3
+Jan 26 19:11 : update: added Music/International 2018/035 - Brynn Elliott - Might Not Like Me (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/013 - Ariana Grande - no tears left to cry.mp3
+Jan 26 19:11 : update: added Music/International 2018/032 - Taylor Swift - Shake It Off.mp3
+Jan 26 19:11 : update: added Music/International 2018/082 - Nelly - Dilemma ft. Kelly Rowland.mp3
+Jan 26 19:11 : update: added Music/International 2018/183 - Sia - Elastic Heart feat. Shia LaBeouf & Maddie Ziegler (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/111 - Rihanna - Take A Bow.mp3
+Jan 26 19:11 : update: added Music/International 2018/188 - Maroon 5 - Animals.mp3
+Jan 26 19:11 : update: added Music/International 2018/064 - Ellie Goulding - Love Me Like You Do (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/156 - Little Mix - Shout Out to My Ex (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/101 - Bruno Mars - Grenade [OFFICIAL VIDEO].mp3
+Jan 26 19:11 : update: added Music/International 2018/142 - Pitbull - Timber ft. Ke$ha.mp3
+Jan 26 19:11 : update: added Music/International 2018/065 - Shakira - Try Everything (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/123 - Lady Gaga - Poker Face.mp3
+Jan 26 19:11 : update: added Music/International 2018/179 - Dua Lipa - Blow Your Mind (Mwah) (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/170 - We The Kings - Sad Song (Lyric Video) ft. Elena Coats.mp3
+Jan 26 19:11 : update: added Music/International 2018/168 - Mariah Carey - My All.mp3
+Jan 26 19:11 : update: added Music/International 2018/028 - Calvin Harris, Dua Lipa - One Kiss (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/155 - The Pussycat Dolls - Buttons ft. Snoop Dogg.mp3
+Jan 26 19:11 : update: added Music/International 2018/163 - Calum Scott - Dancing On My Own.mp3
+Jan 26 19:11 : update: added Music/International 2018/023 - Calvin Harris - This Is What You Came For (Official Video) ft. Rihanna.mp3
+Jan 26 19:11 : update: added Music/International 2018/043 - Post Malone - Psycho ft. Ty Dolla $ign.mp3
+Jan 26 19:11 : update: added Music/International 2018/200 - Talk - Why Don't We [Official Music Video].mp3
+Jan 26 19:11 : update: added Music/International 2018/051 - Bebe Rexha - Meant to Be (feat. Florida Georgia Line) [Official Music Video].mp3
+Jan 26 19:11 : update: added Music/International 2018/092 - Fifth Harmony - Worth It ft. Kid Ink.mp3
+Jan 26 19:11 : update: added Music/International 2018/160 - Rihanna - Umbrella (Orange Version) ft. JAY-Z.mp3
+Jan 26 19:11 : update: added Music/International 2018/007 - Christina Perri - A Thousand Years [Official Music Video].mp3
+Jan 26 19:11 : update: added Music/International 2018/144 - Skrillex and Diplo - 'Where Are Ü Now' with Justin Bieber (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/191 - Bastille - Pompeii.mp3
+Jan 26 19:11 : update: added Music/International 2018/018 - Bryce Vine - Drew Barrymore [Official Music Video].mp3
+Jan 26 19:11 : update: added Music/International 2018/097 - Ellie Goulding - Burn.mp3
+Jan 26 19:11 : update: added Music/International 2018/058 - Martin Garrix & Bebe Rexha - In The Name Of Love (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/129 - Ariana Grande - One Last Time (Official).mp3
+Jan 26 19:11 : update: added Music/International 2018/138 - The Script - The Man Who Can’t Be Moved (Official Video).mp3
+Jan 26 19:11 : update: added Music/International 2018/104 - Burak Yeter - Tuesday ft. Danelle Sandoval.mp3
+Jan 26 19:11 : update: added Music/International 2018/131 - Duke Dumont - Ocean Drive.mp3
+Jan 26 19:11 : update: added Music/International 2018/061 - Jessie J, Ariana Grande, Nicki Minaj - Bang Bang ft. Ariana Grande, Nicki Minaj.mp3
+Jan 26 19:11 : update: added Music/International 2018/175 - Nick Jonas - Close ft. Tove Lo.mp3
+Jan 26 19:11 : update: added Music/NaFF - Tak Seindah Cinta Yang Semestinya _ Official Video Clip.mp3
+Jan 26 19:11 : update: added Music/Queen - Bohemian Rhapsody (Official Video)-fJ9rUzIMcZQ.mp3
+Jan 26 19:11 : update: added Music/Takkan Terganti - Marcell (Curved Soprano Saxophone Cover by Desmond Amos 4K Quality).mp3
+Jan 26 19:11 : update: added Music/naif - air dan api.mp3
+Jan 26 19:11 : update: added Music/DEEN ASSALAM - Cover by SABYAN.mp3
+Jan 26 19:13 : client: [1] closed
+Jan 26 19:14 : player: played "Music/lagu berrabe/11 - The Rain Feat. Endank Soekamti - Terlatih Patah Hati (Official Video).mp3"
+Jan 26 19:23 : client: [0] closed
+Jan 26 19:23 : player: played "Music/lagu berrabe/33 - NDARBOY GENK - BALUNGAN KERE ( Official Music Video ).mp3"
