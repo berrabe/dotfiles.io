@@ -1,3 +1,0 @@
-
-. <(ng completion --bash)
-
