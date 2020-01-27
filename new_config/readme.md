@@ -11,7 +11,7 @@
 | **Compositor** | compton |
 | **Notifier** | dunst |
 | **App Launcher** | rofi |
-| **Color Generator** | [pywal](https://github.com/dylanaraps/pywal/wiki) bug, use --vte|
+| **Color Generator** | [pywal](https://github.com/dylanaraps/pywal/wiki)|
 | **Icon** | [Papirus-Dark](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme#installation) |
 | **GTK Theme** | [Sierra-Dark](https://github.com/vinceliuice/Sierra-gtk-theme) |
 | **Mouse Theme** | [Capitaine-Cursor](https://launchpad.net/~dyatlov-igor/+archive/ubuntu/la-capitaine) |
@@ -21,3 +21,10 @@
 | **Image Viewer** | viewnior |
 | **System Info** | neofetch |
 | **Terminal Clock** | tty-clock |
+
+# pywal
+> pywal is used to change the color scheme of the terminal and also the color of rofi
+> see the configuration file automatically created by pywal at **.cache/wal/**
+> in pywal there is a bug if using xfce4-terminal, use pywal --vte -i image.png
+![pywal](Screenshot/wal.png)
+
