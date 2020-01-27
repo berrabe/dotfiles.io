@@ -1,0 +1,77 @@
+#!/bin/bash
+
+# WARNA
+NOCOLOR='\033[0m'
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+ORANGE='\033[0;33m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+LIGHTGRAY='\033[0;37m'
+DARKGRAY='\033[1;30m'
+LIGHTRED='\033[1;31m'
+LIGHTGREEN='\033[1;32m'
+YELLOW='\033[1;33m'
+LIGHTBLUE='\033[1;34m'
+LIGHTPURPLE='\033[1;35m'
+LIGHTCYAN='\033[1;36m'
+WHITE='\033[1;37m'
+clear
+
+
+if [ $# -eq 0 ]
+  then
+    echo -ne "\t== Created by berrabe ==\n\n"
+
+    echo " ==============="
+    echo " |  Help Page  |"
+    echo " ==============="
+
+    echo " [+] Availabe Mode"
+    echo -e "  |=> Mode 1 => Monitoring \n  |=> Mode 2 => Set Max CPU Freq \n  |=> Mode 3 => Show Current Max CPU freq \n"
+
+    echo " [+] Param"
+    echo -e "  |=> Mode 1 => [delay] \n  |=> Mode 2 => [max CPU freq] \n"
+    
+    echo " [+] Example"
+    echo -e "  |=> General => ./util [mode] [param] \n"
+
+    
+    exit
+
+elif [ $1 -eq 1 ]
+  then
+    while true
+	do
+		temp=$(sensors | egrep "Core [0-1]" | sed -r 's/.*:\s+[\+-]?(.*C)\s+.*/\1/' | tr '\n' ' ')
+		cpu=$(cat /proc/cpuinfo | grep -i "cpu MHz" | cut -b 12-20 | tr '\n' ' ')
+		memory=$(awk '/^Mem/ {print $3}' <(free -m))
+
+		echo -ne "${WHITE}[TEMP]${NOCOLOR}${LIGHTGREEN} $temp${NOCOLOR}\
+      ${WHITE}[FREQ]${NOCOLOR}${YELLOW} $cpu${NOCOLOR}\
+      ${WHITE}[MEM]${NOCOLOR}${LIGHTPURPLE} $memory${NOCOLOR}\\r"
+		sleep $2
+	done
+
+
+elif [ $1 -eq 2 ]
+  then
+  	for i in {0..1}
+	do
+	   echo $2 | sudo tee "/sys/devices/system/cpu/cpu$i/cpufreq/scaling_max_freq"
+	done
+
+
+elif [ $1 -eq 3 ]
+  then
+  	for i in {0..1}
+	do
+	   buffer=$(cat "/sys/devices/system/cpu/cpu$i/cpufreq/scaling_max_freq" | sed ':a;s/\B[0-9]\{3\}\>/,&/;ta')
+     echo "Max Freq Core $i = $buffer GHz"
+	done
+
+
+fi
+
+
