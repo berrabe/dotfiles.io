@@ -26,5 +26,6 @@
 > pywal is used to change the color scheme of the terminal and also the color of rofi
 > see the configuration file automatically created by pywal at **.cache/wal/**
 > in pywal there is a bug if using xfce4-terminal, use pywal --vte -i image.png
+
 ![pywal](Screenshot/wal.png)
 
