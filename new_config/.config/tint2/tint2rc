@@ -89,14 +89,14 @@ systray_icon_size = 0
 systray_icon_asb = 90 -100 100
 
 # Clock
-time1_font = Space Mono For Powerline Bold 9
+time1_font = SpaceMono Nerd Font Bold 9
 clock_align = center
-time1_format = %H:%M
+time1_format =%H:%M
 # time2_format = %a %d %b
 # time2_font = Sans 0
 clock_font_color = #ffffff 100
 clock_tooltip = 
-clock_padding = 15 0
+clock_padding = 1 2
 clock_background_id = 2
 clock_lclick_command = gsimplecal
 time1_timezone = 
@@ -138,7 +138,7 @@ execp_align = left
 execp_continuous = 1
 execp_interval = 
 execp_font_color = #ffffff 100
-execp_font = Space Mono For Powerline Bold 7
+execp_font = SpaceMono Nerd Font Bold 7
 # execp_font = rissole 8
 execp_padding = 10 10
 execp_background_id = 4

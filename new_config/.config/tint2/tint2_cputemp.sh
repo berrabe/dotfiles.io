@@ -26,7 +26,7 @@ while true
 		cpu=$(cat /proc/cpuinfo | grep -i "cpu MHz" | cut -b 12-20 | tr '\n' ' ')
 		memory=$(awk '/^Mem/ {print $3}' <(free -m))
 
-		echo "$temp | $cpu | $memory"
+		echo "龍 $temp  $cpu  $memory"
 		sleep $1
 	done
 
