@@ -173,7 +173,7 @@ bindsym $mod+o exec "notify-send -u normal '==== B E R R A B E ===='"
 
 
 #                                                                               I3-GAPS SETTING
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 0
 gaps inner 50
 gaps outer 5
 #                                                                               DISABLE FOCUS CONTAINER WHEN MOVE CURSOR
@@ -188,10 +188,11 @@ exec --no-startup-id nm-applet
 #exec --no-startup-id xautolock -time 5 -locker i3lock &
 #exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+exec --no-startup-id dunst
 exec --no-startup-id tint2
 exec --no-startup-id pnmixer
-exec --no-startup-id compton
-exec --no-startup-id sleep 5 && notify-send -u low -t 10000 'Welcome Again berrabe' && xrandr --output LVDS-1 --brightness 0.5 && sudo su -c "echo 11936 >/sys/class/backlight/intel_backlight/brightness"
+exec --no-startup-id picom
+exec --no-startup-id sleep 3 && notify-send -u low -t 10000 'Welcome Again berrabe' && xrandr --output LVDS-1 --brightness 0.5 && sudo su -c "echo 11936 >/sys/class/backlight/intel_backlight/brightness && util 2 1600000 && sudo /opt/phctool/./phctray.sh"
 # exec --no-startup-id python $HOME/.config/tint2/python.py --core
 
 ################################################################################################################
