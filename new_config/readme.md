@@ -8,7 +8,7 @@
 | --- | --- |
 | **WM** |  [i3-gaps](https://github.com/Airblader/i3/wiki/Installation) |
 | **Panel** | tint2 |
-| **Compositor** | compton / [compton-tryone-kawasake-blur](Programs/compton)  |
+| **Compositor** | compton / [compton-tryone-kawasake-blur](Programs/compton). [github](https://github.com/GabrielTenma/compton-kawase-blur) / [picom](Programs/picom7.5), [github](https://github.com/yshui/picom)  |
 | **Notifier** | dunst |
 | **App Launcher** | rofi |
 | **Color Generator** | [pywal](https://github.com/dylanaraps/pywal/wiki)|
@@ -23,9 +23,9 @@
 | **Terminal Clock** | tty-clock |
 
 # pywal
-> pywal is used to change the color scheme of the terminal and also the color of rofi
-> see the configuration file automatically created by pywal at **.cache/wal/**
-> in pywal there is a bug if using xfce4-terminal, use pywal --vte -i image.png
+> pywal is used to change the color scheme of the terminal and also the color of rofi  <br />
+> see the configuration file automatically created by pywal at **.cache/wal/**  <br />
+> in pywal there is a bug if using xfce4-terminal, use pywal --vte -i image.png  <br />
 
 ![pywal](Screenshot/wal.png)
 
