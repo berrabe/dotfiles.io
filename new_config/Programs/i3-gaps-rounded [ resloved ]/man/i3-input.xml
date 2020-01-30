@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<refentry>
+<refmeta>
+<refentrytitle>i3-input</refentrytitle>
+<manvolnum>1</manvolnum>
+<refmiscinfo class="source">i3</refmiscinfo>
+<refmiscinfo class="version">4.16.1</refmiscinfo>
+<refmiscinfo class="manual">i3 Manual</refmiscinfo>
+</refmeta>
+<refnamediv>
+  <refname>i3-input</refname>
+  <refpurpose>interactively take a command for i3 window manager</refpurpose>
+</refnamediv>
+<refsynopsisdiv id="_synopsis">
+<simpara>i3-input [-s &lt;socket&gt;] [-F &lt;format&gt;] [-l &lt;limit&gt;] [-P &lt;prompt&gt;] [-f &lt;font&gt;] [-v]</simpara>
+</refsynopsisdiv>
+<refsect1 id="_description">
+<title>DESCRIPTION</title>
+<simpara>i3-input is a tool to take commands (or parts of a command) composed by
+the user, and send it/them to i3. This is useful, for example, for the
+mark/goto command.</simpara>
+<simpara>You can press Escape to close i3-input without sending any commands.</simpara>
+</refsect1>
+<refsect1 id="_options">
+<title>OPTIONS</title>
+<variablelist>
+<varlistentry>
+<term>
+-s &lt;socket&gt;
+</term>
+<listitem>
+<simpara>
+Specify the path to the i3 IPC socket (it should not be necessary to use this
+option, i3-input will figure out the path on its own).
+</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>
+-F &lt;format&gt;
+</term>
+<listitem>
+<simpara>
+Every occurrence of "%s" in the &lt;format&gt; string is replaced by the user input,
+and the result is sent to i3 as a command. Default value is "%s".
+</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>
+-l &lt;limit&gt;
+</term>
+<listitem>
+<simpara>
+Set the maximum allowed length of the user input to &lt;limit&gt; characters.
+i3-input will automatically issue the command when the user input reaches that
+length.
+</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>
+-P &lt;prompt&gt;
+</term>
+<listitem>
+<simpara>
+Display the &lt;prompt&gt; string in front of user input text field.
+The prompt string is not included in the user input/command.
+</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>
+-f &lt;font&gt;
+</term>
+<listitem>
+<simpara>
+Use the specified X11 core font (use <literal>xfontsel</literal> to chose a font).
+</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>
+-v
+</term>
+<listitem>
+<simpara>
+Show version and exit.
+</simpara>
+</listitem>
+</varlistentry>
+</variablelist>
+</refsect1>
+<refsect1 id="_examples">
+<title>EXAMPLES</title>
+<simpara>Mark a container with a single character:</simpara>
+<screen>i3-input -F 'mark %s' -l 1 -P 'Mark: '</screen>
+<simpara>Go to the container marked with above example:</simpara>
+<screen>i3-input -F '[con_mark="%s"] focus' -l 1 -P 'Go to: '</screen>
+</refsect1>
+<refsect1 id="_environment">
+<title>ENVIRONMENT</title>
+<refsect2 id="_i3sock">
+<title>I3SOCK</title>
+<simpara>i3-input handles the different sources of socket paths in the following order:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+I3SOCK environment variable
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+I3SOCK gets overwritten by the -s parameter, if specified
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+if neither are available, i3-input reads the socket path from the X11
+  property, which is the recommended way
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+if everything fails, i3-input tries <literal>/tmp/i3-ipc.sock</literal>
+</simpara>
+</listitem>
+</itemizedlist>
+<simpara>The socket path is necessary to connect to i3 and actually issue the command.</simpara>
+</refsect2>
+</refsect1>
+<refsect1 id="_see_also">
+<title>SEE ALSO</title>
+<simpara>i3(1)</simpara>
+</refsect1>
+<refsect1 id="_author">
+<title>AUTHOR</title>
+<simpara>Michael Stapelberg and contributors</simpara>
+</refsect1>
+</refentry>

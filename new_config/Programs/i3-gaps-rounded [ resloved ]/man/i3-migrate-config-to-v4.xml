@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<refentry>
+<refmeta>
+<refentrytitle>i3-migrate-config-to-v4</refentrytitle>
+<manvolnum>1</manvolnum>
+<refmiscinfo class="source">i3</refmiscinfo>
+<refmiscinfo class="version">4.16.1</refmiscinfo>
+<refmiscinfo class="manual">i3 Manual</refmiscinfo>
+</refmeta>
+<refnamediv>
+  <refname>i3-migrate-config-to-v4</refname>
+  <refpurpose>migrates your i3 config file</refpurpose>
+</refnamediv>
+<refsynopsisdiv id="_synopsis">
+<screen>mv ~/.i3/config ~/.i3/old.config
+i3-migrate-config-to-v4 ~/.i3/old.config &gt; ~/.i3/config</screen>
+</refsynopsisdiv>
+<refsect1 id="_description">
+<title>DESCRIPTION</title>
+<simpara>i3-migrate-config-to-v4 is a Perl script which migrates your old (&lt; version 4)
+configuration files to a version 4 config file. The most significant changes
+are the new commands (see the release notes).</simpara>
+<simpara>This script will automatically be run by i3 when it detects an old config file.
+Please migrate your config file as soon as possible. We plan to include this
+script in all i3 release until 2012-08-01. Afterwards, old config files will no
+longer be supported.</simpara>
+</refsect1>
+<refsect1 id="_see_also">
+<title>SEE ALSO</title>
+<simpara>i3(1)</simpara>
+</refsect1>
+<refsect1 id="_author">
+<title>AUTHOR</title>
+<simpara>Michael Stapelberg and contributors</simpara>
+</refsect1>
+</refentry>

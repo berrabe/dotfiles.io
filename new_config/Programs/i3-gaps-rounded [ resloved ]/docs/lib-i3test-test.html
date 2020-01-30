@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" href="/favicon.png">
+<meta charset="utf-8">
+<meta name="generator" content="Pod::Simple::HTML">
+<meta name="description" content="i3 Perl documentation">
+<link rel="stylesheet" href="https://i3wm.org/css/style.css" type="text/css" />
+<style type="text/css">
+.pod pre {
+    background: #333;
+    border: 1px solid #555;
+    border-left: 5px solid #555;
+    padding: 0.5em;
+    padding-left: 0;
+    padding-right: 0.5em;
+    white-space: pre;
+    color: white;
+}
+
+.pod ul {
+    list-style-type: none;
+}
+.pod li {
+    margin-bottom: 0 !important;
+}
+
+tt {
+    font-family: 'Droid Sans Mono', sans-serif;
+    font-size: inherit;
+}
+
+.pod h1 a, .pod h2 a, .pod h3 a, .pod h4 a {
+    text-decoration: none;
+    color: white;
+}
+</style>
+<title>
+i3test::Test</title>
+</head>
+<body>
+
+        <div id="main">
+            <a href="/"><h1 id="title">i3 - improved tiling WM</h1></a>
+			<ul id="nav">
+				<li><a style="border-bottom: 2px solid #fff" href="/docs">Docs</a></li>
+				<li><a href="/screenshots">Screens</a></li>
+				<li><a href="https://www.reddit.com/r/i3wm/">FAQ</a></li>
+				<li><a href="/contact">Contact</a></li>
+				<li><a href="https://bugs.i3wm.org/">Bugs</a></li>
+			</ul>
+	<br style="clear: both">
+<div id="content" class="pod">
+<h1>i3 Perl documentation</h1>
+
+<a name='___top' class='dummyTopAnchor' ></a>
+
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#EXPORT'>EXPORT</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#is_num_children(%24workspace%2C_%24expected%2C_%24test_name)'>is_num_children($workspace, $expected, $test_name)</a>
+    <li class='indexItem indexItem2'><a href='#is_num_fullscreen(%24workspace%2C_%24expected%2C_%24test_name)'>is_num_fullscreen($workspace, $expected, $test_name)</a>
+    <li class='indexItem indexItem2'><a href='#cmp_float(%24a%2C_%24b)'>cmp_float($a, $b)</a>
+    <li class='indexItem indexItem2'><a href='#does_i3_live'>does_i3_live</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+</ul>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME</a></h1>
+
+<p>i3test::Test - Additional test instructions for use in i3 testcases</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS</a></h1>
+<pre><tt>  use i3test;
+
+  my $ws = fresh_workspace;
+  is_num_children($ws, 0, &#39;no containers on this workspace yet&#39;);
+  cmd &#39;open&#39;;
+  is_num_children($ws, 1, &#39;one container after &#34;open&#34;&#39;);
+
+  done_testing;</tt></pre>
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION</a></h1>
+
+<p>This module provides convenience methods for i3 testcases. If you notice that a certain pattern is present in 5 or more test cases, it should most likely be moved into this module.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXPORT"
+>EXPORT</a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="is_num_children($workspace,_$expected,_$test_name)"
+>is_num_children($workspace, $expected, $test_name)</a></h2>
+
+<p>Gets the number of children on the given workspace and verifies that they match the expected amount of children.</p>
+<pre><tt>  is_num_children(&#39;1&#39;, 0, &#39;no containers on workspace 1 at startup&#39;);</tt></pre>
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="is_num_fullscreen($workspace,_$expected,_$test_name)"
+>is_num_fullscreen($workspace, $expected, $test_name)</a></h2>
+
+<p>Gets the number of fullscreen containers on the given workspace and verifies that they match the expected amount.</p>
+<pre><tt>  is_num_fullscreen(&#39;1&#39;, 0, &#39;no fullscreen containers on workspace 1&#39;);</tt></pre>
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="cmp_float($a,_$b)"
+>cmp_float($a, $b)</a></h2>
+
+<p>Compares floating point numbers <code>$a</code> and <code>$b</code> and returns true if they differ less then 1e-6.</p>
+<pre><tt>  $tmp = fresh_workspace;
+
+  open_window for (1..4);
+
+  cmd &#39;resize grow width 10 px or 25 ppt&#39;;
+
+  ($nodes, $focus) = get_ws_content($tmp);
+  ok(cmp_float($nodes-&#62;[0]-&#62;{percent}, 0.166666666666667), &#39;first window got 16%&#39;);
+  ok(cmp_float($nodes-&#62;[1]-&#62;{percent}, 0.166666666666667), &#39;second window got 16%&#39;);
+  ok(cmp_float($nodes-&#62;[2]-&#62;{percent}, 0.166666666666667), &#39;third window got 16%&#39;);
+  ok(cmp_float($nodes-&#62;[3]-&#62;{percent}, 0.50), &#39;fourth window got 50%&#39;);</tt></pre>
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="does_i3_live"
+>does_i3_live</a></h2>
+
+<p>Returns true if the layout tree can still be received from i3.</p>
+<pre><tt>  # i3 used to crash on invalid commands in revision X
+  cmd &#39;invalid command&#39;;
+  does_i3_live;</tt></pre>
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR</a></h1>
+
+<p>Michael Stapelberg &#60;michael@i3wm.org&#62;</p>
+
+<!-- end doc -->
+
+</body></html>

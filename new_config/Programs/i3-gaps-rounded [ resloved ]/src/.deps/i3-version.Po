@@ -1,0 +1,6 @@
+src/i3-version.o: ../../i3/src/version.c /usr/include/stdc-predef.h \
+ config.h
+
+/usr/include/stdc-predef.h:
+
+config.h:

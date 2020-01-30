@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<refentry>
+<refmeta>
+<refentrytitle>i3-dump-log</refentrytitle>
+<manvolnum>1</manvolnum>
+<refmiscinfo class="source">i3</refmiscinfo>
+<refmiscinfo class="version">4.16.1</refmiscinfo>
+<refmiscinfo class="manual">i3 Manual</refmiscinfo>
+</refmeta>
+<refnamediv>
+  <refname>i3-dump-log</refname>
+  <refpurpose>dumps the i3 SHM log</refpurpose>
+</refnamediv>
+<refsynopsisdiv id="_synopsis">
+<simpara>i3-dump-log [-s &lt;socketpath&gt;] [-f]</simpara>
+</refsynopsisdiv>
+<refsect1 id="_description">
+<title>DESCRIPTION</title>
+<simpara>Debug versions of i3 automatically use 1% of your RAM (but 25 MiB max) to store
+full debug log output. This is extremely helpful for bugreports and
+figuring out what is going on, without permanently logging to a file.</simpara>
+<simpara>With i3-dump-log, you can dump the SHM log to stdout.</simpara>
+<simpara>The -f flag works like tail -f, i.e. the process does not terminate after
+dumping the log, but prints new lines as they appear.</simpara>
+</refsect1>
+<refsect1 id="_example">
+<title>EXAMPLE</title>
+<simpara>i3-dump-log | gzip -9 &gt; /tmp/i3-log.gz</simpara>
+</refsect1>
+<refsect1 id="_see_also">
+<title>SEE ALSO</title>
+<simpara>i3(1)</simpara>
+</refsect1>
+<refsect1 id="_author">
+<title>AUTHOR</title>
+<simpara>Michael Stapelberg and contributors</simpara>
+</refsect1>
+</refentry>

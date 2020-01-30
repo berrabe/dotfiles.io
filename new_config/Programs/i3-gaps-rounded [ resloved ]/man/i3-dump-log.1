@@ -1,0 +1,50 @@
+'\" t
+.\"     Title: i3-dump-log
+.\"    Author: [see the "AUTHOR" section]
+.\" Generator: DocBook XSL Stylesheets v1.79.1 <http://docbook.sf.net/>
+.\"      Date: 01/30/2020
+.\"    Manual: i3 Manual
+.\"    Source: i3 4.16.1
+.\"  Language: English
+.\"
+.TH "I3\-DUMP\-LOG" "1" "01/30/2020" "i3 4\&.16\&.1" "i3 Manual"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+i3-dump-log \- dumps the i3 SHM log
+.SH "SYNOPSIS"
+.sp
+i3\-dump\-log [\-s <socketpath>] [\-f]
+.SH "DESCRIPTION"
+.sp
+Debug versions of i3 automatically use 1% of your RAM (but 25 MiB max) to store full debug log output\&. This is extremely helpful for bugreports and figuring out what is going on, without permanently logging to a file\&.
+.sp
+With i3\-dump\-log, you can dump the SHM log to stdout\&.
+.sp
+The \-f flag works like tail \-f, i\&.e\&. the process does not terminate after dumping the log, but prints new lines as they appear\&.
+.SH "EXAMPLE"
+.sp
+i3\-dump\-log | gzip \-9 > /tmp/i3\-log\&.gz
+.SH "SEE ALSO"
+.sp
+i3(1)
+.SH "AUTHOR"
+.sp
+Michael Stapelberg and contributors

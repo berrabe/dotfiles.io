@@ -1,0 +1,164 @@
+'\" t
+.\"     Title: i3-msg
+.\"    Author: [see the "AUTHOR" section]
+.\" Generator: DocBook XSL Stylesheets v1.79.1 <http://docbook.sf.net/>
+.\"      Date: 01/30/2020
+.\"    Manual: i3 Manual
+.\"    Source: i3 4.16.1
+.\"  Language: English
+.\"
+.TH "I3\-MSG" "1" "01/30/2020" "i3 4\&.16\&.1" "i3 Manual"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+i3-msg \- send messages to i3 window manager
+.SH "SYNOPSIS"
+.sp
+i3\-msg [\-q] [\-v] [\-h] [\-s socket] [\-t type] [message]
+.SH "OPTIONS"
+.PP
+\fB\-q, \-\-quiet\fR
+.RS 4
+Only send ipc message and suppress the output of the response\&.
+.RE
+.PP
+\fB\-v, \-\-version\fR
+.RS 4
+Display version number and exit\&.
+.RE
+.PP
+\fB\-h, \-\-help\fR
+.RS 4
+Display a short help\-message and exit\&.
+.RE
+.PP
+\fB\-s, \-\-socket\fR \fIsock_path\fR
+.RS 4
+i3\-msg will use the environment variable I3SOCK or the socket path given here\&. If both fail, it will try to get the socket information from the root window and then try /tmp/i3\-ipc\&.sock before exiting with an error\&.
+.RE
+.PP
+\fB\-t\fR \fItype\fR
+.RS 4
+Send ipc message, see below\&. This option defaults to "command"\&.
+.RE
+.PP
+\fB\-m\fR, \fB\-\-monitor\fR
+.RS 4
+Instead of exiting right after receiving the first subscribed event, wait indefinitely for all of them\&. Can only be used with "\-t subscribe"\&. See the "subscribe" IPC message type below for details\&.
+.RE
+.PP
+\fBmessage\fR
+.RS 4
+Send ipc message, see below\&.
+.RE
+.SH "IPC MESSAGE TYPES"
+.PP
+command
+.RS 4
+The payload of the message is a command for i3 (like the commands you can bind to keys in the configuration file) and will be executed directly after receiving it\&.
+.RE
+.PP
+get_workspaces
+.RS 4
+Gets the current workspaces\&. The reply will be a JSON\-encoded list of workspaces\&.
+.RE
+.PP
+get_outputs
+.RS 4
+Gets the current outputs\&. The reply will be a JSON\-encoded list of outputs (see the reply section of docs/ipc, e\&.g\&. at
+\m[blue]\fBhttps://i3wm\&.org/docs/ipc\&.html#_receiving_replies_from_i3\fR\m[])\&.
+.RE
+.PP
+get_tree
+.RS 4
+Gets the layout tree\&. i3 uses a tree as data structure which includes every container\&. The reply will be the JSON\-encoded tree\&.
+.RE
+.PP
+get_marks
+.RS 4
+Gets a list of marks (identifiers for containers to easily jump to them later)\&. The reply will be a JSON\-encoded list of window marks\&.
+.RE
+.PP
+get_bar_config
+.RS 4
+Gets the configuration (as JSON map) of the workspace bar with the given ID\&. If no ID is provided, an array with all configured bar IDs is returned instead\&.
+.RE
+.PP
+get_binding_modes
+.RS 4
+Gets a list of configured binding modes\&.
+.RE
+.PP
+get_version
+.RS 4
+Gets the version of i3\&. The reply will be a JSON\-encoded dictionary with the major, minor, patch and human\-readable version\&.
+.RE
+.PP
+get_config
+.RS 4
+Gets the currently loaded i3 configuration\&.
+.RE
+.PP
+send_tick
+.RS 4
+Sends a tick to all IPC connections which subscribe to tick events\&.
+.RE
+.PP
+subscribe
+.RS 4
+The payload of the message describes the events to subscribe to\&. Upon reception, each event will be dumped as a JSON\-encoded object\&. See the \-m option for continuous monitoring\&.
+.RE
+.SH "DESCRIPTION"
+.sp
+i3\-msg is a sample implementation for a client using the unix socket IPC interface to i3\&.
+.SS "Exit status:"
+.sp
+0: if OK, 1: if invalid syntax or unable to connect to ipc\-socket 2: if i3 returned an error processing your command(s)
+.SH "EXAMPLES"
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+# Use 1\-px border for current client
+i3\-msg "border 1pixel"
+
+# You can leave out the quotes
+i3\-msg border normal
+
+# Dump the layout tree
+i3\-msg \-t get_tree
+
+# Monitor window changes
+i3\-msg \-t subscribe \-m \*(Aq[ "window" ]\*(Aq
+.fi
+.if n \{\
+.RE
+.\}
+.SH "ENVIRONMENT"
+.SS "I3SOCK"
+.sp
+If no ipc\-socket is specified on the commandline, this variable is used to determine the path, at which the unix domain socket is expected, on which to connect to i3\&.
+.SH "SEE ALSO"
+.sp
+i3(1)
+.SH "AUTHOR"
+.sp
+Michael Stapelberg and contributors
