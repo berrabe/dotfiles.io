@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>PHCtool documentation</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div id="topframe">
+<p id="title">Titel</p>
+</div>
+<div id="topstripe">
+	<a id="backlink" href="../index.html">back</a>
+</div>
+<div id="content">
+sinnlosesgeschwafel
+
+<div class="embedimg">
+	<img src="images/cpuinfo.png">
+	<p>Bildname</p>
+</div>
+</div>
+
+</body>
+</html>

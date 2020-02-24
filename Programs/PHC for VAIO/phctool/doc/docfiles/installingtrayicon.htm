@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>PHCtool documentation</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div id="topframe">
+<p id="title">installing the Tray icon</p>
+</div>
+<div id="topstripe">
+	<a id="backlink" href="../index.html">back</a></a>
+</div>
+<div id="content">
+The PHCTool tray icon sits in your systems panel and offers you the following things:
+
+<ul class="ulbull">
+<li>open PHCTool by clicking on this icon</li>
+<li>reload your values each time the Icon is loaded (normally at the same time your Desktop is loaded)</li>
+</ul>
+
+<div class="embedimg">
+	<img src="images/trayicon.png">
+	<p>the PHCTool tray icon (in a Gnome Panel)</p>
+</div>
+
+To add the PHCTool tray icon to Gnome autostart function open your session settings.
+
+<div class="embedimg">
+	<img src="images/sessions_before.png">
+	<p>the Gnome Session</p>
+</div>
+
+Click "add" to add a new program.
+As Name you can enter what ever you want.<br>
+The command line is the complete patch to PHCTool and the file name "pgctray.sh".<br>
+The comment is optional.
+<div class="embedimg">
+	<img src="images/session_add.png">
+	<p>Adding a new Program to the autostarter</p>
+</div>
+
+After clicking "ok" the new entry should be visible.
+<div class="embedimg">
+	<img src="images/sessions_after.png">
+	<p>the PHCTool tray with PHCTool added</p>
+</div>
+
+If everything is okay you'll see the icon next time you log on.<br>
+To manually call the Tray icon (for bug finding for example) you just need to call the phctray.sh from a command box.<br><br>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>PHCtool documentation</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div id="topframe">
+<p id="title">Throttling tab</p>
+</div>
+<div id="topstripe">
+	<a id="backlink" href="../index.html">back</a>
+</div>
+<div id="content">
+Throttling a processor means to force the processor to stay in a deeper idle/sleep state for a while.<br><br>
+This can be useful if your system is just under light load.<br>Tasks will be hold up until the cpu is waken up again.<br>
+<br>
+This throttling is independent from the systems emergency throttling that is used if your processor gets too hot.<br>
+<br>
+Please note that you should try throttling the first time if there is no danger that you'll lose data (like an unsaved document, etc).
+On some systems the highest throttling state can freeze the system.
+<br><br>
+
+
+<div class="embedimg">
+	<img src="images/throttling.png">
+	<p>the Throttling tab</p>
+</div>
+</div>
+
+</body>
+</html>

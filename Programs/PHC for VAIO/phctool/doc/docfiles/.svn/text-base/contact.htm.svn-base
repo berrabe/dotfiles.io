@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>PHCtool documentation</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div id="topframe">
+<p id="title">Contact</p>
+</div>
+<div id="topstripe">
+	<a id="backlink" href="../index.html">back</a>
+</div>
+<div id="content">
+
+You can contact the author of PHCTool via IRC.<br>
+Go to the linux-phc <a href="http://www.dedigentoo.org/trac/linux-phc/" target="_blank">website</a> to get the IRC server and channel name.
+
+
+</div>
+
+</body>
+</html>

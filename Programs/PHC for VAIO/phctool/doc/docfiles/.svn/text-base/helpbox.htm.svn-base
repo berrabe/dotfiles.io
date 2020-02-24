@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>PHCtool documentation</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div id="topframe">
+<p id="title">in-program HelpBox</p>
+</div>
+<div id="topstripe">
+	<a id="backlink" href="../index.html">back</a>
+</div>
+<div id="content">
+For a quick in-program help PHCTool offers you a help button that will display a small help note for
+the tab you are currently on.
+
+<div class="embedimg">
+	<img src="images/helpbutton.png">
+	<p>the in-program help button</p>
+</div>
+
+Just hit the button and it'll open a small help box.
+<div class="embedimg">
+	<img src="images/helpbox.png">
+	<p>the HelpBox</p>
+</div>
+</div>
+
+</body>
+</html>

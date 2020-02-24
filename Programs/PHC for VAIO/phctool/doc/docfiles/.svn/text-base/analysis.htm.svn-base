@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>PHCtool documentation</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div id="topframe">
+<p id="title">Analysis tab</p>
+</div>
+<div id="topstripe">
+	<a id="backlink" href="../index.html">back</a>
+</div>
+<div id="content">
+By using linux-phc you can not be sure if the values you set up really are used by the processor.<br>
+This may have many reasons and you can not force anything.<br>
+To check what VIDs currently REALLY are used you can use this analsysis tab.<br>
+<br>
+You'll have to load the kernel module "msr" first (#modprobe msr).<br>
+After that just click the "Refresh"-Button. The values displayed are valid for the frequency step your processor currently is in.
+<br><br>
+To check it for other frequencies just force a frequency. You can use Gnome's "CPU Frequency Scaling Monitor" appet or what ever you like.
+
+
+<div class="embedimg">
+	<img src="images/analysis.png">
+	<p>the Analysis tab</p>
+</div>
+</div>
+
+</body>
+</html>

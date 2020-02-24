@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>PHCtool documentation</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div id="topframe">
+<p id="title">install PHCTool</p>
+</div>
+<div id="topstripe">
+	<a id="backlink" href="../index.html">back</a>
+</div>
+<div id="content">
+PHCtool brings a simple installation script. This script is doing the following things:
+
+<ul class="ulbull">
+<li>create a new group using groupadd</li>
+<li>adding this group to /etc/sudoers</li>
+<li>setting permissions to the PHCTool files</li>
+</ul>
+
+You'll be asked for each task if you want the installer to perform it.<br>
+If you don't wish to use the installer or if the installer doesn't work for you (in that case please contact me) 
+you can start PHCTool by calling phctool.sh as root.<br>
+PHCTool needs to be started as root because the SysFS Interface of acpi and linux-phc are writable by root only.<br>
+<br>
+To install PHCTool using the installer;
+<ul class="ulbull">
+<li>Copy all files to the location you want to store it</li>
+<li>Run install.sh as root within a command line</li>
+<li>Follow the installers instructions</li>
+</ul>
+After finishing the installer you have to
+<ul class="ulbull">
+<li>add each user who can use PHCTool to the new group (installer default: 'phctool')</li>
+<li>logout and re-login to have the group changes take effect.</li>
+</ul>
+
+</div>
+
+</body>
+</html>

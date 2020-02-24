@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>PHCtool documentation</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div id="topframe">
+<p id="title">Author's page</p>
+</div>
+<div id="topstripe">
+	<a id="backlink" href="../index.html">back</a>
+</div>
+<div id="content">
+The author of PHCTool is Colin Michael.<br>
+He is an IT Specialist with special interest in computer security.<br>
+<br>
+Colin started writing PHCTool shortly after stumbling about linux-phc.<br>
+He wished to have an easy GUI to set up linux-phc values and a tool that automatically reloads the values on reboot.<br>
+<br><br>
+Colin wants to say "Thank You" to all people helping with PHCTool, finding bugs, translation errors and what ever else.<br>
+Special thanks goes to Whoopie. He diggs deep in the code to find errors and is giving good advices.
+</div>
+
+</body>
+</html>

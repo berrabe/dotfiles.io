@@ -1,0 +1,125 @@
+This is the Changelog file for PHCtool
+
+0.5.2-2
+===============================
+	Added voltage calculation or Penryn Cores (thanks 7oby)
+
+0.5.2
+===============================
+	Changed phctool.sh script - uses gksu if available (thanks tawk)
+
+0.5.1
+===============================
+	Forced ordering of frequencies / VIDs. This fixes an reverse ordering using the speedstep-centrino patches
+
+0.5
+===============================
+	Changed GUI design to make the raising amount of displayed data arranged clearly
+	Analysis Tab uses a TreeView now and is showing Voltages next to the VIDs
+	VIDs now can be set from 0 to default of each speed step to prevent setting wrong values 
+		(linux-phc never would use them, but it's for your good feelings)
+	Voltages Tab is showing voltages next to the vids
+	Added a theme-file - a first step to make phctool themable in future versions
+	Replaced the "inline help" with a popup window to save space in the GUI
+	Created a new installation script
+	Removed the SUID-wrapper - now we are using "sudo"
+	A lot of code reworks and cleanups
+	Updated documentation
+	More data on Info-Tab: CPU Type (Vendor, Model, Stepping, etc), linux-phc version, 
+		availibility of an calculation formula for your cpu
+	Added a voltage calculation module. It calculates the voltages if your CPU is known.
+
+0.4.1
+===============================
+	fixed up problems if system does not support throttling control but proc-files are available
+	updated documentation to inform the user that python-gnome2-extra is needed for the trayicon
+
+0.4pre2
+===============================
+	little typo fixes
+	some text in the documentation corrected (seems that i accidently deleted a line)
+	added some space between icons and text in GUI (wished by users)
+	tray icon menu now appears on right-click, left klick opens PHCtool directly
+	changed installer to set permission to 755 instead 777
+
+0.4pre1
+===============================
+	fixed installer
+	added tray icon tool
+	added tray icon loading script
+	updated installer to 'install' the new components
+	updated documentation
+	updated GUI
+	made GUI some more pixels wider
+
+
+0.3pre4
+===============================
+	added forgotten "!" on the first line of phctool.sh
+	some typo fixes
+	fixed bug in cpuinfos.py that stores a boolean value to a wrong place if phc is not available
+	code cleanup and some few additional code documentations
+	little change to GUI
+	reworked sideimage
+	
+	could become release version
+
+0.3pre3
+===============================
+	made GUI 50px wider
+	fixed the issue that PHCtool doesnt show correct VIDs if there where some different values to restore
+	small code cleanups
+
+0.3pre2
+===============================
+	added shellscript that enables you calling phctool from a foreign directory
+	if there is no phcstore.phc, PHCtool will create one even if there is no data to story
+	many typo fixes
+	updated documentation
+
+
+0.3pre1
+===============================
+	added changelog :)
+	many buxfixes
+	even more fixes
+	code cleanups
+	throttling now possible with singlecore cpus
+	added msr information gathering
+	added Analysis Tab, you can now verify weather VIDs are accepted or not
+	changed CPUinfo Tab now showing if PHC or MSR is available and available freq-steps
+	even more coded extracted from basefile to modules
+	rewritten cpuinfo-module
+	changed subdirectories to make it more cleaner
+	phcstore - file now stored in users home directory
+	changes in the "background" - function
+	update documentation
+	
+
+0.2pre2
+===============================
+	some fixes and cleanups
+
+
+0.2pre1
+===============================
+	rewriting GUI - now using GTK instead of WX
+	removed tray icon
+	add throttling control
+	add text-fields to display quick informations about the function (TAB)
+	ability to set up whitch values should be restored (VIDs, throttles, nothin or both)
+	divided code into several modules
+	cleanups
+	moved many files into subdirectories
+	added a globals-file containing version information
+	added HTML documentationv with screenshots
+
+	GPL'ed
+		
+
+0.1pre1
+===============================
+Initial release
+	read and write PHC Values
+	display some few CPU Informations
+	comes with a simple installation script

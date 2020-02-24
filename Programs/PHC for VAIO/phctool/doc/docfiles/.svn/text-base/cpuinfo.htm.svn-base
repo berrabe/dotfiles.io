@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>PHCtool documentation</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div id="topframe">
+<p id="title">CPUInfo tab</p>
+</div>
+<div id="topstripe">
+	<a id="backlink" href="../index.html">back</a>
+</div>
+<div id="content">
+This is the CPUInfo tab.<br>
+It displays the most important data about your processors(s) in
+context of linux-phc.<br>
+Most data is collected from /proc/cpuinfo.<br><br>
+If there are more than one CPU found in your system you can select it with the tabs on the left side.<br><br>
+<ul>
+<li>The first line "Name" displays the name of your cpu.<br><br></li>
+<li>The second line displays the cpu identification numbers. Those numbers will later be used to identify the cpu and select the matching 
+voltage calculation formula.<br><br></li>
+<li>The third line shows all frequency steps of the cpu in MHz.<br><br></li>
+<li>Next line displays the availibility of cpu throttling.<br><br></li>
+<li>On the line "PHC extensions" you can see if the linux-phc interface is detected. If not double-check if you patched your modules and load the correct one.<br><br></li>
+<li>"PHC version" displays the version of linux-phc found on your system.<br><br></li>
+<li>The next line "MSR extensions" informs you if the MSR interface has been found. MSR is not neccessary to use PHCtool but is needed if you wish tu use the Analysis tab.<br><br></li>
+<li>The last line "Vcc calculation" informs you if your processor is recognized and PHCtool knows a matching formula for calculating voltages.<br><br></li>
+<li>If your CPU is not detected you still can use PHCtool but PHCtool won't display voltages - but thats for human readability only.<br><br></li>
+</ul>
+<div class="embedimg">
+	<img src="images/cpuinfo.png">
+	<p>the CPUInfo tab</p>
+</div>
+</div>
+
+</body>
+</html>

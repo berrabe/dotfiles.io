@@ -1,0 +1,31 @@
+8
+
+dir
+6
+https://phctool.googlecode.com/svn/trunk/doc
+https://phctool.googlecode.com/svn
+
+
+
+2007-10-16T15:00:25.502803Z
+6
+linux-phc@o2online.de
+
+
+svn:special svn:externals svn:needs-lock
+
+docfiles
+dir
+
+index.htm
+file
+
+
+
+
+2007-09-23T13:39:19.000000Z
+ddf636308b52e36c074e51de06a9528f
+2007-10-16T15:00:25.502803Z
+6
+linux-phc@o2online.de
+

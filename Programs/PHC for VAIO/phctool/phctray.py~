@@ -1,0 +1,80 @@
+#!/usr/bin/env python
+
+import pygtk
+pygtk.require("2.0")
+import gtk, subprocess, sys
+#import egg.trayicon
+
+
+
+
+def exit_applet( *args ):
+	gtk.main_quit();
+	return;
+
+def run_phctool( *args ):
+	cmd=[sys.path[0]+"/phctool.sh"]		##command
+	subprocess.Popen(cmd, shell=False)	##call the affinated programm
+
+def applet_face_click( window, event, *data ):
+	if event.button == 3 :
+		menu.popup( None, None, None, 0, event.time );
+	elif event.button == 1 :
+		run_phctool(None)
+	return;
+
+def status_clicked( self, status ):
+#	if event.button == 3 :
+#		menu.popup( None, None, None, 0, event.time );
+#	elif event.button == 1 :
+#		run_phctool(None)
+	return;
+
+
+#event_box = gtk.EventBox( );
+#image_widget = gtk.Image( );
+#image_widget.set_from_file(sys.path[0]+"/inc/phc_icon_22.png");
+
+statusicon = gtk.status_icon_new_from_stock(sys.path[0]+"/inc/phc_icon_22.png")
+
+#statusicon.connect('activate', status_clicked )
+
+statusicon.connect("button_press_event", applet_face_click );
+
+menu_items = (
+	(sys.path[0]+"/inc/phc_icon_22.png", "Open PHCtool", run_phctool ),
+	None,
+	(sys.path[0]+"/inc/phc_exit_22.png", "Exit Tray", exit_applet )
+	);
+
+menu = gtk.Menu()
+for i in menu_items:
+    if i is None:
+        menu.add(gtk.SeparatorMenuItem());
+    else:
+        menu_items = gtk.ImageMenuItem( i[1] );
+        menu_items.connect( 'activate', i[2] );
+
+	image = gtk.Image()
+	image.set_from_file( i[0] )
+	menu_items.set_image( image );
+
+        menu.add( menu_items );
+
+
+menu.show_all()
+
+#t = egg.trayicon.TrayIcon("PHCtoolTray")
+#t.add(event_box)
+#t.show_all()
+
+
+##call phctool without GUI to set stored values
+cmd=[sys.path[0]+"/phctool.sh","background"]	##command
+subprocess.Popen(cmd, shell=False)		##call the affinated programm
+
+statusicon.set_visible(True)
+
+gtk.main()
+
+
