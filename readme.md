@@ -22,6 +22,7 @@
 | **Image Viewer** | viewnior |
 | **System Info** | neofetch |
 | **Terminal Clock** | tty-clock |
+| **File Manager** | thunar - ranger |
 | **Music Visualizer** | [cava](https://github.com/karlstav/cava) |
 | **CPU Monitor** | [s-tui](https://github.com/amanusk/s-tui) |
 | **Multi Monitor Stuff** | pasystray - pavucontrol - arandr |
