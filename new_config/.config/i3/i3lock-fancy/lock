@@ -29,7 +29,7 @@ if [ "$COLOR" -gt "$VALUE" ]; then #white background image and black text
 	# Liberation
     convert $IMAGE -level 0%,100%,0.6 \
         -filter Gaussian -resize 20% -define filter:sigma=1.5 -resize 500% \
-        -font Monospace -pointsize 26 -fill black -gravity center \
+        -font agave-regular-Nerd-Font-Complete-Mono -pointsize 26 -fill black -gravity center \
         -annotate +0+160 "$TEXT" \
         $SCRIPTPATH/lockdark.png -gravity center -composite $IMAGE
     PARAM='--textcolor=00000000 --insidecolor=0000001c --ringcolor=0000003e \
@@ -38,7 +38,7 @@ if [ "$COLOR" -gt "$VALUE" ]; then #white background image and black text
 else #black
     convert $IMAGE -level 0%,100%,0.6 \
         -filter Gaussian -resize 20% -define filter:sigma=1.5 -resize 500% \
-        -font Monospace -pointsize 26 -fill white -gravity center \
+        -font agave-regular-Nerd-Font-Complete-Mono -pointsize 26 -fill white -gravity center \
         -annotate +0+160 "$TEXT" \
         $SCRIPTPATH/lock.png -gravity center -composite $IMAGE
     PARAM='--textcolor=ffffff00 --insidecolor=ffffff1c --ringcolor=ffffff3e \

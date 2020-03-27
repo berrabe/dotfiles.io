@@ -1,7 +1,7 @@
 # Background definitions
 # ID 1		[ PANEL ]
 rounded = 0
-background_color = #3d3d3d 100
+background_color = #3d3d3d 0
 
 # ID 2		[ INTERNET SPEED ]
 rounded = 0
@@ -148,6 +148,7 @@ execp_command = echo  $(whoami)
 execp_font = Agave Nerd Font Mono Bold 7
 execp_font_color = #ffffff 100
 execp_continuous = 0
+execp_interval = 0
 execp_background_id = 3
 execp_padding = 5 5
 execp_align = center

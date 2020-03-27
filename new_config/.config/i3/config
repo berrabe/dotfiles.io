@@ -7,6 +7,7 @@
 #                                                                               SETTING MAIN FONT I3WM
 # font pango:monospace 8
 font pango:rissole 8
+font pango:Agave Nerd Font Mono 6
 #                                                                               SET MOD FOR DRAG FLOATING WINDOWS CONTAINER
 floating_modifier $mod
 #                                                                               SET MOD KEY , MOD 1 = ALT , MOD 4 = ENTER
@@ -41,8 +42,10 @@ bindsym $mod+Return exec xfce4-terminal --hide-menubar
 #                                                                               EXIT CONTAINER
 bindsym $mod+q	kill
 #                                                                               OPEN ROFI (APPLICATION MENU)
-bindsym $mod+d exec rofi -show drun -lines 3 -columns 2 -eh 2 -bw 0 -hide-scrollbar true -font "Space Mono For Powerline Bold 8"
+# bindsym $mod+d exec rofi -show drun -lines 3 -columns 2 -eh 2 -bw 0 -hide-scrollbar true -font "Space Mono For Powerline Bold 8"
 # bindsym $mod+d exec rofi -show drun -lines 3 -columns 2 -eh 2 -bw 0 -hide-scrollbar true -font "rissole 10"
+bindsym $mod+d exec rofi -show drun -lines 3 -columns 2 -eh 2 -bw 0 -hide-scrollbar true -font "Agave Nerd Font bold italic 7"
+
 
 # bindsym $mod+d exec rofi -show drun -lines 3 -eh 2 -width 100 -padding 400 -opacity "10" -bw 0 -bc "802d303b" -bg "802d303b" -fg "802d303b" -hlbg "802d303b" -hlfg "#802d303b" -font "Space Mono For Powerline Bold 18"
 # bindsym $mod+d exec rofi -show drun -modi drun -font "San Francisco Display Bold 14"
@@ -74,6 +77,18 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parents
 bindsym $mod+c focus child
 #                                                                               CHANGE WORKSPACE
+
+workspace 1 output secondary
+workspace 2 output primary
+workspace 3 output primary
+workspace 4 output primary
+workspace 5 output primary
+workspace 6 output secondary
+workspace 7 output secondary
+workspace 8 output secondary
+workspace 9 output secondary
+workspace 10 output secondary
+
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
@@ -173,7 +188,7 @@ bindsym $mod+o exec "notify-send -u normal '==== B E R R A B E ===='"
 
 
 #                                                                               I3-GAPS SETTING
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 0
 gaps inner 50
 gaps outer 5
 border_radius 7
@@ -181,7 +196,7 @@ border_radius 7
 focus_follows_mouse no
 
 #                                                                               CHANGE BACKGROUND WITH FEH
-exec feh --bg-scale --no-xinerama '/usr/share/wallpapers/Wallpaper/129744.jpg'
+exec feh --bg-scale --no-xinerama '/usr/share/wallpapers/Wallpaper/90114.jpg'
 #                                                                               CUSTOM EXEC ON STARTUP
 # exec --no-startup-id indicator-cpufreq
 exec --no-startup-id xfce4-power-manager
@@ -193,7 +208,7 @@ exec --no-startup-id dunst
 exec --no-startup-id tint2
 exec --no-startup-id pnmixer
 exec --no-startup-id compton
-exec --no-startup-id sleep 1 && notify-send -u low -t 5000 'Welcome Again berrabe' && xrandr --output LVDS-1 --brightness 0.5 && sudo su -c "echo 11936 >/sys/class/backlight/intel_backlight/brightness" && util 2 1600000 && sudo /opt/phctool/./phctray.sh
+exec --no-startup-id sleep 1 && notify-send -u low -t 5000 'Welcome Again berrabe' && xrandr --output LVDS-1 --brightness 0.5 && sudo su -c "echo 11936 >/sys/class/backlight/intel_backlight/brightness" && util 2 1600000
 exec --no-startup-id sleep 5 && /home/berrabe/.config/i3/i3lock-fancy/./lock
 
 # exec --no-startup-id python $HOME/.config/tint2/python.py --core

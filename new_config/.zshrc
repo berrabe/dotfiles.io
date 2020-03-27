@@ -101,7 +101,8 @@ source $ZSH/oh-my-zsh.sh
 # berrabe Alias
 # alias ls='ls -l --color=auto'
 # alias ll='ls -al'
-alias ls='colorls'
+alias ls='colorls -l'
+alias audio-hdmi='pacmd set-card-profile 0 output:hdmi-stereo'
 
 #alias init='util 2 2130001 && sudo /opt/phctool/./phctool.sh && xrandr --output LVDS-1 --brightness 0.6 && util 1 1'
 alias init='util 2 2130001 && sudo /opt/phctool/./phctool.sh'
@@ -109,5 +110,20 @@ alias init='util 2 2130001 && sudo /opt/phctool/./phctool.sh'
 # setting ical
 LS_COLORS=$LS_COLORS:'di=1;95:fi=1;94:ex=1;33:ow=1;31:' ; export LS_COLORS
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
-source /etc/zsh_command_not_found  
-source ~/.local/share/icons-in-terminal/icons_bash.sh
+source /etc/zsh_command_not_found 
+
+# Import colorscheme from 'wal' asynchronously
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
+(cat ~/.cache/wal/sequences &)
+
+# Alternative (blocks terminal for 0-3ms)
+cat ~/.cache/wal/sequences
+
+# To add support for TTYs this line can be optionally added.
+source ~/.cache/wal/colors-tty.sh
+
+
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+    exec startx
+fi
