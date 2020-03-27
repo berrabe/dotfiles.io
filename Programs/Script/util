@@ -44,20 +44,21 @@ elif [ $1 -eq 1 ]
   then
     while true
 	do
-		temp=$(sensors | egrep "Core [0-1]" | sed -r 's/.*:\s+[\+-]?(.*C)\s+.*/\1/' | tr '\n' ' ')
+		temp=$(sensors | egrep "Core [0-7]" | sed -r 's/.*:\s+[\+-]?(.*C)\s+.*/\1/' | tr '\n' ' ')
 		cpu=$(cat /proc/cpuinfo | grep -i "cpu MHz" | cut -b 12-20 | tr '\n' ' ')
 		memory=$(awk '/^Mem/ {print $3}' <(free -m))
 
-		echo -ne "${WHITE}[TEMP]${NOCOLOR}${LIGHTGREEN} $temp${NOCOLOR}\
-      ${WHITE}[FREQ]${NOCOLOR}${YELLOW} $cpu${NOCOLOR}\
-      ${WHITE}[MEM]${NOCOLOR}${LIGHTPURPLE} $memory${NOCOLOR}\\r"
+    echo -e "${WHITE}[TEMP]${NOCOLOR}${LIGHTGREEN} $temp${NOCOLOR}"
+    echo -e "${WHITE}[FREQ]${NOCOLOR}${YELLOW} $cpu${NOCOLOR}"
+    echo -e "${WHITE}[MEM]${NOCOLOR}${LIGHTPURPLE}  $memory${NOCOLOR}"
 		sleep $2
+    clear
 	done
 
 
 elif [ $1 -eq 2 ]
   then
-  	for i in {0..1}
+  	for i in {0..7}
 	do
 	   echo $2 | sudo tee "/sys/devices/system/cpu/cpu$i/cpufreq/scaling_max_freq"
 	done
@@ -65,7 +66,7 @@ elif [ $1 -eq 2 ]
 
 elif [ $1 -eq 3 ]
   then
-  	for i in {0..1}
+  	for i in {0..7}
 	do
 	   buffer=$(cat "/sys/devices/system/cpu/cpu$i/cpufreq/scaling_max_freq" | sed ':a;s/\B[0-9]\{3\}\>/,&/;ta')
      echo "Max Freq Core $i = $buffer GHz"

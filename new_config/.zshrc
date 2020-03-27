@@ -99,13 +99,12 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # berrabe Alias
-# alias ls='ls -l --color=auto'
-# alias ll='ls -al'
-alias ls='colorls -l'
+alias ls='ls -l --color=auto'
+alias ll='ls -al'
+# alias ls='colorls -l'
 alias audio-hdmi='pacmd set-card-profile 0 output:hdmi-stereo'
 
-#alias init='util 2 2130001 && sudo /opt/phctool/./phctool.sh && xrandr --output LVDS-1 --brightness 0.6 && util 1 1'
-alias init='util 2 2130001 && sudo /opt/phctool/./phctool.sh'
+alias init='util 2 1000000 && util 3'
 
 # setting ical
 LS_COLORS=$LS_COLORS:'di=1;95:fi=1;94:ex=1;33:ow=1;31:' ; export LS_COLORS
