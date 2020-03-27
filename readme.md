@@ -20,6 +20,7 @@
 | **Shell** | zsh - oh-my-zsh |
 | **dir listing** | [colorls](https://www.omgubuntu.co.uk/2017/07/add-bling-ls-bash-command-colorls) |
 | **Image Viewer** | viewnior |
+| **GTK+ Setting** | lxappearance |
 | **System Info** | neofetch |
 | **Terminal Clock** | tty-clock |
 | **File Manager** | thunar - ranger |
