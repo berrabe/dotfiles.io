@@ -8,9 +8,9 @@ font pango:Agave Nerd Font Mono 6
 #                                                                               SET MOD FOR DRAG FLOATING WINDOWS CONTAINER
 floating_modifier $mod
 
-#                                                                               SET MOD KEY , MOD 1 = ALT , MOD 4 = ENTER
+#                                                                               SET MOD KEY , MOD 1 = ALT , MOD 4 = Wuindows Key
 set $mod Mod1
-set $enter Mod4
+set $mod_berrabe Mod4
 
 #                                                                               SET COLOR FOR I3WM (BORDER , ETC)
 set $bg-color            #5b5b5b
@@ -142,14 +142,22 @@ bindsym XF86AudioNext exec light -A 5
 bindsym XF86AudioPrev exec light -U 5
 
 #                                                                               Screen brightness controls with notification
-bindsym XF86MonBrightnessUp exec "light -A 5; notify-send 'brightness up'"
-bindsym XF86MonBrightnessDown exec "light -U 5; notify-send 'brightness down'" 
+bindsym XF86MonBrightnessUp exec "sudo light -A 1"
+bindsym XF86MonBrightnessDown exec "sudo light -U 1"
+
+#																				Custom For Keyboard
+bindsym $mod_berrabe+1 exec "sudo light -U 1"
+bindsym $mod_berrabe+2 exec "sudo light -A 1"
+bindsym $mod_berrabe+3 exec "pactl set-sink-volume 1 -5%"
+bindsym $mod_berrabe+4 exec "pactl set-sink-volume 1 +5%"
+bindsym $mod_berrabe+5 exec "pactl set-sink-mute 1 toggle"
+
 
 #                                                                               LOCK
 bindsym $mod+Shift+t exec $HOME/.config/i3/i3lock-fancy/lock
 
 #                                                                               CUSTOM KEY
-bindsym $enter+f exec thunar
+bindsym $mod_berrabe+f exec thunar
 bindsym $mod+o exec "notify-send -u normal '==== B E R R A B E ===='"
 
 #                                                                               I3-GAPS SETTING
