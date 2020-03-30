@@ -16,7 +16,7 @@
 | **Icon** | [Papirus-Dark](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme#installation) |
 | **GTK Theme** | [Sierra-Dark](https://github.com/vinceliuice/Sierra-gtk-theme) |
 | **Mouse Theme** | [Capitaine-Cursor](https://launchpad.net/~dyatlov-igor/+archive/ubuntu/la-capitaine) |
-| **Music Player** | [ncmpcpp - mpc - mpd](https://addy-dclxvi.github.io/post/configuring-ncmpcpp/) |
+| **Music Player** | cmus - [ncmpcpp - mpc - mpd](https://addy-dclxvi.github.io/post/configuring-ncmpcpp/) |
 | **Shell** | zsh - oh-my-zsh |
 | **dir listing** | [colorls](https://www.omgubuntu.co.uk/2017/07/add-bling-ls-bash-command-colorls) |
 | **Image Viewer** | viewnior |
@@ -24,6 +24,8 @@
 | **System Info** | neofetch |
 | **Terminal Clock** | tty-clock |
 | **File Manager** | thunar - ranger |
+| **Lock System** | i3lock |
+| **Media Capture** | kazam - scrot - feh - import |
 | **Music Visualizer** | [cava](https://github.com/karlstav/cava) |
 | **CPU Monitor** | [s-tui](https://github.com/amanusk/s-tui) |
 | **Multi Monitor Stuff** | pasystray - pavucontrol - arandr |
