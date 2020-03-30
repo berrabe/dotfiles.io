@@ -148,9 +148,9 @@ bindsym XF86MonBrightnessDown exec "sudo light -U 1"
 #																				Custom For Keyboard
 bindsym $mod_berrabe+1 exec "sudo light -U 1"
 bindsym $mod_berrabe+2 exec "sudo light -A 1"
-bindsym $mod_berrabe+3 exec "pactl set-sink-volume 1 -5%"
-bindsym $mod_berrabe+4 exec "pactl set-sink-volume 1 +5%"
-bindsym $mod_berrabe+5 exec "pactl set-sink-mute 1 toggle"
+bindsym $mod_berrabe+3 exec "pactl set-sink-volume 0 -5%"
+bindsym $mod_berrabe+4 exec "pactl set-sink-volume 0 +5%"
+bindsym $mod_berrabe+5 exec "pactl set-sink-mute 0 toggle"
 
 
 #                                                                               LOCK
@@ -158,7 +158,7 @@ bindsym $mod+Shift+t exec $HOME/.config/i3/i3lock-fancy/lock
 
 #                                                                               CUSTOM KEY
 bindsym $mod_berrabe+f exec thunar
-bindsym $mod+o exec "notify-send -u normal '==== B E R R A B E ===='"
+bindsym $mod+o exec "notify-send -u low '==== B E R R A B E ===='"
 
 #                                                                               I3-GAPS SETTING
 for_window [class="^.*"] border pixel 0
@@ -168,7 +168,7 @@ border_radius 7
 focus_follows_mouse no
 
 #                                                                               CHANGE BACKGROUND WITH FEH
-exec feh --bg-scale --no-xinerama '/usr/share/wallpapers/Wallpaper/90114.jpg'
+exec feh --bg-scale --no-xinerama '/usr/share/wallpapers/Wallpaper/90114_blur.jpg'
 
 #                                                                               CUSTOM EXEC ON STARTUP
 # exec --no-startup-id indicator-cpufreq
