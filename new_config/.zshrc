@@ -102,7 +102,10 @@ source $ZSH/oh-my-zsh.sh
 alias ls='ls -l --color=auto'
 alias ll='ls -al'
 # alias ls='colorls -l'
+
 alias audio-hdmi='pacmd set-card-profile 0 output:hdmi-stereo'
+
+alias reset='cat /home/berrabe/.cache/wal/sequences && clear'
 
 alias init='util 2 1000000 && util 3'
 
