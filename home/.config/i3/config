@@ -164,7 +164,7 @@ bindsym $mod+o exec "notify-send -u low '==== B E R R A B E ===='"
 for_window [class="^.*"] border pixel 0
 gaps inner 50
 gaps outer 5
-border_radius 15
+border_radius 10
 focus_follows_mouse no
 
 #                                                                               CHANGE BACKGROUND WITH FEH
@@ -172,8 +172,8 @@ exec feh --bg-scale --no-xinerama '/usr/share/wallpapers/Wallpaper/90114_blur.jp
 
 #                                                                               CUSTOM EXEC ON STARTUP
 exec --no-startup-id xset s 60
-exec --no-startup-id xautolock -time 2 -locker $HOME/.config/i3/i3lock-fancy/lock
-exec --no-startup-id xautolock -time 5 -locker "sudo pm-suspend"
+exec --no-startup-id xautolock -time 2 -locker $HOME/.config/i3/i3lock-fancy/lock &
+exec --no-startup-id xautolock -time 5 -locker "sudo pm-suspend" &
 exec --no-startup-id sleep 2 && $HOME/.config/i3/i3lock-fancy/./lock
 
 exec --no-startup-id xfce4-power-manager
