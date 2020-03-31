@@ -89,9 +89,14 @@ elif [[ $1 == "-cf" || $1 == "--curr-freq" ]]
 			echo -e "\n[!] end of core"
 			break
 		fi
+		
+		buffer_info=$(cat "/sys/devices/system/cpu/cpu$i/cpufreq/cpuinfo_max_freq" | sed ':a;s/\B[0-9]\{3\}\>/,&/;ta')
+		buffer_scaling=$(cat "/sys/devices/system/cpu/cpu$i/cpufreq/scaling_max_freq" | sed ':a;s/\B[0-9]\{3\}\>/,&/;ta')
+		echo -e "Scaling Freq Core $i \t=> $buffer_scaling GHz / $buffer_info GHz"
 
-		buffer=$(cat "/sys/devices/system/cpu/cpu$i/cpufreq/scaling_max_freq" | sed ':a;s/\B[0-9]\{3\}\>/,&/;ta')
-		echo "Max Freq Core $i = $buffer GHz"
+		# echo -e "Max Freq Core $i \t= $buffer_info GHz"
+
+		echo " "
 	done
 
 
