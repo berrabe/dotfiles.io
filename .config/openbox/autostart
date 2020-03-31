@@ -1,0 +1,4 @@
+sh ~/.fehbg &
+xcompmgr &
+tint2 &
+pnmixer &
