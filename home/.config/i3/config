@@ -172,9 +172,9 @@ exec feh --bg-scale --no-xinerama '/usr/share/wallpapers/Wallpaper/90114_blur.jp
 
 #                                                                               CUSTOM EXEC ON STARTUP
 exec --no-startup-id xset s 60
-exec --no-startup-id xautolock -time 2 -locker /home/berrabe/.config/i3/i3lock-fancy/lock
+exec --no-startup-id xautolock -time 2 -locker $HOME/.config/i3/i3lock-fancy/lock
 exec --no-startup-id xautolock -time 5 -locker "sudo pm-suspend"
-exec --no-startup-id sleep 2 && /home/berrabe/.config/i3/i3lock-fancy/./lock
+exec --no-startup-id sleep 2 && $HOME/.config/i3/i3lock-fancy/./lock
 
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id nm-applet

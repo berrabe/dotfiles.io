@@ -36,6 +36,7 @@ sudo apt install -y\
 		feh\
 		pasystray\
 		arandr\
+		python3-pip\
 		bwm-ng\
 		xautolock\
 		pm-utils\
