@@ -107,7 +107,7 @@ alias audio-hdmi='pacmd set-card-profile 0 output:hdmi-stereo'
 
 alias reset='cat /home/berrabe/.cache/wal/sequences && clear'
 
-alias init='util 2 1000000 && util 3'
+alias init='util -sf 8 1000000 && util -cf 8'
 
 # setting ical
 LS_COLORS=$LS_COLORS:'di=1;95:fi=1;94:ex=1;33:ow=1;31:' ; export LS_COLORS
