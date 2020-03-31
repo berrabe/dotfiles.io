@@ -164,7 +164,7 @@ bindsym $mod+o exec "notify-send -u low '==== B E R R A B E ===='"
 for_window [class="^.*"] border pixel 0
 gaps inner 50
 gaps outer 5
-border_radius 7
+border_radius 15
 focus_follows_mouse no
 
 #                                                                               CHANGE BACKGROUND WITH FEH
