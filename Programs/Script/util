@@ -22,25 +22,27 @@ clear
 
 if [ $# -eq 0 ]
   then
-    echo -ne "\t== Created by berrabe ==\n\n"
+	echo -ne "\t== Created by berrabe ==\n\n"
 
-    echo " ==============="
-    echo " |  Help Page  |"
-    echo " ==============="
+	echo " ==============="
+	echo " |  Help Page  |"
+	echo " ==============="
 
-    echo " [+] Availabe Mode"
-    echo -e "  |=> Mode 1 => Monitoring \n  |=> Mode 2 => Set Max CPU Freq \n  |=> Mode 3 => Show Current Max CPU freq \n"
+	echo -e "\n${LIGHTCYAN} [+] Monitoring"
+	echo -e "  |=> Param \n\t|=> util [-m / --monitoring] [delay in second]"
+	echo -e "  |=> Example \n\t|=> util -m 1${NOCOLOR}"
 
-    echo " [+] Param"
-    echo -e "  |=> Mode 1 => [delay] \n  |=> Mode 2 => [max CPU freq] \n"
-    
-    echo " [+] Example"
-    echo -e "  |=> General => ./util [mode] [param] \n"
+	echo -e "\n${LIGHTGREEN} [+] Set Frequency"
+	echo -e "  |=> Param \n\t=> util [-sf / --set-freq] [number of cores] [frequency in MHz]"
+	echo -e "  |=> Example \n\t=> util -sf 4 1200000${NOCOLOR}"
 
-    
+	echo -e "\n${WHITE} [+] Current Frequency"
+	echo -e "  |=> Param \n\t=> util [-cf / --curr-freq] [number of cores]"
+	echo -e "  |=> Example \n\t=> util -cf 4${NOCOLOR}"
+
     exit
 
-elif [ $1 -eq 1 ]
+elif [[ $1 == "-m" || $1 == "--monitoring" ]]
   then
     while true
 	do
@@ -56,22 +58,45 @@ elif [ $1 -eq 1 ]
 	done
 
 
-elif [ $1 -eq 2 ]
+elif [[ $1 == "-sf" || $1 == "--set-freq" ]]
   then
-  	for i in {0..7}
+
+	core="$(($2-1))"
+
+	for i in $(seq 0 $core)
 	do
-	   echo $2 | sudo tee "/sys/devices/system/cpu/cpu$i/cpufreq/scaling_max_freq"
+
+		if [ ! -d "/sys/devices/system/cpu/cpu$i/cpufreq/" ]
+		then 
+			echo -e "\n[!] end of core"
+			break
+		fi
+
+		echo $3 | sudo tee "/sys/devices/system/cpu/cpu$i/cpufreq/scaling_max_freq"
 	done
 
 
-elif [ $1 -eq 3 ]
+elif [[ $1 == "-cf" || $1 == "--curr-freq" ]]
   then
-  	for i in {0..7}
+
+	core="$(($2-1))"
+
+	for i in $(seq 0 $core)
 	do
-	   buffer=$(cat "/sys/devices/system/cpu/cpu$i/cpufreq/scaling_max_freq" | sed ':a;s/\B[0-9]\{3\}\>/,&/;ta')
-     echo "Max Freq Core $i = $buffer GHz"
+
+		if [ ! -d "/sys/devices/system/cpu/cpu$i/cpufreq/" ]
+		then 
+			echo -e "\n[!] end of core"
+			break
+		fi
+
+		buffer=$(cat "/sys/devices/system/cpu/cpu$i/cpufreq/scaling_max_freq" | sed ':a;s/\B[0-9]\{3\}\>/,&/;ta')
+		echo "Max Freq Core $i = $buffer GHz"
 	done
 
+
+else
+	echo "ERROR"
 
 fi
 
