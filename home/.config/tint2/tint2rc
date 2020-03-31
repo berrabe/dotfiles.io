@@ -5,7 +5,7 @@ background_color = #3d3d3d 0
 
 # ID 2		[ INTERNET SPEED ]
 rounded = 0
-border_width = 3
+border_width = 2
 border_sides = B
 background_color = #777777 0
 border_color = #ff4800 100
@@ -16,28 +16,28 @@ background_color = #ff6f00 100
 
 # ID 4		[ SYSINFO AVG TEMP CPU ]
 rounded = 0
-border_width = 3
+border_width = 2
 border_sides = B
 background_color = #777777 0
 border_color = #0dff00 100
 
 # ID 5		[ SYSINFO AVG CPU FREQ ]
 rounded = 0
-border_width = 3
+border_width = 2
 border_sides = B
 background_color = #777777 0
 border_color = #b3ff00 100
 
 # ID 6		[ SYSINFO TOTAL RAM ]
 rounded = 0
-border_width = 3
+border_width = 2
 border_sides = B
 background_color = #777777 0
 border_color = #00ff6e 100
 
 # ID 7		[ CLOCK ]
 rounded = 0
-border_width = 3
+border_width = 2
 border_sides = B
 background_color = #777777 0
 border_color = #ff0099 100
@@ -52,7 +52,7 @@ border_color = #ffffff 100
 # ID 9		[ TASK ACTIVE ]
 rounded = 0
 background_color = #000000 0
-border_width = 3
+border_width = 2
 border_sides = B
 border_color = #ffffff 100
 
