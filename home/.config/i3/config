@@ -13,8 +13,8 @@ set $mod Mod1
 set $mod_berrabe Mod4
 
 #                                                                               SET COLOR FOR I3WM (BORDER , ETC)
-set $bg-color            #5b5b5b
-set $bd-color            #ffffff
+set $bg-color            #b55640
+set $bd-color            #ff8164
 set $inactive-bg-color   #383C4A
 set $inactive-bd-color   #383C4A
 set $text-color          #f3f4f5
@@ -36,7 +36,8 @@ client.background                           $bg-color
 
 
 #                                                                               OPEN TERMINAL
-bindsym $mod+Return exec xfce4-terminal --hide-menubar
+bindsym $mod_berrabe+Return exec xfce4-terminal --hide-menubar
+bindsym $mod+Return exec urxvt
 
 #                                                                               EXIT CONTAINER
 bindsym $mod+q	kill
@@ -172,7 +173,7 @@ exec feh --bg-scale --no-xinerama '/usr/share/wallpapers/Wallpaper/90114_blur.jp
 
 #                                                                               CUSTOM EXEC ON STARTUP
 exec --no-startup-id xset s 60
-exec --no-startup-id xautolock -time 2 -locker "$HOME/.config/i3/i3lock-fancy/lock && systemctl suspend" -corners --00 &
+exec --no-startup-id xautolock -notify 30 -notifier "notify-send -u critical -t 10000 '30 Seconds Before Suspend'" -time 5 -locker "$HOME/.config/i3/i3lock-fancy/lock && systemctl suspend" -corners --00 &
 exec --no-startup-id sleep 2 && $HOME/.config/i3/i3lock-fancy/./lock
 
 exec --no-startup-id xfce4-power-manager

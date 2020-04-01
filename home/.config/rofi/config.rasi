@@ -23,13 +23,13 @@
     background-color: @background;
     background: #120f1c;
     foreground: #deab9f;
-    border-color: @background;
+    border-color: #b55640;
     spacing: 2;
 }
 
 #window {
     background-color: @background;
-    border: 0;
+    border: 3;
     padding: 2.5ch;
 }
 
@@ -61,7 +61,7 @@
 
 #listview {
     fixed-height: 0;
-    border: 2px 0px 0px;
+    border: 0px 0px 0px;
     border-color: @border-color;
     spacing: 2px;
     scrollbar: true;
