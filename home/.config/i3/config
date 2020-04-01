@@ -172,8 +172,7 @@ exec feh --bg-scale --no-xinerama '/usr/share/wallpapers/Wallpaper/90114_blur.jp
 
 #                                                                               CUSTOM EXEC ON STARTUP
 exec --no-startup-id xset s 60
-exec --no-startup-id xautolock -time 2 -locker $HOME/.config/i3/i3lock-fancy/lock &
-exec --no-startup-id xautolock -time 3 -locker "sudo pm-suspend" &
+exec --no-startup-id xautolock -notify 90 -notifier "notify-send -u critical -t 3000 '30 Seconds Before Timeout | 90 Seconds Before Suspend'" -time 2 -locker "$HOME/.config/i3/i3lock-fancy/lock && systemctl suspend" &
 exec --no-startup-id sleep 2 && $HOME/.config/i3/i3lock-fancy/./lock
 
 exec --no-startup-id xfce4-power-manager
