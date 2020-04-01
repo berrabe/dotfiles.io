@@ -172,7 +172,7 @@ exec feh --bg-scale --no-xinerama '/usr/share/wallpapers/Wallpaper/90114_blur.jp
 
 #                                                                               CUSTOM EXEC ON STARTUP
 exec --no-startup-id xset s 60
-exec --no-startup-id xautolock -notify 90 -notifier "notify-send -u critical -t 3000 '30 Seconds Before Timeout | 90 Seconds Before Suspend'" -time 2 -locker "$HOME/.config/i3/i3lock-fancy/lock && systemctl suspend" &
+exec --no-startup-id xautolock -time 2 -locker "$HOME/.config/i3/i3lock-fancy/lock && systemctl suspend" -corners --00 &
 exec --no-startup-id sleep 2 && $HOME/.config/i3/i3lock-fancy/./lock
 
 exec --no-startup-id xfce4-power-manager
@@ -184,3 +184,7 @@ exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agen
 exec --no-startup-id dunst
 exec --no-startup-id tint2
 exec --no-startup-id compton
+
+
+# Xautolock with Notifiers add this
+# -notify 90 -notifier "notify-send -u critical -t 3000 '30 Seconds Before Timeout | 90 Seconds Before Suspend'"
