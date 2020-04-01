@@ -68,10 +68,10 @@ XClock*secondColor: rgba:de/ab/9f/ff
 URxvt*depth: 32
 
 !! URxvt Appearance
-URxvt.font: xft:agave Nerd Font:style=r:size=7
-URxvt.boldFont: xft:agave Nerd Font:style=r:size=7
-URxvt.italicFont: xft:agave Nerd Font:style=r:size=7
-URxvt.boldItalicfont: xft:agave Nerd Font:style=r:size=7
+URxvt.font: xft:agave Nerd Font Mono:style=r:size=7
+URxvt.boldFont: xft:agave Nerd Font Mono:style=r:size=7
+URxvt.italicFont: xft:agave Nerd Font Mono:style=r:size=7
+URxvt.boldItalicfont: xft:agave Nerd Font Mono:style=r:size=7
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 URxvt.geometry: 92x24
