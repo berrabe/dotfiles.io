@@ -1,0 +1,141 @@
+#!/bin/bash
+
+VERSION=1.7
+
+if [ "$EUID" -ne 0 ]
+	then
+		echo -ne "\n[!] please run as root\n"
+	exit
+fi
+
+# Color
+NOCOLOR='\033[0m'
+WHITE='\033[1;37m'
+
+# init global var
+acores=$(cat /proc/cpuinfo | grep processor | wc -l)
+cores=$(ls /sys/devices/system/cpu/ | grep -i "cpu[0-9]" | wc -l)
+core_="$(($cores-1))"
+cpu_model=$(cat /proc/cpuinfo | grep "model name" | head -n 1 | cut -b14-)
+
+cols=$(tput cols)
+rows=$(tput lines)
+
+if [[ $# -eq 0 ]]
+	then
+		echo -ne "\n[?] type -h / --help for usage\n"
+
+elif [[ $1 == "-h" || $1 == "--help" ]]
+	then
+		clear
+		echo -e "\t   == CPU Utillity =="
+
+		echo -ne " \n--------------------------------------- "
+		echo -ne " \n                         | Avail Mode |"
+		echo -e  " \n                         -------------\n"
+
+		echo -e " [1] Monitoring \t[ -mo ]"
+		echo -e " [2] Set Max Frequency \t[ -sf ]"
+		echo -e " [3] Current Frequency \t[ -cf ]"
+		echo -e " [4] Core Manager \t[ -cm ]"
+
+		echo -ne " \n--------------------------------------- "
+		echo -ne " \n                             | Detail |"
+		echo -e  " \n                             ---------\n"
+
+		echo -e "-mo / --monitoring \n\twatch system usage every 1 sec"
+		echo -e "-sf / --set-freq \n\tset MAX freq for all CPU cores"
+		echo -e "-cf / --curr-freq \n\tshow current MAX & Threshold CPU"
+		echo -e "-cm / --core-manager \n\tturn on/off half of CPU cores"
+		echo -e "-h / --help \n\tshow help page"
+		echo -e "-v / --version \n\tprint script version"
+
+
+elif [[ $1 == "-mo" || $1 == "--monitoring" ]]
+  then
+  	clear
+    while true
+		do
+			if [[ $(tput cols) -ne $cols || $(tput lines) -ne $rows ]]
+				then
+					cols=$(tput cols)
+					rows=$(tput lines)
+					clear
+			fi
+
+			usage=$(grep 'cpu ' /proc/stat | awk '{cpu_usage=($2+$4)*100/($2+$4+$5)} END {printf "%0.2f %", cpu_usage}')
+			temp=$(sensors | egrep "Core [0-$cores]" | cut -b 17-18 | sed -z 's/\n/ °C  /g')
+			memory=$(awk '/^Mem/ {print $3 " MB / " $2 " MB"}' <(free -m))
+			cpu=$(cat /proc/cpuinfo | grep -i "cpu MHz" | cut -b 12-20 | sed -z 's/\n/ MHz  /g' )
+
+    echo -ne "[ System Monitoring ]
+
+[+] Info \t$cpu_model    [ $acores | $cores Cores ]
+
+[+] cpu \t$usage
+[+] temp \t$temp
+[+] Mem \t$memory
+[+] Freq \t$cpu"
+
+
+	    tput cup 0 0
+	    sleep 1
+	done
+
+
+elif [[ $1 == "-sf" || $1 == "--set-freq" ]]
+	then
+
+		for i in $(seq 0 $core_)
+			do
+				echo $2 | sudo tee "/sys/devices/system/cpu/cpu$i/cpufreq/scaling_max_freq"
+			done
+
+
+elif [[ $1 == "-cf" || $1 == "--curr-freq" ]]
+	then
+		clear
+		for i in $(seq 0 $core_)
+			do
+				buffer_info=$(cat "/sys/devices/system/cpu/cpu$i/cpufreq/cpuinfo_max_freq" | sed ':a;s/\B[0-9]\{3\}\>/,&/;ta')
+				buffer_scaling=$(cat "/sys/devices/system/cpu/cpu$i/cpufreq/scaling_max_freq" | sed ':a;s/\B[0-9]\{3\}\>/,&/;ta')
+				
+				echo -en "Scaling Freq Core $i \t=> $buffer_scaling GHz / $buffer_info GHz\n"	
+			done
+
+elif [[ $1 == "-cm" || $1 == "--core-manager" ]]
+	then
+		clear
+		_core="$(($cores/2))"
+
+		for i in $(seq $_core $core_)
+			do
+				file="/sys/devices/system/cpu/cpu$i/online"
+				su -c "echo $2 > '$file'"
+			done
+
+		echo  -e "Core 0 > [!]"
+		for i in $(seq 1 $core_)
+			do				
+				file="/sys/devices/system/cpu/cpu$i/online"
+				value=$(cat $file)
+
+				echo  -e "Core $i > $([[ $value = 1 ]] && echo "ON" || echo "Off") "
+			done
+
+elif [[ $1 == "-v" || $1 == "--version" ]]
+	then
+		clear
+		echo -e "\t   == CPU Utillity =="
+		echo -ne "\n[+] Ver $VERSION"
+		echo -ne "\n[+] by berrabe"
+
+		echo -e "\n\n[!] Keep It Simple"
+
+
+else
+	echo -e "\n[!] ERROR | Mode Not Found"
+
+fi
+
+
