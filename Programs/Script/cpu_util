@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=1.7
+VERSION=1.7.1
 
 if [ "$EUID" -ne 0 ]
 	then
@@ -13,9 +13,9 @@ NOCOLOR='\033[0m'
 WHITE='\033[1;37m'
 
 # init global var
-acores=$(cat /proc/cpuinfo | grep processor | wc -l)
-cores=$(ls /sys/devices/system/cpu/ | grep -i "cpu[0-9]" | wc -l)
-core_="$(($cores-1))"
+d_cores=$(cat /proc/cpuinfo | grep processor | wc -l)
+s_cores=$(ls /sys/devices/system/cpu/ | grep -i "cpu[0-9]" | wc -l)
+core_="$(($d_cores-1))"
 cpu_model=$(cat /proc/cpuinfo | grep "model name" | head -n 1 | cut -b14-)
 
 cols=$(tput cols)
@@ -64,13 +64,13 @@ elif [[ $1 == "-mo" || $1 == "--monitoring" ]]
 			fi
 
 			usage=$(grep 'cpu ' /proc/stat | awk '{cpu_usage=($2+$4)*100/($2+$4+$5)} END {printf "%0.2f %", cpu_usage}')
-			temp=$(sensors | egrep "Core [0-$cores]" | cut -b 17-18 | sed -z 's/\n/ °C  /g')
+			temp=$(sensors | egrep "Core [0-$s_cores]" | cut -b 17-18 | sed -z 's/\n/ °C  /g')
 			memory=$(awk '/^Mem/ {print $3 " MB / " $2 " MB"}' <(free -m))
 			cpu=$(cat /proc/cpuinfo | grep -i "cpu MHz" | cut -b 12-20 | sed -z 's/\n/ MHz  /g' )
 
     echo -ne "[ System Monitoring ]
 
-[+] Info \t$cpu_model    [ $acores | $cores Cores ]
+[+] Info \t$cpu_model    [ $d_cores | $s_cores Cores ]
 
 [+] cpu \t$usage
 [+] temp \t$temp
@@ -85,16 +85,24 @@ elif [[ $1 == "-mo" || $1 == "--monitoring" ]]
 
 elif [[ $1 == "-sf" || $1 == "--set-freq" ]]
 	then
+		clear
+
+		if ! [[ $2 =~ ^[0-9]+$ ]]
+			then
+				echo -ne "\n[!] ERROR | argument not valid '$2'\n"
+				exit
+		fi
 
 		for i in $(seq 0 $core_)
 			do
-				echo $2 | sudo tee "/sys/devices/system/cpu/cpu$i/cpufreq/scaling_max_freq"
+				echo -ne "Core $i \t=> " && echo $2 | sudo tee "/sys/devices/system/cpu/cpu$i/cpufreq/scaling_max_freq"
 			done
 
 
 elif [[ $1 == "-cf" || $1 == "--curr-freq" ]]
 	then
 		clear
+
 		for i in $(seq 0 $core_)
 			do
 				buffer_info=$(cat "/sys/devices/system/cpu/cpu$i/cpufreq/cpuinfo_max_freq" | sed ':a;s/\B[0-9]\{3\}\>/,&/;ta')
@@ -106,16 +114,24 @@ elif [[ $1 == "-cf" || $1 == "--curr-freq" ]]
 elif [[ $1 == "-cm" || $1 == "--core-manager" ]]
 	then
 		clear
-		_core="$(($cores/2))"
 
-		for i in $(seq $_core $core_)
+		if ! [[ $2 =~ ^[0-1]+$ ]]
+			then
+				echo -ne "\n[!] ERROR | argument not valid '$2'\n"
+				exit
+		fi
+
+		_cores="$(($s_cores/2))"
+		cores_="$(($s_cores-1))"
+
+		for i in $(seq $_cores $cores_)
 			do
 				file="/sys/devices/system/cpu/cpu$i/online"
 				su -c "echo $2 > '$file'"
 			done
 
 		echo  -e "Core 0 > [!]"
-		for i in $(seq 1 $core_)
+		for i in $(seq 1 $cores_)
 			do				
 				file="/sys/devices/system/cpu/cpu$i/online"
 				value=$(cat $file)
