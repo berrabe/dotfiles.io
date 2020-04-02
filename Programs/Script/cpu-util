@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=1.7.1
+VERSION=1.7.2
 
 if [ "$EUID" -ne 0 ]
 	then
@@ -32,23 +32,31 @@ elif [[ $1 == "-h" || $1 == "--help" ]]
 
 		echo -ne " \n--------------------------------------- "
 		echo -ne " \n                         | Avail Mode |"
-		echo -e  " \n                         -------------\n"
+		echo -e  " \n                         --------------\n"
 
 		echo -e " [1] Monitoring \t[ -mo ]"
 		echo -e " [2] Set Max Frequency \t[ -sf ]"
-		echo -e " [3] Current Frequency \t[ -cf ]"
-		echo -e " [4] Core Manager \t[ -cm ]"
+		echo -e " [3] Core Manager \t[ -cm ]"
 
 		echo -ne " \n--------------------------------------- "
 		echo -ne " \n                             | Detail |"
-		echo -e  " \n                             ---------\n"
+		echo -e  " \n                             ----------\n"
 
-		echo -e "-mo / --monitoring \n\twatch system usage every 1 sec"
-		echo -e "-sf / --set-freq \n\tset MAX freq for all CPU cores"
-		echo -e "-cf / --curr-freq \n\tshow current MAX & Threshold CPU"
-		echo -e "-cm / --core-manager \n\tturn on/off half of CPU cores"
+		echo -e "-mo / --monitoring \n\twatch system usage every 1 sec\n"
+		echo -e "-sf / --set-freq [ freq in MHz | show ]\n\tset MAX freq for all CPU cores\n"
+		echo -e "-cm / --core-manager [ 0/1 | show ]\n\tturn on/off half of CPU cores\n"
 		echo -e "-h / --help \n\tshow help page"
 		echo -e "-v / --version \n\tprint script version"
+
+		echo -ne " \n--------------------------------------- "
+		echo -ne " \n                            | Example |"
+		echo -e  " \n                            -----------\n"
+
+		echo -e ">> sudo cpu-util -mo"
+		echo -e ">> sudo cpu-util -sf 1000000"
+		echo -e ">> sudo cpu-util -sf show"
+		echo -e ">> sudo cpu-util -cm 0"
+		echo -e ">> sudo cpu-util -cm show"
 
 
 elif [[ $1 == "-mo" || $1 == "--monitoring" ]]
@@ -87,35 +95,40 @@ elif [[ $1 == "-sf" || $1 == "--set-freq" ]]
 	then
 		clear
 
-		if ! [[ $2 =~ ^[0-9]+$ ]]
+		if ! [[ $2 =~ ^[0-9]+$ || $2 == "show" ]]
 			then
 				echo -ne "\n[!] ERROR | argument not valid '$2'\n"
 				exit
 		fi
 
-		for i in $(seq 0 $core_)
-			do
-				echo -ne "Core $i \t=> " && echo $2 | sudo tee "/sys/devices/system/cpu/cpu$i/cpufreq/scaling_max_freq"
-			done
+		if [[ $2 =~ "show" ]]
+			then
+				clear
 
+				for i in $(seq 0 $core_)
+					do
+						buffer_info=$(cat "/sys/devices/system/cpu/cpu$i/cpufreq/cpuinfo_max_freq" | sed ':a;s/\B[0-9]\{3\}\>/,&/;ta')
+						buffer_scaling=$(cat "/sys/devices/system/cpu/cpu$i/cpufreq/scaling_max_freq" | sed ':a;s/\B[0-9]\{3\}\>/,&/;ta')
 
-elif [[ $1 == "-cf" || $1 == "--curr-freq" ]]
-	then
-		clear
+						echo -en "Scaling Freq Core $i \t=> $buffer_scaling / $buffer_info MHz\n"	
+				done
+		else
+			for i in $(seq 0 $core_)
+				do
+					# echo -ne "Core $i \t=> " && echo -ne $2 | sudo tee "/sys/devices/system/cpu/cpu$i/cpufreq/scaling_max_freq" && echo " MHz"
+					file="/sys/devices/system/cpu/cpu$i/cpufreq/scaling_max_freq"
+					su -c "echo $2 > '$file'"
 
-		for i in $(seq 0 $core_)
-			do
-				buffer_info=$(cat "/sys/devices/system/cpu/cpu$i/cpufreq/cpuinfo_max_freq" | sed ':a;s/\B[0-9]\{3\}\>/,&/;ta')
-				buffer_scaling=$(cat "/sys/devices/system/cpu/cpu$i/cpufreq/scaling_max_freq" | sed ':a;s/\B[0-9]\{3\}\>/,&/;ta')
-				
-				echo -en "Scaling Freq Core $i \t=> $buffer_scaling GHz / $buffer_info GHz\n"	
-			done
+					echo -e "Core $i \t=> $(echo $2 | sed ':a;s/\B[0-9]\{3\}\>/,&/;ta') MHz"
+				done
+		fi
+
 
 elif [[ $1 == "-cm" || $1 == "--core-manager" ]]
 	then
 		clear
 
-		if ! [[ $2 =~ ^[0-1]+$ ]]
+		if ! [[ $2 =~ ^[0-9]+$ || $2 == "show" ]]
 			then
 				echo -ne "\n[!] ERROR | argument not valid '$2'\n"
 				exit
@@ -124,20 +137,26 @@ elif [[ $1 == "-cm" || $1 == "--core-manager" ]]
 		_cores="$(($s_cores/2))"
 		cores_="$(($s_cores-1))"
 
-		for i in $(seq $_cores $cores_)
-			do
-				file="/sys/devices/system/cpu/cpu$i/online"
-				su -c "echo $2 > '$file'"
-			done
+		if [[ $2 =~ "show" ]]
+			then
+				echo  -e "Core 0 > [always ON]"
+				for i in $(seq 1 $cores_)
+					do				
+						file="/sys/devices/system/cpu/cpu$i/online"
+						value=$(cat $file)
 
-		echo  -e "Core 0 > [!]"
-		for i in $(seq 1 $cores_)
-			do				
-				file="/sys/devices/system/cpu/cpu$i/online"
-				value=$(cat $file)
+						echo  -e "Core $i > $([[ $value = 1 ]] && echo "ON" || echo "Off") "
+					done
+		else
+			for i in $(seq $_cores $cores_)
+				do
+					file="/sys/devices/system/cpu/cpu$i/online"
+					su -c "echo $2 > '$file'"
 
-				echo  -e "Core $i > $([[ $value = 1 ]] && echo "ON" || echo "Off") "
-			done
+					echo  -e "Core $i > $2 $([[ $2 = 1 ]] && echo "[ON]" || echo "[Off]") "
+				done
+		fi
+
 
 elif [[ $1 == "-v" || $1 == "--version" ]]
 	then
