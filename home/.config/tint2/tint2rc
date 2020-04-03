@@ -141,10 +141,10 @@ clock_background_id = 7
 ######################################################
 
 execp = new
-execp_command = $HOME/.config/tint2/./sys-info 1
+execp_command = $HOME/.config/tint2/./sys-info 1 1
 execp_font = Agave Nerd Font Bold 7
 execp_font_color = #ffffff 100
-execp_continuous = 0
+execp_continuous = 1
 execp_background_id = 3
 execp_padding = 5 5
 execp_align = center

@@ -13,8 +13,8 @@ set $mod Mod1
 set $mod_berrabe Mod4
 
 #                                                                               SET COLOR FOR I3WM (BORDER , ETC)
-set $bg-color            #b55640
-set $bd-color            #ff8164
+set $bg-color            #38406e
+set $bd-color            #7e7e7e
 set $inactive-bg-color   #383C4A
 set $inactive-bd-color   #383C4A
 set $text-color          #f3f4f5

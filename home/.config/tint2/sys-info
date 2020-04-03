@@ -8,7 +8,6 @@ while true
 		if [[ $1 == 1 ]]
 			then
 				echo "  $(hostnamectl | grep hostname | cut -b 21-)"
-				exit
 
 
 		elif [[ $1 == 2 ]]
@@ -34,7 +33,7 @@ while true
 		elif [[ $1 == 5 ]]
 			then
 				# Note the use of "stdbuf -oL" to force the program to flush the output line by line.
-				stdbuf -oL bwm-ng -o csv -t 1000 | awk -F ';' '/total/ { printf "直  %.02f Mb/s\n", ($5*8/1.0e6) }; fflush(stdout)'
+				stdbuf -oL bwm-ng -o csv -t 1000 | awk -v ical="$(iwgetid | cut -b 17- | sed -z 's/"//g')" -F ';' '/total/ { printf "直  %s - %.0f kb/s\n", ical,($5*8/1.0e3)}; fflush(stdout)'
 
 
 		elif [[ $1 == 6 ]]
