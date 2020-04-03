@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=1.7.3
+VERSION=1.7.4
 
 if [ "$EUID" -ne 0 ]
 	then
@@ -83,24 +83,26 @@ elif [[ $1 == "-mo" || $1 == "--monitoring" ]]
 					exit
 			fi
 
-			usage=$(grep 'cpu ' /proc/stat | awk '{cpu_usage=($2+$4)*100/($2+$4+$5)} END {printf "%0.2f %", cpu_usage}')
-			temp=$(sensors | egrep "Core [0-$s_cores]" | cut -b 17-18 | sed -z 's/\n/ °C-/g')
-			memory=$(awk '/^Mem/ {print $3 " MB / " $2 " MB"}' <(free -m))
-			cpu=$(cat /proc/cpuinfo | grep -i "cpu MHz" | cut -b 12-20 | sed -z 's/\n/ MHz-/g') #  |sed -z 's/\n/ MHz  /g'
+			uptime_=$(uptime -p | cut -b 4-)
+
+			cpu_usage_=$(grep 'cpu ' /proc/stat | awk '{cpu_usage=($2+$4)*100/($2+$4+$5)} END {printf "%0.2f %", cpu_usage}')
+			cpu_temp_=$(sensors | egrep "Core [0-$s_cores]" | cut -b 17-18 | sed -z 's/\n/ °C-/g')
+			sys_memory_=$(awk '/^Mem/ {print $3 " MB / " $2 " MB"}' <(free -m))
+			cpu_freq_=$(cat /proc/cpuinfo | grep -i "cpu MHz" | cut -b 12-20 | sed -z 's/\n/ MHz-/g')
 
     echo -ne "
 [ System Monitoring ] [ $(date +%H:%M:%S) ]
 
-[+] Uptime \t$(uptime -p | cut -b 4-)
 [+] Proc \t$cpu_model
+[+] Uptime \t$uptime_
 [+] Host \t$host
 [+] Kernel \t$kernel
-[+] Arch \t$os $arch
+[+] OS \t\t$os $arch
 
-[+] cpu \t$usage
-[+] Mem \t$memory
+[+] cpu \t$cpu_usage_
+[+] Mem \t$sys_memory_
 [+] Core \t$d_cores / $s_cores Cores
-[+] Freq|Temp \t$(echo $cpu | sed -z 's/-/\n\t\t/g') $(tput cup 12 32 && echo $temp | sed 's/-/\n\t\t\t\t/g') "		
+[+] Freq|Temp \t$(echo $cpu_freq_ | sed -z 's/-/\n\t\t/g') $(tput cup 12 32 && echo $cpu_temp_ | sed 's/-/\n\t\t\t\t/g') "		
 
 	    tput cup 0 0
 	    sleep 1

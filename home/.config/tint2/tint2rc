@@ -1,45 +1,48 @@
-# Background definitions
+######################################################
+######################################################
+######################################################
+
 # ID 1		[ PANEL ]
 rounded = 0
 background_color = #3d3d3d 0
 
 # ID 2		[ INTERNET SPEED ]
 rounded = 0
+background_color = #777777 0
 border_width = 2
 border_sides = B
-background_color = #777777 0
 border_color = #ff4800 100
 
 # ID 3		[ WHOAMI & CURRENT WORKSPACE ]
 rounded = 0
-background_color = #ff6f00 100
+background_color = #ff6f00 0
 
 # ID 4		[ SYSINFO AVG TEMP CPU ]
 rounded = 0
+background_color = #777777 0
 border_width = 2
 border_sides = B
-background_color = #777777 0
 border_color = #0dff00 100
 
 # ID 5		[ SYSINFO AVG CPU FREQ ]
 rounded = 0
+background_color = #777777 0
 border_width = 2
 border_sides = B
-background_color = #777777 0
 border_color = #b3ff00 100
 
 # ID 6		[ SYSINFO TOTAL RAM ]
 rounded = 0
+background_color = #777777 0
 border_width = 2
 border_sides = B
-background_color = #777777 0
 border_color = #00ff6e 100
 
 # ID 7		[ CLOCK ]
 rounded = 0
+background_color = #777777 0
 border_width = 2
 border_sides = B
-background_color = #777777 0
 border_color = #ff0099 100
 
 # ID 8		[ SYSTEM / NOTIF TRAY ]
@@ -57,6 +60,10 @@ border_sides = B
 border_color = #ffffff 100
 
 
+######################################################
+######################################################
+######################################################
+
 # Panel
 panel_items = ETEEEECSE
 panel_monitor = 1
@@ -71,7 +78,7 @@ panel_background_id = 1
 mouse_effects = 1
 
 # Panel Autohide
-autohide = 1
+autohide = 0
 autohide_show_timeout = 0.0
 autohide_hide_timeout = 2.0
 autohide_height = 0
@@ -86,7 +93,6 @@ taskbar_active_background_id = 0
 taskbar_distribute_size = 0
 taskbar_hide_different_desktop = 0
 taskbar_hide_inactive_tasks = 0
-
 
 # Tasks
 # task_align = center
@@ -108,8 +114,7 @@ task_urgent_icon_asb = 100 0 0
 task_iconified_icon_asb = 100 0 0
 
 # Fonts
-# task_font = Space Mono For Powerline 9
-task_font = rissole 8
+task_font = Agave Nerd Font Bold 7
 task_font_color = #B1B1B1 100
 task_active_font_color = #212121 100
 task_urgent_font_color = #FFFFFF 100
@@ -117,7 +122,6 @@ task_iconified_font_color = #FFFFFF 100
 font_shadow = 0
 
 # System Tray
-# systray_padding = 10 3 10
 systray_padding = 10 3 10
 systray_sort = ascending
 systray_background_id = 8
@@ -125,84 +129,70 @@ systray_icon_size = 0
 systray_icon_asb = 90 -100 100
 
 # Clock
-time1_font = Agave Nerd Font Mono Bold 7
+time1_font = Agave Nerd Font Bold 7
 clock_align = center
-time1_format = %D -- %H:%M 
+time1_format =祥  %D || %H:%M
 clock_font_color = #ffffff 100
 clock_padding = 5 2
 clock_background_id = 7
 
-# Tooltips
-tooltip = 0
-tooltip_padding = 0 0
-tooltip_show_timeout = 0
-tooltip_hide_timeout = 0
-tooltip_background_id = 0
-# tooltip_font = Space Mono For Powerline Bold 8
-tooltip_font = = rissole 8
-tooltip_font_color = #FFFFFF 100
-
+######################################################
+######################################################
+######################################################
 
 execp = new
-execp_command = echo  $(whoami)
-execp_font = Agave Nerd Font Mono Bold 7
+execp_command = $HOME/.config/tint2/./sys-info 1
+execp_font = Agave Nerd Font Bold 7
 execp_font_color = #ffffff 100
 execp_continuous = 0
-execp_interval = 0
 execp_background_id = 3
 execp_padding = 5 5
 execp_align = center
 
-
-# Note the use of "stdbuf -oL" to force the program to flush the output line by line.
 execp = new
+execp_command = $HOME/.config/tint2/./sys-info 5 1
+execp_font = Agave Nerd Font Bold 7
 execp_font_color = #ffffff 100
-execp_font = Agave Nerd Font Mono Bold 7
-execp_command = stdbuf -oL bwm-ng -o csv -t 1000 | awk -F ';' '/total/ { printf "龍 %.02f Mb/s\n", ($5*8/1.0e6) }; fflush(stdout)'
 execp_continuous = 1
-execp_align = center
-execp_padding = 10 10
-execp_interval = 1
 execp_background_id = 2
+execp_padding = 10 10
+execp_align = center
 
 execp = new
-execp_command = $HOME/.config/tint2/./tint2_sysinfo.sh 1 1
-execp_align = center
-execp_continuous = 1
+execp_command = $HOME/.config/tint2/./sys-info 2 1
+execp_font = Agave Nerd Font Bold 7
 execp_font_color = #ffffff 100
-execp_font = Agave Nerd Font Mono Bold 7
-execp_padding = 10 10
+execp_continuous = 1
 execp_background_id = 4
+execp_padding = 10 10
+execp_align = center
 
 execp = new
-execp_command = $HOME/.config/tint2/./tint2_sysinfo.sh 2 1
-execp_align = center
-execp_continuous = 1
+execp_command = $HOME/.config/tint2/./sys-info 3 1
+execp_font = Agave Nerd Font Bold 7
 execp_font_color = #ffffff 100
-execp_font = Agave Nerd Font Mono Bold 7
-execp_padding = 10 10
+execp_continuous = 1
 execp_background_id = 5
-
-execp = new
-execp_command = $HOME/.config/tint2/./tint2_sysinfo.sh 3 1
-execp_align = center
-execp_continuous = 1
-execp_font_color = #ffffff 100
-execp_font = Agave Nerd Font Mono Bold 7
 execp_padding = 10 10
-execp_background_id = 6
-
+execp_align = center
 
 execp = new
-execp_command = xprop -root -spy | awk '/^_NET_CURRENT_DESKTOP/ { print "" ($3 + 1) ""; fflush(); }'
-execp_interval = 1
-execp_continuous = 1
-execp_font = Agave Nerd Font Mono Bold 9
+execp_command = $HOME/.config/tint2/./sys-info 4 1
+execp_font = Agave Nerd Font Bold 7
 execp_font_color = #ffffff 100
-execp_background_id = 3
-execp_padding = 5 5
-execp_align = left
+execp_continuous = 1
+execp_background_id = 6
+execp_padding = 10 10
+execp_align = center
 
+execp = new
+execp_command = $HOME/.config/tint2/./sys-info 6 1
+execp_font = Agave Nerd Font Bold 8
+execp_font_color = #ffffff 100
+execp_continuous = 1
+execp_background_id = 3
+execp_padding = 1 5
+execp_align = center
 
 
 # End of config
