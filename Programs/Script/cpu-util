@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=1.7.2
+VERSION=1.7.3
 
 if [ "$EUID" -ne 0 ]
 	then
@@ -16,7 +16,13 @@ WHITE='\033[1;37m'
 d_cores=$(cat /proc/cpuinfo | grep processor | wc -l)
 s_cores=$(ls /sys/devices/system/cpu/ | grep -i "cpu[0-9]" | wc -l)
 core_="$(($d_cores-1))"
+
 cpu_model=$(cat /proc/cpuinfo | grep "model name" | head -n 1 | cut -b14-)
+host=$(sudo dmidecode | grep Version | sed -n '2p' | cut -b 11-)
+kernel=$(hostnamectl | grep "Kernel" | cut -b 21-)
+os=$(hostnamectl | grep "Operating System" | cut -b 21-)
+arch=$(hostnamectl | grep "Architecture" | cut -b 21-)
+
 
 cols=$(tput cols)
 rows=$(tput lines)
@@ -71,24 +77,35 @@ elif [[ $1 == "-mo" || $1 == "--monitoring" ]]
 					clear
 			fi
 
+			if [[ $(cat /proc/cpuinfo | grep processor | wc -l) -ne $d_cores ]]
+				then
+					echo -e "\n[!] WARNING | system changed\n"
+					exit
+			fi
+
 			usage=$(grep 'cpu ' /proc/stat | awk '{cpu_usage=($2+$4)*100/($2+$4+$5)} END {printf "%0.2f %", cpu_usage}')
-			temp=$(sensors | egrep "Core [0-$s_cores]" | cut -b 17-18 | sed -z 's/\n/ °C  /g')
+			temp=$(sensors | egrep "Core [0-$s_cores]" | cut -b 17-18 | sed -z 's/\n/ °C-/g')
 			memory=$(awk '/^Mem/ {print $3 " MB / " $2 " MB"}' <(free -m))
-			cpu=$(cat /proc/cpuinfo | grep -i "cpu MHz" | cut -b 12-20 | sed -z 's/\n/ MHz  /g' )
+			cpu=$(cat /proc/cpuinfo | grep -i "cpu MHz" | cut -b 12-20 | sed -z 's/\n/ MHz-/g') #  |sed -z 's/\n/ MHz  /g'
 
-    echo -ne "[ System Monitoring ]
+    echo -ne "
+[ System Monitoring ] [ $(date +%H:%M:%S) ]
 
-[+] Info \t$cpu_model    [ $d_cores | $s_cores Cores ]
+[+] Uptime \t$(uptime -p | cut -b 4-)
+[+] Proc \t$cpu_model
+[+] Host \t$host
+[+] Kernel \t$kernel
+[+] Arch \t$os $arch
 
 [+] cpu \t$usage
-[+] temp \t$temp
 [+] Mem \t$memory
-[+] Freq \t$cpu"
-
+[+] Core \t$d_cores / $s_cores Cores
+[+] Freq|Temp \t$(echo $cpu | sed -z 's/-/\n\t\t/g') $(tput cup 12 32 && echo $temp | sed 's/-/\n\t\t\t\t/g') "		
 
 	    tput cup 0 0
 	    sleep 1
 	done
+	# [+] Temp \t$(echo $temp | sed 's/-/\n\t\t/g') $(echo $cpu | sed -z 's/-/\n\t\t/g')
 
 
 elif [[ $1 == "-sf" || $1 == "--set-freq" ]]
