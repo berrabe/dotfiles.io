@@ -131,7 +131,7 @@ systray_icon_asb = 90 -100 100
 # Clock
 time1_font = Agave Nerd Font Bold 7
 clock_align = center
-time1_format =祥  %D || %H:%M
+time1_format =  %D    %H:%M
 clock_font_color = #ffffff 100
 clock_padding = 5 2
 clock_background_id = 7
