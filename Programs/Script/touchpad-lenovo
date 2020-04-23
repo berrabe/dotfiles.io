@@ -2,16 +2,22 @@
 
 # xinput --list-props SynPS/2 Synaptics TouchPad / 18
 
-synclient FingerHigh=47
-synclient FingerLow=43
+# synclient FingerHigh=50
+# synclient FingerLow=45
+
+xinput --set-prop 13 "Synaptics Noise Cancellation" 50 50
+xinput --set-prop 13 "Synaptics Finger" 45 50 255
 
 synclient HorizTwoFingerScroll=1
 
-synclient VertScrollDelta=-350
-synclient HorizScrollDelta=-350
+synclient VertScrollDelta=-500
+synclient HorizScrollDelta=-500
 
-synclient MaxSpeed=1.0
-synclient MinSpeed=0.7
+# synclient MaxSpeed=1.0
+# synclient MinSpeed=0.7
+
+synclient MaxSpeed=0.8
+synclient MinSpeed=0.1
 
 synclient AccelFactor=0.01
 
@@ -20,3 +26,4 @@ synclient MaxTapTime=100
 synclient PalmDetect=1
 synclient PalmMinWidth=10
 synclient PalmMinZ=0
+
