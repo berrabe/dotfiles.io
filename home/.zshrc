@@ -64,7 +64,7 @@ ZSH_THEME="ys"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
-	zsh-syntax-highlighting
+	# zsh-syntax-highlighting
 	)
 
 source $ZSH/oh-my-zsh.sh
@@ -99,20 +99,23 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # berrabe Alias
-alias ls='ls -l --color=auto'
-alias ll='ls -al'
-# alias ls='colorls -l'
+# alias ls='ls -l --color=auto'
+# alias ll='ls -al'
+alias ls='colorls -l'
 
 alias audio-hdmi='pacmd set-card-profile 0 output:hdmi-stereo'
 
 alias reset='cat /home/berrabe/.cache/wal/sequences && clear'
 
-alias init='util -sf 8 1000000 && util -cf 8'
+alias init='sudo cpu-util -sf 1000000 && sudo undervolt --core -165 --cache -165 --gpu -135 --uncore -165 --analogio -165 && sudo cpu-util -sf show && sudo undervolt --read'
+alias uninit='sudo undervolt --core 0 --cache 0 --gpu 0 --uncore 0 --analogio 0 && sudo undervolt --read'
 
+alias webku='sudo service nginx start && sudo service php7.2-fpm start'
 # setting ical
 LS_COLORS=$LS_COLORS:'di=1;95:fi=1;94:ex=1;33:ow=1;31:' ; export LS_COLORS
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
-source /etc/zsh_command_not_found 
+source /etc/zsh_command_not_found
+export PATH=$PATH:/snap/bin/
 
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
