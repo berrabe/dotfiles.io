@@ -13,8 +13,8 @@ set $mod Mod1
 set $mod_berrabe Mod4
 
 #                                                                               SET COLOR FOR I3WM (BORDER , ETC)
-set $bg-color            #38406e
-set $bd-color            #7e7e7e
+set $bg-color            #121a1b
+set $bd-color            #b3baba
 set $inactive-bg-color   #383C4A
 set $inactive-bd-color   #383C4A
 set $text-color          #f3f4f5
@@ -143,9 +143,9 @@ mode "move" {
 }
 
 #                                                                               VOLUME KEY ON KEYBOARD
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 1 +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 1 -5%
+bindsym XF86AudioMute exec pactl set-sink-mute 1 toggle
 
 #                                                                               TRACKPAD ACTIVATION
 bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh
@@ -163,9 +163,9 @@ bindsym XF86MonBrightnessDown exec "sudo light -U 1"
 #																				Custom For Keyboard
 bindsym $mod_berrabe+1 exec "sudo light -U 1"
 bindsym $mod_berrabe+2 exec "sudo light -A 1"
-bindsym $mod_berrabe+3 exec "pactl set-sink-volume 0 -5%"
-bindsym $mod_berrabe+4 exec "pactl set-sink-volume 0 +5%"
-bindsym $mod_berrabe+5 exec "pactl set-sink-mute 0 toggle"
+bindsym $mod_berrabe+3 exec "pactl set-sink-volume 1 -5%"
+bindsym $mod_berrabe+4 exec "pactl set-sink-volume 1 +5%"
+bindsym $mod_berrabe+5 exec "pactl set-sink-mute 1 toggle"
 
 
 #                                                                               LOCK
@@ -177,17 +177,18 @@ bindsym $mod+o exec "notify-send -u low '==== B E R R A B E ===='"
 
 #                                                                               I3-GAPS SETTING
 for_window [class="^.*"] border pixel 0
-gaps inner 50
-gaps outer 5
-# border_radius 10
+gaps inner 20
+gaps outer 40
+border_radius 7
 focus_follows_mouse no
 
 #                                                                               CHANGE BACKGROUND WITH FEH
-exec feh --bg-scale --no-xinerama '/usr/share/wallpapers/Wallpaper/90114_blur.jpg'
+# exec feh --bg-scale --no-xinerama '/usr/share/wallpapers/Wallpaper/90114.jpg'
+exec --no-startup-id nitrogen --set-zoom-fill /usr/share/wallpapers/Wallpaper/forest.jpg
 
 #                                                                               CUSTOM EXEC ON STARTUP
 exec --no-startup-id xset s 60
-exec --no-startup-id xautolock -notify 30 -notifier "notify-send -u critical -t 10000 '30 Seconds Before Suspend'" -time 5 -locker "$HOME/.config/i3/i3lock-fancy/lock && systemctl suspend" -corners --00 &
+# exec --no-startup-id xautolock -notify 30 -notifier "notify-send -u critical -t 10000 '30 Seconds Before Suspend'" -time 5 -locker "$HOME/.config/i3/i3lock-fancy/lock && systemctl suspend" -corners --00 &
 exec --no-startup-id sleep 2 && $HOME/.config/i3/i3lock-fancy/./lock
 
 exec --no-startup-id xfce4-power-manager
@@ -198,8 +199,6 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 exec --no-startup-id dunst
 exec --no-startup-id tint2
+exec --no-startup-id $HOME/.Lenovo-Util/Touchpad_Lenovo.sh
+exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id compton
-
-
-# Xautolock with Notifiers add this
-# -notify 90 -notifier "notify-send -u critical -t 3000 '30 Seconds Before Timeout | 90 Seconds Before Suspend'"

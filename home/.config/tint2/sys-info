@@ -7,7 +7,8 @@ while true
 
 		if [[ $1 == 1 ]]
 			then
-				echo "  $(cat /sys/devices/virtual/dmi/id/product_version)"
+				# echo "  $(cat /sys/devices/virtual/dmi/id/product_version)"
+				echo "  $(hostname)"
 
 
 		elif [[ $1 == 2 ]]
@@ -27,18 +28,19 @@ while true
 		elif [[ $1 == 4 ]]
 			then
 				memory=$(awk '/^Mem/ {print $3 " MB"}' <(free -m))
-				echo "  $memory"
+				echo "  $memory"
 
 
 		elif [[ $1 == 5 ]]
 			then
 				# Note the use of "stdbuf -oL" to force the program to flush the output line by line.
-				stdbuf -oL bwm-ng -o csv -t 1000 | awk -v ical="$(iwgetid | cut -b 17- | sed -z 's/"//g')" -F ';' '/total/ { printf "  %s     %.02f Mb/s\n", ical,($5*8/1.0e6)}; fflush(stdout)'
+				# stdbuf -oL bwm-ng -o csv -t 1000 | awk -v ical="$(iwgetid | cut -b 17- | sed -z 's/"//g')" -F ';' '/total/ { printf "  %s     %.02f Mb/s\n", ical,($5*8/1.0e6)}; fflush(stdout)'
+				stdbuf -oL bwm-ng -o csv -t 1000 | awk -F ';' '/total/ { printf "  %.02f Mb/s\n",($5*8/1.0e6)}; fflush(stdout)'
 
 
 		elif [[ $1 == 6 ]]
 			then
-				xprop -root -spy | awk '/^_NET_CURRENT_DESKTOP/ { print "" ($3 + 1) " /   "; fflush(); }'
+				xprop -root -spy | awk '/^_NET_CURRENT_DESKTOP/ { print " " ($3 + 1) " /   "; fflush(); }'
 		
 
 		fi
