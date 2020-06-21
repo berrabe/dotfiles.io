@@ -102,6 +102,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ls='ls -l --color=auto'
 # alias ll='ls -al'
 alias ls='colorls -l'
+alias la='colorls -la'
+alias ld='colorls -lad'
+alias lf='colorls -laf'
 
 alias audio-hdmi='pacmd set-card-profile 0 output:hdmi-stereo'
 
@@ -114,7 +117,7 @@ alias webku='sudo service nginx start && sudo service php7.2-fpm start'
 # setting ical
 LS_COLORS=$LS_COLORS:'di=1;95:fi=1;94:ex=1;33:ow=1;31:' ; export LS_COLORS
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
-source /etc/zsh_command_not_found
+#source /etc/zsh_command_not_found
 export PATH=$PATH:/snap/bin/
 
 # Import colorscheme from 'wal' asynchronously
@@ -129,6 +132,6 @@ cat ~/.cache/wal/sequences
 source ~/.cache/wal/colors-tty.sh
 
 
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-    exec startx
-fi
+#if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+#    exec startx
+#fi
