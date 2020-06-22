@@ -12,6 +12,7 @@ berrabe="SynPS/2 Synaptics TouchPad"
 xinput --set-prop "$berrabe" "libinput Tapping Enabled" 1
 xinput --set-prop "$berrabe" "libinput Natural Scrolling Enabled" 1
 xinput --set-prop "$berrabe" "libinput Accel Speed" -0.500000
+xinput --set-prop "$berrabe" "libinput Middle Emulation Enabled" 1
 
 
 
