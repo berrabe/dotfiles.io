@@ -36,8 +36,8 @@ client.background                           $bg-color
 
 
 #                                                                               OPEN TERMINAL
-bindsym $mod_berrabe+Return exec xfce4-terminal --hide-menubar
-bindsym $mod+Return exec urxvt
+bindsym $mod_berrabe+Return exec urxvt
+bindsym $mod+Return exec xfce4-terminal --hide-menubar
 
 #                                                                               EXIT CONTAINER
 bindsym $mod+q	kill
@@ -143,9 +143,9 @@ mode "move" {
 }
 
 #                                                                               VOLUME KEY ON KEYBOARD
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 1 +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 1 -5%
-bindsym XF86AudioMute exec pactl set-sink-mute 1 toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
 
 #                                                                               TRACKPAD ACTIVATION
 bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh
@@ -157,15 +157,15 @@ bindsym XF86AudioNext exec light -A 5
 bindsym XF86AudioPrev exec light -U 5
 
 #                                                                               Screen brightness controls with notification
-bindsym XF86MonBrightnessUp exec "sudo light -A 1"
-bindsym XF86MonBrightnessDown exec "sudo light -U 1"
+bindsym XF86MonBrightnessUp exec "light -A 1"
+bindsym XF86MonBrightnessDown exec "light -U 1"
 
 #																				Custom For Keyboard
-bindsym $mod_berrabe+1 exec "sudo light -U 1"
-bindsym $mod_berrabe+2 exec "sudo light -A 1"
-bindsym $mod_berrabe+3 exec "pactl set-sink-volume 1 -5%"
-bindsym $mod_berrabe+4 exec "pactl set-sink-volume 1 +5%"
-bindsym $mod_berrabe+5 exec "pactl set-sink-mute 1 toggle"
+bindsym $mod_berrabe+1 exec "light -U 1"
+bindsym $mod_berrabe+2 exec "light -A 1"
+bindsym $mod_berrabe+3 exec "pactl set-sink-volume 0 -5%"
+bindsym $mod_berrabe+4 exec "pactl set-sink-volume 0 +5%"
+bindsym $mod_berrabe+5 exec "pactl set-sink-mute 0 toggle"
 
 
 #                                                                               LOCK
@@ -174,31 +174,38 @@ bindsym $mod+Shift+t exec $HOME/.config/i3/i3lock-fancy/lock
 #                                                                               CUSTOM KEY
 bindsym $mod_berrabe+f exec thunar
 bindsym $mod+o exec "notify-send -u low '==== B E R R A B E ===='"
+bindsym $mod+Shift+p exec flameshot gui
+
 
 #                                                                               I3-GAPS SETTING
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 1
 gaps inner 20
-gaps outer 40
-border_radius 7
-focus_follows_mouse no
+gaps outer 10
+# gaps inner 20
+# gaps outer 40
+# border_radius 7
+focus_follows_mouse yes
 
 #                                                                               CHANGE BACKGROUND WITH FEH
 # exec feh --bg-scale --no-xinerama '/usr/share/wallpapers/Wallpaper/90114.jpg'
-exec --no-startup-id nitrogen --set-zoom-fill /usr/share/wallpapers/Wallpaper/forest.jpg
+exec --no-startup-id nitrogen --set-zoom-fill $HOME/.wallpaper/forest.jpg
 
 #                                                                               CUSTOM EXEC ON STARTUP
 exec --no-startup-id xset s 60
 # exec --no-startup-id xautolock -notify 30 -notifier "notify-send -u critical -t 10000 '30 Seconds Before Suspend'" -time 5 -locker "$HOME/.config/i3/i3lock-fancy/lock && systemctl suspend" -corners --00 &
-exec --no-startup-id sleep 2 && $HOME/.config/i3/i3lock-fancy/./lock
+# exec --no-startup-id sleep 2 && $HOME/.config/i3/i3lock-fancy/./lock
 
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id nm-applet
-exec --no-startup-id pnmixer
-exec --no-startup-id blueman-applet
+# exec --no-startup-id pnmixer
+# exec --no-startup-id blueman-applet
 
-exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec --no-startup-id dunst
-exec --no-startup-id tint2
+exec --no-startup-id flameshot
+# exec --no-startup-id tint2
+exec --no-startup-id $HOME/.config/polybar/launch.sh --blocks
 exec --no-startup-id $HOME/.Lenovo-Util/Touchpad_Lenovo.sh
-exec --no-startup-id xrdb ~/.Xresources
-exec --no-startup-id compton
+exec --no-startup-id xrdb -merge ~/.Xresources
+# exec --no-startup-id picom
+# exec --no-startup-id pamac-tray

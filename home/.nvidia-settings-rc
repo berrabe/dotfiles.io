@@ -1,0 +1,18 @@
+#
+# /home/berrabe/.nvidia-settings-rc
+#
+# Configuration file for nvidia-settings - the NVIDIA X Server Settings utility
+# Generated on Wed Feb 24 11:03:10 2021
+#
+
+# ConfigProperties:
+
+RcFileLocale = C
+DisplayStatusBar = No
+SliderTextEntries = Yes
+IncludeDisplayNameInConfigFile = No
+ShowQuitDialog = Yes
+UpdateRulesOnProfileNameChange = Yes
+
+# Attributes:
+

@@ -4,7 +4,7 @@
 
 # ID 1		[ PANEL ]
 rounded = 0
-background_color = #000000 50
+background_color = #000000 100
 
 # ID 2		[ INTERNET SPEED ]
 rounded = 0
@@ -78,7 +78,7 @@ panel_background_id = 1
 mouse_effects = 1
 
 # Panel Autohide
-autohide = 0
+autohide = 1
 autohide_show_timeout = 0.0
 autohide_hide_timeout = 1.0
 autohide_height = 0

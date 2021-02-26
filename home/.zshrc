@@ -65,6 +65,9 @@ ZSH_THEME="ys"
 plugins=(
 	git
 	# zsh-syntax-highlighting
+	command-not-found
+	zsh-completions
+	zsh-autosuggestions
 	)
 
 source $ZSH/oh-my-zsh.sh
@@ -110,28 +113,29 @@ alias audio-hdmi='pacmd set-card-profile 0 output:hdmi-stereo'
 
 alias reset='cat /home/berrabe/.cache/wal/sequences && clear'
 
-alias init='sudo cpu-util -sf 1000000 && sudo undervolt --core -165 --cache -165 --gpu -135 --uncore -165 --analogio -165 && sudo cpu-util -sf show && sudo undervolt --read'
+alias init='sudo cpu-util -sf 1000000 && sudo undervolt --core -165 --cache -165 --gpu -135 --uncore -165 --analogio -165 && echo -e "\n" && sudo undervolt --read'
 alias uninit='sudo undervolt --core 0 --cache 0 --gpu 0 --uncore 0 --analogio 0 && sudo undervolt --read'
 
-alias webku='sudo service nginx start && sudo service php7.2-fpm start'
 # setting ical
 LS_COLORS=$LS_COLORS:'di=1;95:fi=1;94:ex=1;33:ow=1;31:' ; export LS_COLORS
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 #source /etc/zsh_command_not_found
-export PATH=$PATH:/snap/bin/
+source /usr/share/doc/pkgfile/command-not-found.zsh
+export PATH=$PATH:/snap/bin/:$HOME/.bin/
+export VISUAL=nano
 
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
 # ( ) # Hide shell job control messages.
-(cat ~/.cache/wal/sequences &)
+# (cat ~/.cache/wal/sequences &)
 
 # Alternative (blocks terminal for 0-3ms)
-cat ~/.cache/wal/sequences
+# cat ~/.cache/wal/sequences
 
 # To add support for TTYs this line can be optionally added.
-source ~/.cache/wal/colors-tty.sh
+# source ~/.cache/wal/colors-tty.sh
 
 
-#if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-#    exec startx
-#fi
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+    exec startx
+fi
