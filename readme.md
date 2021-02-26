@@ -1,8 +1,8 @@
 # Screenshot
 ![screenshot 1](Screenshot/2020-01-26-192550_1600x900_scrot.png)
 ![screenshot 2](Screenshot/2020-03-27-085332_1366x768_scrot.png)
-![screenshot 3](Screenshot/2020-03-27-092228_1366x768_scrot.png)
-![screenshot 4](Screenshot/new_setup.png)
+![screenshot 3](Screenshot/new_setup.png)
+![screenshot 4](Screenshot/auto_backup.png)
 
 # List App
 | Type | App |
