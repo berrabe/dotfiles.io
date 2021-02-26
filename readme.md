@@ -5,6 +5,7 @@
 <br/><br/>
 
 ### 1 - Screenshot
+---
 ![screenshot 1](Screenshot/2020-01-26-192550_1600x900_scrot.png)
 ![screenshot 2](Screenshot/2020-03-27-085332_1366x768_scrot.png)
 ![screenshot 3](Screenshot/new_setup.png)
@@ -15,6 +16,7 @@
 <br/><br/>
 
 ### 2 - List App
+---
 | Type | App |
 | --- | --- |
 | **WM** |  [i3-gaps](https://github.com/Airblader/i3/wiki/Installation) |
@@ -44,6 +46,7 @@
 <br/><br/>
 
 ### 3 - PyWal
+---
 > pywal is used to change the color scheme of the terminal and also the color of rofi  <br />
 > see the configuration file automatically created by pywal at **.cache/wal/**  <br />
 > in pywal there is a bug if using xfce4-terminal, use pywal --vte -i image.png  <br />
