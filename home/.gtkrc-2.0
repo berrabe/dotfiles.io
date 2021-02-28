@@ -4,7 +4,7 @@
 include "/home/berrabe/.gtkrc-2.0.mine"
 gtk-theme-name="Sierra-compact-dark"
 gtk-icon-theme-name="Papirus-Dark"
-gtk-font-name="San Francisco Text 7"
+gtk-font-name="JetBrainsMono Nerd Font Medium 7"
 gtk-cursor-theme-name="xcursor-breeze"
 gtk-cursor-theme-size=0
 gtk-toolbar-style=GTK_TOOLBAR_BOTH
@@ -15,4 +15,5 @@ gtk-enable-event-sounds=1
 gtk-enable-input-feedback-sounds=1
 gtk-xft-antialias=1
 gtk-xft-hinting=1
-gtk-xft-hintstyle="hintfull"
+gtk-xft-hintstyle="hintslight"
+gtk-xft-rgba="rgb"
