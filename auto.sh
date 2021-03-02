@@ -5,7 +5,7 @@
 _LOCAL_CONF_=( "cava" "dunst" "glava" "gtk-2.0" "gtk-3.0" "i3" "lxterminal" "neofetch" "networkmanager-dmenu" 
                 "mpd" "polybar" "ranger" "rofi" "terminator" "Thunar" "tint2" "viewnior"  "picom.conf" 
                 "sublime-text-3/Packages/User/Preferences.sublime-settings" )
-_HOME_CONF_=( ".fonts" ".Lenovo-Util" ".ncmpcpp" ".oh-my-zsh" ".resources" ".themes" ".urxvt" ".bashrc" ".fehbg" ".gtkrc-2.0"
+_HOME_CONF_=( ".fonts" ".Lenovo-Util" ".ncmpcpp" ".resources" ".themes" ".urxvt" ".bashrc" ".fehbg" ".gtkrc-2.0"
 				".nvidia-settings-rc" ".profile" ".vimrc" ".xinitrc" ".Xresources" ".Xresources.backup" ".zshrc" "index.php")
 
 # ============================================
