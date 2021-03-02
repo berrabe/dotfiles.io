@@ -12,6 +12,9 @@
 <p align="center">
   <img src="Screenshot/auto_backup.png">
 </p>
+<p align="center">
+  <img src="Screenshot/font.png">
+</p>
 
 <br/><br/>
 
@@ -20,7 +23,7 @@
 | Type | App |
 | --- | --- |
 | **WM** |  [i3-gaps](https://github.com/Airblader/i3/wiki/Installation) |
-| **Panel** | tint2 |
+| **Panel** | tint2 - polybar |
 | **Compositor** | [compton](https://launchpad.net/~kgilmer/+archive/ubuntu/speed-ricer)
 | **Notifier** | dunst |
 | **App Launcher** | rofi |
@@ -37,19 +40,11 @@
 | **Terminal Clock** | tty-clock |
 | **File Manager** | thunar - ranger |
 | **Lock System** | i3lock |
-| **Media Capture** | kazam - scrot - feh - import |
+| **Media Capture** | kazam - scrot - feh - import - flameshot - SSR |
 | **Music Visualizer** | [cava](https://github.com/karlstav/cava) |
-| **CPU Monitor** | [s-tui](https://github.com/amanusk/s-tui) |
+| **CPU Monitor** | [s-tui](https://github.com/amanusk/s-tui) - ytop - gotop |
 | **Multi Monitor Stuff** | pasystray - pavucontrol - arandr |
 
 
 <br/><br/>
-
-### 3 - PyWal
----
-> pywal is used to change the color scheme of the terminal and also the color of rofi  <br />
-> see the configuration file automatically created by pywal at **.cache/wal/**  <br />
-> in pywal there is a bug if using xfce4-terminal, use pywal --vte -i image.png  <br />
-
-![pywal](Screenshot/wal.png)
 
