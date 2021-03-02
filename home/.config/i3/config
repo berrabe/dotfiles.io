@@ -13,12 +13,19 @@ set $mod Mod1
 set $mod_berrabe Mod4
 
 #                                                                               SET COLOR FOR I3WM (BORDER , ETC)
-set $bg-color            #121a1b
-set $bd-color            #b3baba
-set $inactive-bg-color   #383C4A
-set $inactive-bd-color   #383C4A
-set $text-color          #f3f4f5
-set $inactive-text-color #676E7D
+# set $bg-color            #121a1b
+# set $bd-color            #b3baba
+# set $inactive-bg-color   #383C4A
+# set $inactive-bd-color   #383C4A
+# set $text-color          #f3f4f5
+# set $inactive-text-color #676E7D
+
+set $bg-color            #2F343F
+set $bd-color            #BE78D1
+set $inactive-bg-color   #2F343F
+set $inactive-bd-color   #2F343F
+set $text-color          #ffffff
+set $inactive-text-color #2F343F
 #  border          			background      text      		indicator  			 child 		border 
 client.focused      		$bd-color    	$bg-color   	$text-color  		 $bd-color 	$bd-color  
 client.unfocused            $bg-color       $bg-color       $inactive-text-color $bg-color  $bg-color
@@ -178,7 +185,7 @@ bindsym $mod+Shift+p exec flameshot gui
 
 
 #                                                                               I3-GAPS SETTING
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
 gaps inner 20
 gaps outer 10
 # gaps inner 20

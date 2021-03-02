@@ -21,7 +21,7 @@ URxvt*color3:             #F0DFAF
 URxvt*color11:            #F0DFAF
 ! blue dark/light
 URxvt*color4:             #8CD0D3
-URxvt*color12:            #8CD0D3
+URxvt*color12:            #12A1F5
 ! magenta dark/light
 URxvt*color5:             #92659a
 URxvt*color13:            #92659a
@@ -37,21 +37,21 @@ URxvt*color15:            #eeeeec
 URxvt*depth: 32
 
 !! Xft settings
-Xft.dpi:                    96
+Xft.dpi:                    100
 Xft.antialias:              true
 Xft.rgba:                   rgb
 Xft.hinting:                true
 Xft.hintstyle:              hintslight
 
 !! URxvt Appearance
-URxvt.font: xft:agave Nerd Font Mono:style=Bold:size=7
-URxvt.boldFont: xft:agave Nerd Font Mono:style=Bold:size=7
-URxvt.italicFont: xft:agave Nerd Font Mono:style=Italic:size=7
-URxvt.boldItalicfont: xft:agave Nerd Font Mono:style=Bold Italic:size=7
+URxvt.font: xft:JetBrainsMono NF:style=Regular:size=6
+URxvt.boldFont: xft:JetBrainsMono NF:style=Bold:size=6
+URxvt.italicFont: xft:JetBrainsMono NF:style=Italic:size=6
+URxvt.boldItalicfont: xft:JetBrainsMono NF:style=Bold Italic:size=6
 URxvt.letterSpace: -1
-URxvt.lineSpace: 4
+URxvt.lineSpace: 5
 URxvt.geometry: 92x24
-URxvt.internalBorder: 24
+URxvt.internalBorder: 30
 URxvt.cursorBlink: false
 URxvt.cursorUnderline: true
 URxvt.saveline: 2048

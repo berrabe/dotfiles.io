@@ -42,7 +42,7 @@ set incsearch
 set showmatch
 
 " highlight current line
-set cursorline
+" set cursorline
 
 " Enable syntax highlighting based on the file format
 syntax on
