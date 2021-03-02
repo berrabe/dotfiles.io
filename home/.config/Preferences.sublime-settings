@@ -1,0 +1,26 @@
+{
+	"color_scheme": "Packages/ayu/ayu-dark.sublime-color-scheme",
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"node_modules/"
+	],
+	"font_face": "JetBrainsMonoMedium NF",
+	"font_optionss":
+	[
+		"gray_antialias"
+	],
+	"font_size": 7.5,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"line_padding_bottom": 3,
+	"line_padding_top": 3,
+	"open_files_in_new_window": false,
+	"theme": "ayu-dark.sublime-theme",
+	"translate_tabs_to_spaces": true
+}
