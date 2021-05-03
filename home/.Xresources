@@ -44,12 +44,13 @@ Xft.hinting:                true
 Xft.hintstyle:              hintslight
 
 !! URxvt Appearance
-URxvt.font: xft:JetBrainsMono NF:style=Regular:size=6
+URxvt.font: xft:JetBrainsMono NF:style=Regular:size=6:antialias=true, \
+xft:agave Nerd Font Mono
 URxvt.boldFont: xft:JetBrainsMono NF:style=Bold:size=6
 URxvt.italicFont: xft:JetBrainsMono NF:style=Italic:size=6
 URxvt.boldItalicfont: xft:JetBrainsMono NF:style=Bold Italic:size=6
 URxvt.letterSpace: -1
-URxvt.lineSpace: 5
+URxvt.lineSpace: 3
 URxvt.geometry: 92x24
 URxvt.internalBorder: 30
 URxvt.cursorBlink: false

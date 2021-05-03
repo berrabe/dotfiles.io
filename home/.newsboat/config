@@ -1,0 +1,16 @@
+# Modified by berrabe
+# https://www.youtube.com/watch?v=CJXdQTGm1jg
+# https://www.youtube.com/watch?v=RUu3O4tddlU
+# https://wiki.archlinux.org/title/Newsboat
+
+# Color Scheme
+include /usr/share/doc/newsboat/contrib/colorschemes/solarized-dark
+
+# Reloading
+auto-reload yes
+reload-time 5
+reload-threads 50
+
+# Header
+highlight feedlist "---.*---" cyan default bold
+highlight feedlist ".*0/0.." default default invis

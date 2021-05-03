@@ -22,6 +22,15 @@ xinput --set-prop "$berrabe" "libinput Middle Emulation Enabled" 1
 
 
 
+##################################################
+# config for Thinkpad TrackPoint (xorg-xinput) [ manjaro ]
+##################################################
+
+TrackPoint="TPPS/2 IBM TrackPoint"
+
+xinput --set-prop "$TrackPoint" "libinput Accel Speed" -0.500000
+
+
 
 ##################################################
 # config for legacy driver (xf86-input-synaptics) [ ubuntu ]

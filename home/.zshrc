@@ -113,8 +113,9 @@ alias audio-hdmi='pacmd set-card-profile 0 output:hdmi-stereo'
 
 alias reset='cat /home/berrabe/.cache/wal/sequences && clear'
 
-alias init='sudo cpu-util -sf 1000000 && sudo undervolt --core -165 --cache -165 --gpu -135 --uncore -165 --analogio -165 && echo -e "\n" && sudo undervolt --read'
-alias uninit='sudo undervolt --core 0 --cache 0 --gpu 0 --uncore 0 --analogio 0 && sudo undervolt --read'
+alias init='sudo cpu-util -sf 1500000'
+# alias init='sudo cpu-util -sf 1000000 && sudo undervolt --core -165 --cache -165 --gpu -135 --uncore -165 --analogio -165 && echo -e "\n" && sudo undervolt --read'
+# alias uninit='sudo undervolt --core 0 --cache 0 --gpu 0 --uncore 0 --analogio 0 && sudo undervolt --read'
 
 # setting ical
 LS_COLORS=$LS_COLORS:'di=1;95:fi=1;94:ex=1;33:ow=1;31:' ; export LS_COLORS
@@ -139,3 +140,8 @@ export VISUAL=nano
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     exec startx
 fi
+
+
+fm6000 -n -de dwm -o 'Arch Linux' -m 3 -g 5 \
+    $(printf '%s\n' -al -as -phb -w -dog | shuf -n1) \
+    -c $(printf '%s\n' green yellow blue magenta cyan white | shuf -n1)

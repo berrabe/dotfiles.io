@@ -42,7 +42,12 @@
 		elif [[ $1 == 6 ]]
 			then
 				xprop -root -spy | awk '/^_NET_CURRENT_DESKTOP/ { print " " ($3 + 1) " /   "; fflush(); }'
-		
+
+
+		elif [[ $1 == 7 ]]
+			then
+				fan_rpm=$(sensors | awk '/^fan/{++r; gsub(/[^[:digit:]]+/, "", $2); s+=$2} END {printf("%.0f RPM",s/r)}')
+				echo "$fan_rpm"
 
 		fi
 

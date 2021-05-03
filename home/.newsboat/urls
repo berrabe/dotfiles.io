@@ -1,0 +1,50 @@
+# Movie
+---Movie---
+https://yts.mx/rss/0/720p/all/0/en "~YTS Movie"
+
+# Indonesia News
+# https://www.antaranews.com/rss
+# https://risdiyanto.com/tag/rss-feed/
+---Local---
+https://www.antaranews.com/rss/terkini.xml "~Antara News"
+https://www.antaranews.com/rss/tekno.xml "~Antara Tekno"
+https://sindikasi.okezone.com/index.php/techno/RSS2.0 "~Okezone Techno"
+https://sindikasi.okezone.com/index.php/lifestyle/RSS2.0 "~Okezone Lifestyle"
+https://sindikasi.okezone.com/index.php/international/RSS2.0 "~Okezone International"
+https://sindikasi.okezone.com/index.php/news/RSS2.0 "~Okezone News"
+https://sindikasi.okezone.com/index.php/okezone/RSS2.0 "~Okezone Breaking News"
+
+# International News
+# https://rss.com/blog/popular-rss-feeds/
+---International---
+https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml "~NY Times Technology"
+https://rss.nytimes.com/services/xml/rss/nyt/MostViewed.xml "~NY Times Most Viewed"
+https://rss.nytimes.com/services/xml/rss/nyt/World.xml "~NY Times World"
+https://www.huffpost.com/section/front-page/feed?x=1 "~Huffington Post"
+http://rssfeeds.usatoday.com/usatodaycomnation-topstories&x=1 "~USA Today"
+https://lifehacker.com/rss "~Life Hacker"
+https://www.yahoo.com/news/rss "~Yahoo News"
+https://www.latimes.com/local/rss2.0.xml "~Los Angeles Times"
+
+# Computer
+# https://www.ubuntubuzz.com/2016/11/list-of-rss-feeds-of-gnulinux-floss-related-websites.html
+---Computer---
+https://www.tecmint.com/feed/ "~Tecmint"
+https://www.howtoforge.com/feed.rss "~How To Forge"
+https://feeds.howtogeek.com/howtogeek "~How To Geek"
+https://www.cyberciti.biz/atom/atom.xml "~NixCraft / Cyberciti.biz"
+https://www.xmodulo.com/feed "~XModulo"
+https://csdl-api.computer.org/api/rss/periodicals/mags/co/rss.xml "~Computer.org"
+https://csdl-api.computer.org/api/rss/periodicals/mags/cd/rss.xml "~Cloud Computing"
+https://csdl-api.computer.org/api/rss/periodicals/mags/sp/rss.xml "~Security and Privacy"
+https://rss.packetstormsecurity.com/ "~Packet Storm Sec"
+https://www.computerweekly.com/rss/RSS-Feed.xml "~Computer Weekly"
+https://itsfoss.com/feed/ "~ItsFoss"
+http://fullcirclemagazine.org/feed "~Full Circle Magazine"
+https://fedoramagazine.org/feed "~Fedora Magazine"
+https://planet.archlinux.org/rss20.xml "~Arch Linux Planet"
+https://planet.debian.org/rss20.xml "~Debian Linux Planet"
+http://planet.gnu.org/rss20.xml "~GNU Planet"
+http://blog.canonical.com/feed "~Cannonical"
+https://developers.redhat.com/blog/feed "~Dev RedHat"
+https://www.archlinux.org/feeds/news "~Arch Linux"
