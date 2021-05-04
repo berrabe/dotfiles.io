@@ -117,6 +117,10 @@ alias init='sudo cpu-util -sf 1500000'
 # alias init='sudo cpu-util -sf 1000000 && sudo undervolt --core -165 --cache -165 --gpu -135 --uncore -165 --analogio -165 && echo -e "\n" && sudo undervolt --read'
 # alias uninit='sudo undervolt --core 0 --cache 0 --gpu 0 --uncore 0 --analogio 0 && sudo undervolt --read'
 
+alias webdiff='$HOME/.config/webdiff/webdiff.sh'
+alias git-webdiff='$HOME/.config/webdiff/git-webdiff.sh'
+
+
 # setting ical
 LS_COLORS=$LS_COLORS:'di=1;95:fi=1;94:ex=1;33:ow=1;31:' ; export LS_COLORS
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
