@@ -30,6 +30,7 @@ https://www.latimes.com/local/rss2.0.xml "~Los Angeles Times"
 # https://www.ubuntubuzz.com/2016/11/list-of-rss-feeds-of-gnulinux-floss-related-websites.html
 ---Computer---
 https://www.tecmint.com/feed/ "~Tecmint"
+https://linuxize.com/index.xml "~Linuxize"
 https://www.howtoforge.com/feed.rss "~How To Forge"
 https://feeds.howtogeek.com/howtogeek "~How To Geek"
 https://www.cyberciti.biz/atom/atom.xml "~NixCraft / Cyberciti.biz"

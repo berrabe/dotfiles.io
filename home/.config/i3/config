@@ -45,7 +45,12 @@ client.background                           $bg-color
 #                                                                               OPEN TERMINAL
 bindsym $mod_berrabe+Return exec urxvt
 bindsym $mod+Return exec xfce4-terminal --hide-menubar
+
+#                                                                               SSR Shortcut Script
 bindsym $mod+n exec /home/berrabe/.config/i3/ssr.sh
+
+#                                                                               Clipboard Manager Shortcut
+bindsym $mod+Shift+h exec xfce4-clipman-history
 
 #                                                                               EXIT CONTAINER
 bindsym $mod+q	kill
