@@ -149,3 +149,16 @@ fi
 fm6000 -n -de dwm -o 'Arch Linux' -m 3 -g 5 \
     $(printf '%s\n' -al -as -phb -w -dog | shuf -n1) \
     -c $(printf '%s\n' green yellow blue magenta cyan white | shuf -n1)
+
+
+# prevent zsh_history duplication
+# cat -n .zsh_history | sort -t ';' -uk2 | sort -nk1 | cut -f3- > zsh-history-nodup
+# https://leetschau.github.io/remove-duplicate-zsh-history.html
+setopt EXTENDED_HISTORY
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_FIND_NO_DUPS
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_BEEP
