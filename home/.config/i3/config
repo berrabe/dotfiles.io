@@ -21,7 +21,7 @@ set $mod_berrabe Mod4
 # set $inactive-text-color #676E7D
 
 set $bg-color            #2C2C2C
-set $bd-color            #99A3A2
+set $bd-color            #B9C244
 set $inactive-bg-color   #2C2C2C
 set $inactive-bd-color   #2C2C2C
 set $text-color          #ffffff
@@ -42,9 +42,16 @@ client.background                           $bg-color
 
 
 
+#                                                                               SHOW / HIDE POLYBAR
+bindsym $mod_berrabe+s exec polybar-msg cmd show
+bindsym $mod_berrabe+h exec polybar-msg cmd hide
+
 #                                                                               OPEN TERMINAL
 bindsym $mod_berrabe+Return exec urxvt
 bindsym $mod+Return exec xfce4-terminal --hide-menubar
+
+#                                                                               Flash Current Window
+bindsym $mod+Shift+f exec --no-startup-id flash_window
 
 #                                                                               SSR Shortcut Script
 bindsym $mod+n exec /home/berrabe/.config/i3/ssr.sh
@@ -56,7 +63,8 @@ bindsym $mod+Shift+h exec xfce4-clipman-history
 bindsym $mod+q	kill
 
 #                                                                               OPEN ROFI (APPLICATION MENU)
-bindsym $mod+d exec rofi -show drun -lines 3 -columns 2 -eh 2 -bw 0 -hide-scrollbar true -font "Agave Nerd Font bold italic 7"
+# bindsym $mod+d exec rofi -show drun -lines 3 -columns 2 -eh 2 -bw 0 -hide-scrollbar true -font "Agave Nerd Font bold italic 7"
+bindsym $mod+d exec $HOME/.config/polybar/blocks/scripts/launcher.sh
 
 #                                                                               CHANGE FOCUS CONTAINER
 bindsym $mod+j focus left
@@ -223,4 +231,5 @@ exec --no-startup-id $HOME/.config/polybar/launch.sh --blocks
 exec --no-startup-id $HOME/.Lenovo-Util/Touchpad_Lenovo.sh
 exec --no-startup-id xrdb -merge ~/.Xresources
 # exec --no-startup-id picom
+# exec --no-startup-id flashfocus
 # exec --no-startup-id pamac-tray

@@ -9,6 +9,7 @@ berrabe="SynPS/2 Synaptics TouchPad"
 
 # xinput --list-props "SynPS/2 Synaptics TouchPad" / 18
 
+xinput --set-prop "$berrabe" "Device Enabled" 1
 xinput --set-prop "$berrabe" "libinput Tapping Enabled" 1
 xinput --set-prop "$berrabe" "libinput Natural Scrolling Enabled" 1
 xinput --set-prop "$berrabe" "libinput Accel Speed" -0.500000
@@ -28,7 +29,7 @@ xinput --set-prop "$berrabe" "libinput Middle Emulation Enabled" 1
 
 TrackPoint="TPPS/2 IBM TrackPoint"
 
-xinput --set-prop "$TrackPoint" "libinput Accel Speed" -0.500000
+xinput --set-prop "$TrackPoint" "libinput Accel Speed" -0.400000
 
 
 
